@@ -1,15 +1,16 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import CanvasDemo from './CanvasDemo';
+import BHGame from './BHGame';
 
 function App() {
 
 
 
+
   return (
     <div className="App">
-      <CanvasDemo/>
+      <BHGame/>
     </div>
   );
 }

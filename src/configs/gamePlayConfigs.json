@@ -5,22 +5,29 @@
       "height": ""
     }
   },
-  "level": {
-    "easy": {
-      "blocks": {
-
-      },
-      "powerUps": {
-
-      }
+  "block": {
+    "color": "",
+    "textColor": ""
+  },
+  "easy": {
+    "blockFreq": {
     },
-    "hard": {
-      "blocks": {
+    "powerUps": {
+      "spring": 40,
+      "springBoots": 120,
+      "orbBack": 30,
+      "orbForward": 35
+    }
+  },
+  "hard": {
+    "blockFreq": {
 
-      },
-      "powerUps": {
-
-      }
+    },
+    "powerUps": {
+      "spring": 40,
+      "springBoots": 120,
+      "orbBack": 30,
+      "orbForward": 35
     }
   }
 }

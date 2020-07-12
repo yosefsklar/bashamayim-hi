@@ -28,7 +28,7 @@ export default class BHMain {
     id = '';
 
 
-    constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, configs) {
+    constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, config) {
         console.log(mainText);
         this.mainText = mainText;
         this.ctx = canvas.getContext("2d");
@@ -37,7 +37,8 @@ export default class BHMain {
 
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);
-        this.BSpawn = new BlockSpawner(level, mainText,decoyText);
+        this.config = config;
+        this.BSpawn = new BlockSpawner(level, mainText,decoyText, this.config)
         this.level = level;
         this.setFirstBlock(this.blocks);
         this.player = new Player(this.gravity,this.setLowestBlock,this.BSpawn,this.mainText);

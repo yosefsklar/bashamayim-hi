@@ -7,10 +7,11 @@ export default class BlockSpawner {
 
     decoyIndex = 0;
     textIndex = 0;
-    constructor(level,mainText,decoyText,textIndex){
+    constructor(level,mainText,decoyText,config){
         this.level = level;
         this.mainText = mainText;
         this.decoyText = decoyText;
+        this.config = config;
 
     }
     setIndex = (num) => {
@@ -129,16 +130,16 @@ export default class BlockSpawner {
     spawnPowerup = (level) => {
         const powerupChances = {
             "easy": {
-                "spring": 40,
-                "springBoots": 120,
-                "orbBack": 30,
-                "orbForward": 35
+                "spring": this.config.easy.spring,
+                "springBoots": this.config.easy.springBoots,
+                "orbBack": this.config.easy.orbBack,
+                "orbForward": this.config.easy.orbForward
             },
             "hard": {
-                "spring": 55,
-                "springBoots": 1000,
-                "orbBack": 25,
-                "orbForward": 30
+                "spring": this.config.hard.spring,
+                "springBoots": this.config.hard.springBoots,
+                "orbBack": this.config.hard.orbBack,
+                "orbForward": this.config.hard.orbForward
             }
         };
 

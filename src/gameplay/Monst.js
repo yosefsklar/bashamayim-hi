@@ -1,6 +1,6 @@
-import DJUtils from './DJUtils';
-import redMonster from '../Sprites/Monsters/smallRed.png';
-let U = new DJUtils();
+import BHUtils from './BHUtils';
+import redMonster from '../Images/Monsters/smallRed.png';
+let U = new BHUtils();
 
 export default class Monster {
     xDif = U.adjustX(27);

@@ -1,0 +1,26 @@
+{
+  "general": {
+    "screen": {
+      "width": "",
+      "height": ""
+    }
+  },
+  "level": {
+    "easy": {
+      "blocks": {
+
+      },
+      "powerUps": {
+
+      }
+    },
+    "hard": {
+      "blocks": {
+
+      },
+      "powerUps": {
+
+      }
+    }
+  }
+}

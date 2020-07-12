@@ -1,6 +1,6 @@
-import DJUtils from './DJUtils';
+import BHUtils from './BHUtils';
 import Block from "./Block";
-let U = new DJUtils();
+let U = new BHUtils();
 let B = new Block();
 
 export default class BlockSpawner {
@@ -131,14 +131,14 @@ export default class BlockSpawner {
             "easy": {
                 "spring": 40,
                 "springBoots": 120,
-                "orb": 30,
-                "laser": 35
+                "orbBack": 30,
+                "orbForward": 35
             },
             "hard": {
                 "spring": 55,
                 "springBoots": 1000,
-                "orb": 25,
-                "laser": 30
+                "orbBack": 25,
+                "orbForward": 30
             }
         };
 
@@ -146,10 +146,10 @@ export default class BlockSpawner {
             return "spring";
         } else if (Math.round(Math.random() * powerupChances[level]["springBoots"]) === 0) {
             return "springBoots";
-        } else if(Math.round(Math.random() * powerupChances[level]["orb"]) === 0) {
-            return "orb";
-        } else if(Math.round(Math.random() * powerupChances[level]["laser"]) === 0) {
-            return "laser";
+        } else if(Math.round(Math.random() * powerupChances[level]["orbBackward"]) === 0) {
+            return "orbBackward";
+        } else if(Math.round(Math.random() * powerupChances[level]["orbForward"]) === 0) {
+            return "orbForward";
         }
         return 0;
     }

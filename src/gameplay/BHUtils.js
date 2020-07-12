@@ -1,6 +1,6 @@
-export default class DJUtils {
+export default class BHUtils {
 
-    screenHeight = window.innerHeight - 60;
+    screenHeight = window.screen.height  - 125;
     screenWidth = this.screenHeight * (5/8);
 
     roundedRect = (ctx, x, y, width, height, radius) =>{

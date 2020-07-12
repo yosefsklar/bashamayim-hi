@@ -1,13 +1,13 @@
 import Block from './Block';
 import BlockSpawner from './BlockSpawner';
 import Player from './Player';
-import DJUtils from './DJUtils';
-import backgroundImagePng from '../Sprites/cloudbackgroundRed2.png';
+import BHUtils from './BHUtils';
+import backgroundImagePng from '../Images/cloudbackgroundRed2.png';
 // import {updateDoodleGame} from "../doodleRest";
 
-const U = new DJUtils();
+const U = new BHUtils();
 
-export default class DJMain {
+export default class BHMain {
     holdingLeftKey = false;
     holdingRightKey = false;
     dead = false;
@@ -28,7 +28,7 @@ export default class DJMain {
     id = '';
 
 
-    constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex) {
+    constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, configs) {
         console.log(mainText);
         this.mainText = mainText;
         this.ctx = canvas.getContext("2d");

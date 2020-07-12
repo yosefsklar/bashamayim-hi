@@ -1,7 +1,7 @@
 import Monst from "./Monst";
-import DJUtils from './DJUtils';
+import BHUtils from './BHUtils';
 let M = new Monst();
-let U = new DJUtils();
+let U = new BHUtils();
 
 export default class Block {
     width = U.adjustX(125);
@@ -78,14 +78,14 @@ export default class Block {
             ctx.fillStyle = "grey";
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
-        } else if(this.powerup == "orb"){
+        } else if(this.powerup == "orbBackward"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), 10, 0, 2 * Math.PI);
             ctx.fillStyle = "white";
             ctx.fill();
             ctx.stroke();
         }
-        else if(this.powerup == "laser"){
+        else if(this.powerup == "orbForward"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), 10, 0, 2 * Math.PI);
             ctx.fillStyle = "#5EFF16";

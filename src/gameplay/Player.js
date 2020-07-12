@@ -1,8 +1,8 @@
-import DJUtils from './DJUtils';
+import BHUtils from './BHUtils';
 import BlockSpawner from './BlockSpawner';
-import playerImage from '../Sprites/SRHirsch.png';
+import playerImage from '../Images/SRHirsch.png';
 
-const U = new DJUtils();
+const U = new BHUtils();
 
 export default class Player {
     x = U.adjustX(300);
@@ -20,7 +20,7 @@ export default class Player {
     highestWordIndex = 0;
     constructor(gravity,setLowestBlock,blockSpawner, mainText){
         this.img = new Image();
-        //img.src = "Sprites/rightPlayer.png";
+        //img.src = "Images/rightPlayer.png";
         this.img.src = playerImage;
         this.gravity = gravity;
         this.setLowestBlock = setLowestBlock;
@@ -77,14 +77,14 @@ export default class Player {
         //A key pressed
         if (holdingLeftKey) {
             this.direction = "left";
-            //this.img.src = "Sprites/leftPlayer.png";
+            //this.img.src = "Images/leftPlayer.png";
             this.img.src = playerImage;
             this.moveLeft();
         }
         //D key pressed
         if (holdingRightKey) {
             this.direction = "right";
-            //this.img.src = "Sprites/rightPlayer.png";
+            //this.img.src = "Images/rightPlayer.png";
             this.img.src = playerImage;
             this.moveRight();
         }
@@ -171,7 +171,7 @@ export default class Player {
             this.springBootsDurability = 6;
         }
 
-        if (powerup === "orb") {
+        if (powerup === "orbBackward") {
             this.orbDurability = 10;
         }
 
@@ -189,7 +189,7 @@ export default class Player {
             this.orbDurability -= 1;
 
         }
-        if (powerup === "laser") {
+        if (powerup === "orbForward") {
             let i = blockIndex + 1;
             let count = 0;
             while(count < 5){

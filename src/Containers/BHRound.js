@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import {decoyWords, textWords, ecc, exodus} from "./text_samples";
-import Utils from './Utils';
-import DJMain from "./gameplay/DJMain";
-import {TextChapters} from "./texts";
+import {decoyWords, textWords, ecc, exodus} from "../Resources/text_samples";
+import Utils from '../Classes/Utils';
+import BHMain from "../gameplay/BHMain";
+import {TextChapters} from "../Resources/texts";
+
+const gamePlayConfigs = require('../configs/gamePlayConfigs')
 
 const U = new Utils();
 
@@ -16,7 +18,7 @@ export default class BHRound extends Component {
         this.updateCanvas();
         let decoywords = this.verseListsToCleanedWords([exodus,ecc])
         console.log(decoywords)
-        let game = new DJMain(this.refs.canvas, this.props.level, textWords,decoywords, 1, this.props.newGame, this.props.continueGame, this.setIndex);
+        let game = new BHMain(this.refs.canvas, this.props.level, textWords,decoywords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
     }
 
     updateCanvas =() =>{
@@ -87,7 +89,7 @@ export default class BHRound extends Component {
       screenHeight = window.screen.height;
       screenWidth = window.screen.height * (5/8);
         return (
-            <canvas ref="canvas" width={screenWidth} height={screenHeight}/>
+            <canvas ref="canvas" width={0} height={0}/>
         );
   }
 }

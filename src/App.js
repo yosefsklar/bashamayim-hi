@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import BHGame from './BHGame';
+import BHGame from './Containers/BHGame';
 
 function App() {
 

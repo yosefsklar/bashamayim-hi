@@ -42,7 +42,7 @@ export default class Block {
             this.color = "#5EFF16";
             ctx.fillStyle =  this.color;
         }
-        // else if(this.wordType == "monster"){
+        // else if(this.wordType == "spike"){
         //     this.color = "#ff5046";
         //     ctx.fillStyle =  this.color;
         // }
@@ -92,7 +92,7 @@ export default class Block {
             ctx.fill();
             ctx.stroke();
         }
-        else if(this.wordType == "monster"){
+        else if(this.wordType == "spike"){
             ctx.fillStyle = "grey";
             U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (1/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
             U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (3/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
@@ -133,7 +133,7 @@ export default class Block {
             }
         }
 
-        if (this.wordType === "monster") {
+        if (this.wordType === "spike") {
             if (this.directionH === "right") {
                 this.x += U.adjustX(1);
                 this.moveTime -= 1;

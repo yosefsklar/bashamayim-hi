@@ -96,7 +96,7 @@ export default class Player {
                     this.y >= blocks[i].y - this.height && this.y <= blocks[i].y + blocks[i].height - this.height) {
                     if (blocks[i].wordType === "decoyWord") {
                         blocks[i].broken = true;
-                    } else if (blocks[i].wordType === "monster") {
+                    } else if (blocks[i].wordType === "spike") {
                         this.jump(blocks, i,lowestBlock);
                         //blocks[i] = 0;
                         blocks[i].wordType = "wordText";
@@ -114,8 +114,8 @@ export default class Player {
                 }
             }
             if (this.y > blocks[i].y) {
-                //Check for hit monster
-                if (blocks[i].wordType === "monster") {
+                //Check for hit spike
+                if (blocks[i].wordType === "spike") {
                     if (this.x >= blocks[i].x - this.width + U.adjustX(28) && this.x <= blocks[i].x + blocks[i].width - U.adjustX(28) &&
                         this.y >= blocks[i].y - blocks[i].height  && this.y <= blocks[i].y + blocks[i].height) {
                         this.dead = true;

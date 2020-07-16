@@ -37,8 +37,8 @@ export default class BlockSpawner {
                 let x;
                 let y;
 
-                if (blocks[i-1].wordType === "decoyWord" || blocks[i-1].wordType === "monster"){
-                    if(blocks[i-2].wordType === "decoyWord" || blocks[i-1].wordType === "monster") {
+                if (blocks[i-1].wordType === "decoyWord" || blocks[i-1].wordType === "spike"){
+                    if(blocks[i-2].wordType === "decoyWord" || blocks[i-1].wordType === "spike") {
                         wordType = "textWord";
                     }
                     else {
@@ -84,9 +84,9 @@ export default class BlockSpawner {
                 //TODO figure out the levels, max jump =~ 260
                 if (wordType === "decoyWord" || blocks[i-1].wordType === "decoyWord") {
                     y = (blocks[i-1].y) - (((Math.random()*(U.adjustY(50) + (difficulty * U.adjustY(10)))) + U.adjustY(30) + blockOffset) * (2 / 3));
-                } else if (wordType === "monster") {
+                } else if (wordType === "spike") {
                     y = (blocks[i-1].y) - ((Math.random()*(U.adjustY(50) + (difficulty *U.adjustY(10))))+U.adjustY(50) + blockOffset);
-                }  else if (blocks[i-1].wordType === "monster") {
+                }  else if (blocks[i-1].wordType === "spike") {
                     // blocks[i].y = (blocks[i-1].y) - ((Math.random()*(U.adjustY(80) + (difficulty*U.adjustY(25))))+U.adjustY(50) + blockOffset);
                     y = (blocks[i-1].y) - ((Math.random()*(U.adjustY(20) + (difficulty *U.adjustY(10)))) +U.adjustY(10)+ blockOffset);
                 }
@@ -158,8 +158,8 @@ export default class BlockSpawner {
     spawnBlockType = () => {
         const blockChances = {
             //1 out of every 15 block TODO this is where we will come up with the decoys, probably 1/4,
-            "sideways": 5,
-            "rising": 4
+            "sideways": this.config.hard.blockTypeFreq.sideways,
+            "rising": this.config.hard.blockTypeFreq.rising
         };
 
 
@@ -174,11 +174,11 @@ export default class BlockSpawner {
 
     spawnWordType = (index) => {
         const wordChances = {
-            "monster": 5,
+            "spike": this.config.hard.wordTypeFreq.spike,
             "textWord": 1
         }
-        if (index > 5 && Math.round(Math.random()* wordChances["monster"]) === wordChances["monster"]){
-            return "monster"
+        if (index > 5 && Math.round(Math.random()* wordChances["spike"]) === wordChances["spike"]){
+            return "spike"
         }
         else if (Math.round(Math.random()* wordChances["textWord"]) === wordChances["textWord"]) {
             return "textWord";
@@ -189,17 +189,7 @@ export default class BlockSpawner {
 
     }
 
-  /*  spawnMonster = () => {
-        //TODO
-         const monsterChances = {
-            "smallRed": 25
-        };
 
-        if (Math.round(Math.random() * monsterChances["smallRed"]) === 0) {
-            return "smallRed";
-        }
-        return 0;
-    }*/
 
     attributeWordToBlock = (wordType) => {
         let word;

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/gameplay/BHUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameplay/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Block.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,11 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameplay/Block.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="44" selection-start-line="44" selection-end-line="47" selection-end-column="12" />
+            <state relative-caret-position="-1553">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/configs/gamePlayConfigs.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -29,8 +39,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameplay/BHUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="175">
               <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameplay/BHMain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameplay/BlockSpawner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2992">
-              <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
+            <state relative-caret-position="147">
+              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -72,8 +94,9 @@
       <find>laser</find>
       <find>canvas</find>
       <find>ctx</find>
-      <find>orb</find>
       <find>monster</find>
+      <find>orb</find>
+      <find>config</find>
     </findStrings>
     <replaceStrings>
       <replace>orbForward</replace>
@@ -95,13 +118,13 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/text_samples.js" />
         <option value="$PROJECT_DIR$/src/BHRound.js" />
-        <option value="$PROJECT_DIR$/src/gameplay/Player.js" />
         <option value="$PROJECT_DIR$/src/Containers/BHRound.js" />
-        <option value="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" />
         <option value="$PROJECT_DIR$/src/gameplay/BHMain.js" />
-        <option value="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" />
         <option value="$PROJECT_DIR$/src/gameplay/BHUtils.js" />
+        <option value="$PROJECT_DIR$/src/gameplay/Player.js" />
         <option value="$PROJECT_DIR$/src/gameplay/Block.js" />
+        <option value="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" />
+        <option value="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" />
       </list>
     </option>
   </component>
@@ -213,12 +236,12 @@
       <option name="presentableId" value="Default" />
       <updated>1594165807692</updated>
       <workItem from="1594165811292" duration="5842000" />
-      <workItem from="1594340284816" duration="10284000" />
+      <workItem from="1594340284816" duration="11141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16126000" />
+    <option name="totallyTimeSpent" value="16983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -302,13 +325,6 @@
     <entry file="file://$PROJECT_DIR$/src/Resources/texts.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameplay/Player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Containers/BHRound.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1513">
@@ -319,13 +335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/gamePlayConfigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/text_samples.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -333,9 +342,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameplay/Player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameplay/Block.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1553">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameplay/BHUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameplay/BHMain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1905">
+        <state relative-caret-position="17">
           <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -343,27 +373,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameplay/BHUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameplay/BlockSpawner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
+        <state relative-caret-position="147">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameplay/Block.js">
+    <entry file="file://$PROJECT_DIR$/src/configs/gamePlayConfigs.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="44" selection-start-line="44" selection-end-line="47" selection-end-column="12" />
+        <state relative-caret-position="379">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
         </state>
       </provider>
     </entry>

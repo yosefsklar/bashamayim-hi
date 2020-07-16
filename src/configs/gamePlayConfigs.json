@@ -17,17 +17,32 @@
       "springBoots": 120,
       "orbBack": 30,
       "orbForward": 35
+    },
+    "blockTypeFreq": {
+      "sideways": 5,
+      "rising": 5
+    },
+    "wordTypeFreq": {
+      "spike": 25
     }
   },
   "hard": {
-    "blockFreq": {
-
+    "blockTypeFreq": {
+      "sideways": 5,
+      "rising": 5
     },
     "powerUps": {
       "spring": 40,
       "springBoots": 120,
       "orbBack": 30,
       "orbForward": 35
+    },
+    "blockTypeFreq": {
+      "sideways": 5,
+      "rising": 5
+    },
+    "wordTypeFreq": {
+      "spike": 25
     }
   }
 }

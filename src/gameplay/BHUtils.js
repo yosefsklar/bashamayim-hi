@@ -18,6 +18,14 @@ export default class BHUtils {
         ctx.stroke();
     }
 
+    downwardTriangle = (ctx, centerTopX, centerTopY,height, base) => {
+            ctx.beginPath();
+            ctx.moveTo(centerTopX, centerTopY);
+            ctx.lineTo(centerTopX + base, centerTopY + height);
+            ctx.lineTo(centerTopX + (base * 2), centerTopY);
+            ctx.fill();
+    }
+
     adjustY = (value) =>{
         return (value / 800) * this.screenHeight;
     }

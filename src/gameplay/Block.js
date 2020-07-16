@@ -30,53 +30,53 @@ export default class Block {
     draw = (ctx) => {
         ctx.fillStyle =  this.color;
 
-        if (this.wordType !== "monster") {
-            if(this.passedText){
-                this.color = "#0a13ff";
-                ctx.fillStyle =  this.color;
-            }
-            else if(this.last){
-                this.color = "#a38841";
-                ctx.fillStyle =  this.color;
-            }
-            else if(this.highlight){
-                this.color = "#5EFF16";
-                ctx.fillStyle =  this.color;
-            }
-            U.roundedRect(ctx,this.x,this.y,this.width,this.height,U.adjustX(5),"black");
-            //ctx.fillRect(this.x, this.y, this.width, this.height);
-            ctx.font = "bold " + U.adjustX(22)+ "px" + "'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
-            ctx.fillStyle = "white";
-            if(this.color === "#5EFF16"){
-                ctx.fillStyle = "#090524";
-            }
-            ctx.textAlign = "center";
-            // if(this.type === "break"){
-            //     if(this.textNumber >= 0) {
-            //         text = window.decoyWords[this.textNumber];
-            //     }
-            // }
-            // else{
-            //     if(this.textNumber >= 0) {
-            //         text = window.textWords[this.textNumber];
-            //     }
-            //     //text = this.textNumber;
-            // }
-
-            ctx.fillText(this.word,this.x + this.width/2,this.y + ((this.height/4)*3));
-        } else {
-            M.draw(this.x, this.y,ctx);
+        if(this.passedText){
+            this.color = "#0a13ff";
+            ctx.fillStyle =  this.color;
         }
+        else if(this.last){
+            this.color = "#a38841";
+            ctx.fillStyle =  this.color;
+        }
+        else if(this.highlight){
+            this.color = "#5EFF16";
+            ctx.fillStyle =  this.color;
+        }
+        // else if(this.wordType == "monster"){
+        //     this.color = "#ff5046";
+        //     ctx.fillStyle =  this.color;
+        // }
+        U.roundedRect(ctx,this.x,this.y,this.width,this.height,U.adjustX(5),"black");
+        //ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.font = "bold " + U.adjustX(22)+ "px" + "'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
+        ctx.fillStyle = "white";
+        if(this.color === "#5EFF16"){
+            ctx.fillStyle = "#090524";
+        }
+        ctx.textAlign = "center";
+        // if(this.type === "break"){
+        //     if(this.textNumber >= 0) {
+        //         text = window.decoyWords[this.textNumber];
+        //     }
+        // }
+        // else{
+        //     if(this.textNumber >= 0) {
+        //         text = window.textWords[this.textNumber];
+        //     }
+        //     //text = this.textNumber;
+        // }
+
+        ctx.fillText(this.word,this.x + this.width/2,this.y + ((this.height/4)*3));
 
         if (this.powerup === "spring") {
             ctx.fillStyle = "grey";
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(10), U.adjustX(30), U.adjustY(10));
         } else if (this.powerup === "springBoots") {
             ctx.fillStyle = "blue";
-            ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(25), U.adjustX(15), U.adjustY(10));
+            ctx.fillRect(this.x + U.adjustX(55), this.y - U.adjustY(25), U.adjustX(15), U.adjustY(10));
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(25), U.adjustX(15), U.adjustY(10));
             ctx.fillStyle = "grey";
-            ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
+            ctx.fillRect(this.x + U.adjustX(55), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
         } else if(this.powerup == "orbBackward"){
             ctx.beginPath();
@@ -91,6 +91,12 @@ export default class Block {
             ctx.fillStyle = "#5EFF16";
             ctx.fill();
             ctx.stroke();
+        }
+        else if(this.wordType == "monster"){
+            ctx.fillStyle = "grey";
+            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (1/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
+            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (3/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
+            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (5/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
         }
     }
 

@@ -174,10 +174,10 @@ export default class BlockSpawner {
 
     spawnWordType = (index) => {
         const wordChances = {
-            "monster": 25,
+            "monster": 5,
             "textWord": 1
         }
-        if (index > 15 && Math.round(Math.random()* wordChances["monster"]) === wordChances["monster"]){
+        if (index > 5 && Math.round(Math.random()* wordChances["monster"]) === wordChances["monster"]){
             return "monster"
         }
         else if (Math.round(Math.random()* wordChances["textWord"]) === wordChances["textWord"]) {

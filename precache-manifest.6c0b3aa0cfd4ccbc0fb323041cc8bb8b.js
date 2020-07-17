@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea7bde4a355b3e61742ec0f236311e27",
+    "revision": "089ae039e0413e4361d64a64782931eb",
     "url": "/bashamayim-hi/index.html"
   },
   {
-    "revision": "1e6ae775c2933d6a0792",
-    "url": "/bashamayim-hi/static/css/main.dc0a14bb.chunk.css"
+    "revision": "93f2808a80c302e72bcc",
+    "url": "/bashamayim-hi/static/css/main.5f361e03.chunk.css"
   },
   {
-    "revision": "74bd38b22e24ae2daff3",
-    "url": "/bashamayim-hi/static/js/2.4a4347cd.chunk.js"
+    "revision": "2561a7894e3dccddbe4d",
+    "url": "/bashamayim-hi/static/js/2.667e22bf.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/bashamayim-hi/static/js/2.4a4347cd.chunk.js.LICENSE.txt"
+    "url": "/bashamayim-hi/static/js/2.667e22bf.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1e6ae775c2933d6a0792",
-    "url": "/bashamayim-hi/static/js/main.b06eb64a.chunk.js"
+    "revision": "93f2808a80c302e72bcc",
+    "url": "/bashamayim-hi/static/js/main.0f156b85.chunk.js"
   },
   {
     "revision": "b2aacfab54104160f515",

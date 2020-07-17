@@ -1,6 +1,4 @@
-import Monst from "./Monst";
 import BHUtils from './BHUtils';
-let M = new Monst();
 let U = new BHUtils();
 
 export default class Block {

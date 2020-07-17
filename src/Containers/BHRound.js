@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {decoyWords, textWords, ecc, exodus} from "../Resources/text_samples";
+import {textWords, ecc, exodus} from "../Resources/text_samples";
 import Utils from '../Classes/Utils';
 import BHMain from "../gameplay/BHMain";
 import {TextChapters} from "../Resources/texts";
@@ -54,6 +54,7 @@ export default class BHRound extends Component {
     verseListsToCleanedWords = (decoyVerseLists) => {
         let decoyWords = decoyVerseLists.flat();
         decoyWords = this.shuffleArray(decoyWords.join(' ').split(/[\s\u05BE]+/).filter(x => this.checkOverlap(x,textWords)));
+        decoyWords = decoyWords.join(" ").replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "").split(/[\s\u05BE]+/);
         return decoyWords;
     }
 

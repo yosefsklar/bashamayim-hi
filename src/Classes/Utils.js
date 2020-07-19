@@ -1,12 +1,16 @@
-export default class Utils{
+export default class Utils {
 
-    removeHTML(textArr){
-        return textArr.map(x => x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g,"").replace(/<[^>]*>/g,""));
+    removeHTML(textArr) {
+        return textArr.map(x => x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g, "").replace(/<[^>]*>/g, ""));
 
     }
 
+    /*
+    * Takes in string returns string
+    * */
+
     stripVowels(rawString) {
-        return rawString.replace(/[\u0591-\u05C7]/g,"")
+        return rawString.replace(/[\u0591-\u05C7]/g, "")
     }
 
     shuffleArray(array) {
@@ -16,5 +20,14 @@ export default class Utils{
         }
     }
 
+    /*
+    * Takes in string returns array of words
+    * */
 
-}
+    stripCantillation = (words) => {
+        return words.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "").split(/[\s\u05BE]+/);
+
+    };
+
+
+};

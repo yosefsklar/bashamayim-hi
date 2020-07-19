@@ -22,6 +22,8 @@ export default class BHGame extends Component {
              level = {"hard"}
              newGame = {this.setGameDefault}
              continueGame = {this.continueGame}
+             text={"Genesis"}
+             startChapter={1}
     />
      );
     }

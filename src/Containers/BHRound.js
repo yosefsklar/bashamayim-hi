@@ -16,14 +16,16 @@ export default class BHRound extends Component {
     }
 
     componentDidMount() {
-        this.updateCanvas();
-        this.fetchSingleChapterText()
-            .then((textWords) => {
-                return this.generateDecoyWords(this.props.text,textWords)
-                    .then((decoyWords) => {
-                        let game = new BHMain(this.refs.canvas, this.props.level, textWords, decoyWords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
-                    })
-            })
+            console.log("URL name : " + this.props.text);
+            console.log("URL chapter : " + this.props.startChapter);
+            this.updateCanvas();
+            this.fetchSingleChapterText()
+                .then((textWords) => {
+                    return this.generateDecoyWords(this.props.text, textWords)
+                        .then((decoyWords) => {
+                            let game = new BHMain(this.refs.canvas, this.props.level, textWords, decoyWords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
+                        })
+                })
     }
 
     updateCanvas = () => {

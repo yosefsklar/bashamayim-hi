@@ -1,0 +1,59 @@
+.Btn {
+    background-color: deepskyblue;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.Answer{
+    height: 115px;
+    min-width: 225px;
+    box-shadow: 0 2px 1px darkblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.Big{
+    height: 125px;
+    min-width: 200px;
+    box-shadow: 0 2px 3px darkblue;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.Config{
+    height:60px;
+    min-width: 50px;
+    font-size: 1.6rem;
+    margin: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 3px darkblue;
+
+}
+
+.Btn:hover{
+    background-color: #046cff;
+    border: solid 3px white;
+    box-shadow: 1px 1px gray;
+}
+
+p{
+    margin-bottom: auto;
+}
+
+.Small{
+    background-color: rgba(0,191,255,0.5);
+    font-size: 1.0rem;
+    height: 40px;
+    min-width: 100px;
+    margin-top: 10px;
+    box-shadow: 0 1px 1px darkblue;
+}
+
+.Wide{min-width: 200px;}

@@ -1,18 +1,21 @@
 import React from 'react';
+import {Route, Switch} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import BHGame from './Containers/BHGame';
 
 function App() {
 
-
-
-
   return (
     <div className="App">
-      <BHGame/>
+        <div className="App">
+            <Switch>
+                 <Route path="/game" component={BHGame}/>
+             </Switch>
+         </div>
     </div>
   );
 }
 
 export default App;
+//

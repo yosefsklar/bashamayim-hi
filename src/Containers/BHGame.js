@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import BHRound from "./BHRound";
 
+import {Switch, Route} from "react-router-dom";
+
+import GameDefault from "../Components/GameDefault";
+
 export default class BHGame extends Component {
 
     constructor(props) {
@@ -13,6 +17,8 @@ export default class BHGame extends Component {
                 endVerse: 0,
                 textName: 'Sefarim',
                 parsha: new TextItem('',0,"",0),
+                gameDefault: true,
+                gameStart: false,
             };
     }
 
@@ -24,6 +30,7 @@ export default class BHGame extends Component {
             })
             .then((data) => {
                 this.retrieveParsha(data, data.calendar_items.findIndex(item =>  item.title.en === "Parashat Hashavua"));
+                this.setGameDefault();
             }).catch((err)=> {
                 console.log(err);
             })
@@ -42,35 +49,58 @@ export default class BHGame extends Component {
         })
     }
 
+    setParsha = () =>{
+        this.setState({
+            textUrlName : this.state.parsha.textUrlName,
+            startChapter : this.state.parsha.startChapter
+        },() => this.props.history.push(`${this.props.match.url}/gamePlay`))
+    }
+
 
     setGameDefault = () => {
-        console.log("New game")
+        this.setState({
+            //           gameDefault: true,
+            //           gamePlay: false,
+            textUrlName: '',
+            startChapter: 'Chapters',
+            textName: 'Sefarim',
+            startVerse: 0,
+            endChapter: 0,
+            endVerse: 0,
+            level:'',
+            gameNumber: this.state.gameNumber + 1
+        }, () => this.props.history.push(`${this.props.match.url}/gameDefault`))
     }
+
+
 
     continueGame = () =>{
         console.log("Continue game")
     }
 
     render() {
-        let display;
-        if(this.state.parsha.startChapter != 0){
-            display = (
-                <BHRound
-                level = {"hard"}
-                newGame = {this.setGameDefault}
-                continueGame = {this.continueGame}
-                text={this.state.parsha.textUrlName}
-                startChapter={this.state.parsha.startChapter}
-            />
-            )
-        }
-        else {
-            display = (<div></div>)
-        }
         return (
-            display
-        );
+            <div>
+                <Switch>
+                    <Route path={`${this.props.match.url}/gamePlay`}>
+                        <BHRound
+                            level = {"hard"}
+                            newGame = {this.setGameDefault}
+                            continueGame = {this.continueGame}
+                            text={this.state.parsha.textUrlName}
+                            startChapter={this.state.parsha.startChapter}
+                        />
+                    </Route>
+                    <Route path={`${this.props.match.url}/gameDefault`}>
+                        <GameDefault setParsha={this.setParsha}
+                                     parsha={this.state.parsha}
+                                     textUrlName={this.state.textUrlName}
+                                     startChapter={this.state.startChapter}/>
+                    </Route>
+                </Switch>
+            </div>
 
+        );
     }
 }
 

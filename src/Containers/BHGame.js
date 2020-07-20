@@ -20,7 +20,6 @@ export default class BHGame extends Component {
                 gameDefault: true,
                 gameStart: false,
             };
-            // this.props.history.push(`${this.props.match.url}/`)
 
     }
 

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bashamayim-hi/precache-manifest.8823fb49049622b35befdd3a3d92d9b3.js"
+  "/bashamayim-hi/precache-manifest.800be460b8096de693be8fa1dc2d93bf.js"
 );
 
 self.addEventListener('message', (event) => {

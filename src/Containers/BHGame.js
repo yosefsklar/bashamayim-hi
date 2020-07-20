@@ -20,6 +20,8 @@ export default class BHGame extends Component {
                 gameDefault: true,
                 gameStart: false,
             };
+            this.props.history.push(`${this.props.match.url}/`)
+
     }
 
     componentDidMount() {
@@ -69,7 +71,7 @@ export default class BHGame extends Component {
             endVerse: 0,
             level:'',
             gameNumber: this.state.gameNumber + 1
-        }, () => this.props.history.push(`${this.props.match.url}gameDefault`))
+        }, () => this.props.history.push(`${this.props.match.url}/gameDefault`))
     }
 
 
@@ -91,7 +93,7 @@ export default class BHGame extends Component {
                             startChapter={this.state.parsha.startChapter}
                         />
                     </Route>
-                    <Route path={`${this.props.match.url}gameDefault`}>
+                    <Route path={`${this.props.match.url}/gameDefault`}>
                         <GameDefault setParsha={this.setParsha}
                                      parsha={this.state.parsha}
                                      textUrlName={this.state.textUrlName}

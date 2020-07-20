@@ -10,7 +10,7 @@ function App() {
     <div className="App">
         <div className="App">
             <Switch>
-                 <Route path="/bashamayim-hi" component={BHGame}/>
+                 <Route path="/" component={BHGame}/>
              </Switch>
          </div>
     </div>

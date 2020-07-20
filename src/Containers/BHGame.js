@@ -54,7 +54,7 @@ export default class BHGame extends Component {
         this.setState({
             textUrlName : this.state.parsha.textUrlName,
             startChapter : this.state.parsha.startChapter
-        },() => this.props.history.push(`${this.props.match.url}/gamePlay`))
+        },() => this.props.history.push(`${this.props.match.url}gamePlay`))
     }
 
 
@@ -70,7 +70,7 @@ export default class BHGame extends Component {
             endVerse: 0,
             level:'',
             gameNumber: this.state.gameNumber + 1
-        }, () => this.props.history.push(`${this.props.match.url}/gameDefault`))
+        }, () => this.props.history.push(`${this.props.match.url}gameDefault`))
     }
 
 

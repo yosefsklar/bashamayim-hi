@@ -83,7 +83,7 @@ export default class BHGame extends Component {
         return (
             <div>
                 <Switch>
-                    <Route path={`${this.props.match.url}/gamePlay`}>
+                    <Route path={`${this.props.match.url}gamePlay`}>
                         <BHRound
                             level = {"hard"}
                             newGame = {this.setGameDefault}
@@ -92,7 +92,7 @@ export default class BHGame extends Component {
                             startChapter={this.state.parsha.startChapter}
                         />
                     </Route>
-                    <Route path={`${this.props.match.url}/gameDefault`}>
+                    <Route path={`${this.props.match.url}gameDefault`}>
                         <GameDefault setParsha={this.setParsha}
                                      parsha={this.state.parsha}
                                      textUrlName={this.state.textUrlName}

@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
     </list>
@@ -117,6 +116,10 @@
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>
     <state x="1345" y="-907" key="SettingsEditor/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596335924243" />
+    <state x="1565" y="-1235" width="710" height="996" key="find.popup" timestamp="1596380260907">
+      <screen x="0" y="-1440" width="2560" height="1400" />
+    </state>
+    <state x="1565" y="-1235" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596380260907" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

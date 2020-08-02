@@ -15,6 +15,10 @@ const GameCustomText = (props) => {
         <BtnConfigSmall setConfig={() => props.setLevel('easy')}>Easy</BtnConfigSmall>
         <BtnConfigSmall setConfig={() => props.setLevel('hard')}>Hard</BtnConfigSmall>
     </div>)
+    //If text and chapter already chosen
+    if(props.textName != "Sefarim" && props.startChapter != "Chapters"){
+        props.setGamePlay();
+    }
     return (
         <Modal>
             <h1>Game: בשמים היא</h1>
@@ -29,9 +33,7 @@ const GameCustomText = (props) => {
                 </div>
             </div>
             <GameCustomChapter setStartChapter={props.setStartChapter} textUrlName={props.textUrlName}  startChapter={props.startChapter}/>
-            <div className={'container'}>
-                {(props.textName != "Sefarim" && props.startChapter != "Chapters") && chooseLevel}
-            </div>
+
         </Modal>
     )
 }

@@ -165,6 +165,13 @@ export default class BHGame extends Component {
         })
         //this.props.history.push(`${this.props.match.url}/gameCustomText`);
     }
+
+    setGamePlay = () =>{
+        this.setState({
+            gameState: GameState.play
+        })
+        //this.props.history.push(`${this.props.match.url}/gameCustomText`);
+    }
     //TODO rename
     setText = (text) => {
         this.setState({
@@ -189,7 +196,6 @@ export default class BHGame extends Component {
             startVerse: 0,
             endChapter: 0,
             endVerse: 0,
-            level:'',
             gameNumber: this.state.gameNumber + 1,
             gameState: GameState.default
         }
@@ -236,7 +242,7 @@ export default class BHGame extends Component {
                                 textUrlName={this.state.textUrlName}
                                 startChapter={this.state.startChapter}
                                 setStartChapter={this.setStartChapter}
-                                setLevel={this.setLevel}/>
+                                setGamePlay={this.setGamePlay}/>
             )
         }
         return (

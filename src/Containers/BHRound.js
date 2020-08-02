@@ -19,10 +19,18 @@ export default class BHRound extends Component {
             console.log("URL name : " + this.props.text);
             console.log("URL chapter : " + this.props.startChapter);
             this.updateCanvas();
-            this.fetchSingleChapterText()
-                .then((textWords) => {
+            let textPromise;
+            if (this.props.endChapter){
+                textPromise = this.fetchMultiChapterText()
+                console.log("multi")
+            }
+            else{
+                textPromise = this.fetchSingleChapterText()
+            }
+            textPromise.then((textWords) => {
                     return this.generateDecoyWords(this.props.text, textWords)
                         .then((decoyWords) => {
+                            console.log(textWords);
                             let game = new BHMain(this.refs.canvas, this.props.level, textWords, decoyWords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
                         })
                 })
@@ -54,6 +62,30 @@ export default class BHRound extends Component {
             })
         return fetchPromise;
     };
+
+    fetchMultiChapterText = () => {
+        let difference = (this.props.endChapter - this.props.startChapter) + 1;
+        let chapters = Array.from(new Array(difference), (x,i) => i + this.props.startChapter);
+       return Promise.all(chapters.map((chapterNumber, index) => {
+            let fetchString = 'https://www.sefaria.org/api/texts/' + this.props.text + '.' + chapterNumber + '?custom=ashkenazi';
+            return fetch(fetchString)
+                .then((response) => {
+                    return response.json();
+                }).then((data) => {
+                    //now were return an array of promises that resolve to provide the hebrew text of its chapter
+                    return U.removeHTML(data.he);
+                })
+        })).then((chapterTexts) => {
+            chapterTexts[0].splice(0,this.props.startVerse - 1);
+            chapterTexts[chapterTexts.length - 1].splice(this.props.endVerse);
+            let finalText = chapterTexts.flat();
+            console.log(chapterTexts);
+            console.log("Haftorah 2 chapater");
+            return finalText;
+        }).then((data) => {
+           return U.stripCantillation(data.join(" "))
+       })
+    }
 
     /*
     * Takes the text chosen for the game and the list of words that that text contains

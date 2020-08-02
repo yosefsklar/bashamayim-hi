@@ -102,11 +102,19 @@ export default class BHGame extends Component {
         }
         else if (this.state.gameState == GameState.play){
             toRender = (<BHRound
+                // level = {"hard"}
+                // newGame = {this.setGameDefault}
+                // continueGame = {this.continueGame}
+                // text={this.state.parsha.textUrlName}
+                // startChapter={this.state.parsha.startChapter}
                 level = {"hard"}
                 newGame = {this.setGameDefault}
                 continueGame = {this.continueGame}
-                text={this.state.parsha.textUrlName}
-                startChapter={this.state.parsha.startChapter}
+                text={"Genesis"}
+                startChapter={1}
+                startVerse={10}
+                endChapter={2}
+                endVerse={10}
             />)
         }
         return (

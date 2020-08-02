@@ -5,9 +5,9 @@ import {BtnConfigSmall, BtnConfigWide} from "./assets/buttons";
 
 const GameDefault = (props) => {
 
-    let options =   (<
-        div className={'row'}>
-        <BtnConfigWide setConfig={props.setParsha} title={"Parshat Hashavua"}>{props.parsha.textName}</BtnConfigWide>
+    let options =   (<div className={'row'}>
+            <BtnConfigWide setConfig={props.setParsha} title={"Parshat Hashavua"}>{props.parsha.textName}</BtnConfigWide>
+            <BtnConfigWide setConfig={props.setHaftorah} title={"Haftorat Hashavua"}>{props.haftorah.textName}</BtnConfigWide>
         </div>
     )
 

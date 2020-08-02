@@ -5,6 +5,12 @@ import {Switch, Route} from "react-router-dom";
 
 import GameDefault from "../Components/GameDefault";
 
+const GameState = {
+    "default" : 1,
+    "play" : 2,
+    "start" : 3,
+}
+
 export default class BHGame extends Component {
 
     constructor(props) {
@@ -17,8 +23,7 @@ export default class BHGame extends Component {
                 endVerse: 0,
                 textName: 'Sefarim',
                 parsha: new TextItem('',0,"",0),
-                gameDefault: true,
-                gameStart: false,
+                gameState: GameState.default
             };
 
     }
@@ -53,8 +58,11 @@ export default class BHGame extends Component {
     setParsha = () =>{
         this.setState({
             textUrlName : this.state.parsha.textUrlName,
-            startChapter : this.state.parsha.startChapter
-        },() => this.props.history.push(`${this.props.match.url}/gamePlay`))
+            startChapter : this.state.parsha.startChapter,
+            gameState: GameState.play
+        }
+        //,() => this.props.history.push(`${this.props.match.url}/gamePlay`)
+        )
     }
 
 
@@ -69,8 +77,11 @@ export default class BHGame extends Component {
             endChapter: 0,
             endVerse: 0,
             level:'',
-            gameNumber: this.state.gameNumber + 1
-        }, () => this.props.history.push(`${this.props.match.url}/gameDefault`))
+            gameNumber: this.state.gameNumber + 1,
+            gameState: GameState.default
+        }
+        //, () => this.props.history.push(`${this.props.match.url}/gameDefault`)
+        )
     }
 
 
@@ -79,26 +90,28 @@ export default class BHGame extends Component {
         console.log("Continue game")
     }
 
+
     render() {
+        let toRender;
+        if (this.state.gameState == GameState.default){
+            toRender = (
+                <GameDefault setParsha={this.setParsha}
+                             parsha={this.state.parsha}
+                             textUrlName={this.state.textUrlName}
+                             startChapter={this.state.startChapter}/>)
+        }
+        else if (this.state.gameState == GameState.play){
+            toRender = (<BHRound
+                level = {"hard"}
+                newGame = {this.setGameDefault}
+                continueGame = {this.continueGame}
+                text={this.state.parsha.textUrlName}
+                startChapter={this.state.parsha.startChapter}
+            />)
+        }
         return (
             <div>
-                <Switch>
-                    <Route path={`${this.props.match.url}/gamePlay`}>
-                        <BHRound
-                            level = {"hard"}
-                            newGame = {this.setGameDefault}
-                            continueGame = {this.continueGame}
-                            text={this.state.parsha.textUrlName}
-                            startChapter={this.state.parsha.startChapter}
-                        />
-                    </Route>
-                    <Route path={`${this.props.match.url}/gameDefault`}>
-                        <GameDefault setParsha={this.setParsha}
-                                     parsha={this.state.parsha}
-                                     textUrlName={this.state.textUrlName}
-                                     startChapter={this.state.startChapter}/>
-                    </Route>
-                </Switch>
+                {toRender}
             </div>
 
         );

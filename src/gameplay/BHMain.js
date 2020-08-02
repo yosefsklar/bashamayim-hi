@@ -143,8 +143,8 @@ export default class BHMain {
             if (this.delta > this.interval) {
                 let backgroundImage = new Image();
                 backgroundImage.src = backgroundImagePng;
-                this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth, U.screenHeight);
-                this.ctx.strokeRect(0,0,U.screenWidth, U.screenHeight);
+                this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth -1, U.screenHeight);
+                this.ctx.strokeRect(0,0,U.screenWidth -1, U.screenHeight);
                 this.ctx.fill();
                 for (let i = 0; i < this.blocks.length; i++) {
                     if (!this.blocks[i].broken) {

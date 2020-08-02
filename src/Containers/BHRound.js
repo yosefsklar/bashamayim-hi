@@ -16,13 +16,10 @@ export default class BHRound extends Component {
     }
 
     componentDidMount() {
-            console.log("URL name : " + this.props.text);
-            console.log("URL chapter : " + this.props.startChapter);
             this.updateCanvas();
             let textPromise;
             if (this.props.endChapter){
                 textPromise = this.fetchMultiChapterText()
-                console.log("multi")
             }
             else{
                 textPromise = this.fetchSingleChapterText()
@@ -30,7 +27,6 @@ export default class BHRound extends Component {
             textPromise.then((textWords) => {
                     return this.generateDecoyWords(this.props.text, textWords)
                         .then((decoyWords) => {
-                            console.log(textWords);
                             let game = new BHMain(this.refs.canvas, this.props.level, textWords, decoyWords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
                         })
                 })
@@ -53,7 +49,6 @@ export default class BHRound extends Component {
             }).then((data) => {
                 data['he'] = U.removeHTML(data.he);
                 if (this.props.startVerse && this.props.endVerse) {
-                    console.log("Haftorah 1 chapater");
                     data['he'] = data['he'].filter((verse, index) => index >= this.props.startVerse - 1 && index < this.props.endVerse);
                 }
                 return data['he'];
@@ -79,8 +74,6 @@ export default class BHRound extends Component {
             chapterTexts[0].splice(0,this.props.startVerse - 1);
             chapterTexts[chapterTexts.length - 1].splice(this.props.endVerse);
             let finalText = chapterTexts.flat();
-            console.log(chapterTexts);
-            console.log("Haftorah 2 chapater");
             return finalText;
         }).then((data) => {
            return U.stripCantillation(data.join(" "))
@@ -98,7 +91,6 @@ export default class BHRound extends Component {
             let keys = Object.keys(TextChapters['tanakh']);
             let key = keys[Math.floor(Math.random() * keys.length)]
             let chapterNumber = Math.ceil(Math.random() * TextChapters['tanakh'][key]);
-            console.log(key + " " + chapterNumber)
             decoyTexts.push(key);
             decoyChapters.push(chapterNumber);
         }
@@ -150,7 +142,6 @@ export default class BHRound extends Component {
     };
 
     setIndex = () => {
-        console.log("Index Set")
     };
 
     render() {

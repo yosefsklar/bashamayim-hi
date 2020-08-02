@@ -2,11 +2,12 @@ import Block from './Block';
 import BlockSpawner from './BlockSpawner';
 import Player from './Player';
 import BHUtils from './BHUtils';
-import backgroundImagePng from '../Images/cloudbackgroundRed2.png';
+import backgroundImagePng from '../Images/sky5.jpg';
 // import {updateDoodleGame} from "../doodleRest";
 
 const U = new BHUtils();
 
+// <a href="https://pngtree.com/free-backgrounds">free background photos from pngtree.com</a>
 export default class BHMain {
     holdingLeftKey = false;
     holdingRightKey = false;
@@ -29,7 +30,6 @@ export default class BHMain {
 
 
     constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, config) {
-        console.log(mainText);
         this.mainText = mainText;
         this.ctx = canvas.getContext("2d");
         canvas.width = U.screenWidth;
@@ -143,9 +143,8 @@ export default class BHMain {
             if (this.delta > this.interval) {
                 let backgroundImage = new Image();
                 backgroundImage.src = backgroundImagePng;
-                this.ctx.fillStyle = "#ffefe4";
-                this.ctx.fillRect(0, 0, U.screenWidth, U.screenHeight);
                 this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth, U.screenHeight);
+                this.ctx.strokeRect(0,0,U.screenWidth, U.screenHeight);
                 this.ctx.fill();
                 for (let i = 0; i < this.blocks.length; i++) {
                     if (!this.blocks[i].broken) {

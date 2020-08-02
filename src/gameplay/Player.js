@@ -105,7 +105,6 @@ export default class Player {
                         blocks[i].color = 'red';
                     } else {
                         if(blocks[i].last){
-                            console.log("Win");
                             this.win = true;
                         }
                         this.jump(blocks, i,lowestBlock);
@@ -155,11 +154,8 @@ export default class Player {
     }
     jump = (blocks,blockIndex,lowestBlock) => {
         if(blocks[blockIndex].wordType === 'textWord') {
-            console.log("high " + this.highestWordIndex);
             this.highestWordIndex = Math.max(this.highestWordIndex, blocks[blockIndex].wordIndex);
-            console.log("word " + blocks[blockIndex].wordIndex)
-            console.log( Math.max(this.highestWordIndex, blocks[blockIndex].wordIndex));
-        }
+               }
         let block = blocks[blockIndex];
         let powerup = block.powerup;
         let type = block.type;

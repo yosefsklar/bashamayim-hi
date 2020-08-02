@@ -21,10 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,10 +120,15 @@
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>
     <state x="1345" y="-907" key="SettingsEditor/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596335924243" />
-    <state x="1565" y="-1235" width="710" height="996" key="find.popup" timestamp="1596380260907">
+    <state x="191" y="0" width="1094" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596402407040">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="1373" y="-1340" width="1094" height="1207" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596396560541" />
+    <state x="191" y="0" width="1094" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.0.1280.680" timestamp="1596402407040" />
+    <state x="1565" y="-1235" width="710" height="996" key="find.popup" timestamp="1596396489721">
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>
-    <state x="1565" y="-1235" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596380260907" />
+    <state x="1565" y="-1235" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596396489721" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

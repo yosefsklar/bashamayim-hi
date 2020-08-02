@@ -91,9 +91,7 @@ export default class BHGame extends Component {
         if(haftorahEnding.includes('.')){
 
             haftorahEndChapter = parseInt(haftorahEnding.split('.')[0]);
-            console.log("haftorah end chapter: " + haftorahEndChapter);
             haftorahEndVerse = parseInt(haftorahEnding.split('.')[1]);
-            console.log("haftorah end chapter: " + haftorahEndVerse);
 
         }
         else{
@@ -206,7 +204,6 @@ export default class BHGame extends Component {
 
 
     continueGame = () =>{
-        console.log("Continue game")
     }
 
 

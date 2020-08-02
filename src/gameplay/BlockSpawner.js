@@ -115,7 +115,6 @@ export default class BlockSpawner {
                 if(this.textIndex > mainText.length){
                     break;
                 }
-                console.log(wordIndex);
                 let block = new Block(x,y,powerup,type,word,wordType,wordIndex,last);
                 blocks.push(block);
             }
@@ -166,7 +165,6 @@ export default class BlockSpawner {
         if (Math.round(Math.random() * blockChances["sideways"]) === blockChances["sideways"]) {
             return "sideways";
         } else if (Math.round(Math.random() * blockChances["rising"]) === blockChances["rising"]) {
-            console.log("rising block created " + this.textIndex);
             return "rising";
         }
         return "regular";

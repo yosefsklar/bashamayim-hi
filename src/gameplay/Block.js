@@ -92,9 +92,9 @@ export default class Block {
         }
         else if(this.wordType == "spike"){
             ctx.fillStyle = "grey";
-            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (1/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
-            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (3/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
-            U.downwardTriangle(ctx,this.x + U.adjustX(this.width * (5/5)),this.y + this.height,U.adjustY(15),U.adjustY(15));
+            U.downwardTriangle(ctx,this.x + (this.width * (0/6)),this.y + this.height,this.width/6,this.width/6);
+            U.downwardTriangle(ctx,this.x + (this.width * (2/6)),this.y + this.height,this.width/6,this.width/6);
+            U.downwardTriangle(ctx,this.x + (this.width * (4/6)),this.y + this.height,this.width/6,this.width/6);
         }
     }
 

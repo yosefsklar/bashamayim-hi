@@ -8,7 +8,10 @@ const GameDefault = (props) => {
     let options =   (<div className={'row'}>
             <BtnConfigWide setConfig={props.setParsha} title={"Parshat Hashavua"}>{props.parsha.textName}</BtnConfigWide>
             <BtnConfigWide setConfig={props.setHaftorah} title={"Haftorat Hashavua"}>{props.haftorah.textName}</BtnConfigWide>
-        </div>
+            <div className="w-100"></div>
+            <BtnConfigWide setConfig={props.set929} title={"929"}>{props.nine.textName}</BtnConfigWide>
+
+    </div>
     )
 
 

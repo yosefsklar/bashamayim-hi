@@ -24,6 +24,7 @@ export default class BHGame extends Component {
                 textName: 'Sefarim',
                 parsha: new TextItem('',0,"",0),
                 haftorah: new TextItem("",0,"",0),
+                nine: new TextItem("",0,"",0),
                 gameState: GameState.default
             };
 
@@ -38,6 +39,7 @@ export default class BHGame extends Component {
             .then((data) => {
                 this.retrieveParsha(data, data.calendar_items.findIndex(item =>  item.title.en === "Parashat Hashavua"));
                 this.retrieveHaftorah(data, data.calendar_items.findIndex(item =>  item.title.en === "Haftarah"));
+                this.retrieve929(data, data.calendar_items.findIndex(item =>  item.title.en === "929"));
                 this.setGameDefault();
             }).catch((err)=> {
                 console.log(err);
@@ -104,6 +106,20 @@ export default class BHGame extends Component {
 
     }
 
+    retrieve929 =(data,index)=>{
+        let text = data.calendar_items[index].url.split("-")[0].split(".");
+        let nineText = text[0];
+        let nineStart = parseInt(text[1]);
+        let nineName = data.calendar_items[index].displayValue.en;
+        let nineEnd = data.calendar_items[index].url.split("-")[0].split(".")[0] +
+            data.calendar_items[index].url.split("-")[1];
+
+
+        this.setState({
+            nine : new TextItem(nineText,nineStart,nineName,nineEnd)
+        })
+    }
+
     setParsha = () =>{
         this.setState({
             textUrlName : this.state.parsha.textUrlName,
@@ -130,6 +146,17 @@ export default class BHGame extends Component {
          //   () => this.props.history.push(`${this.props.match.url}/gameDefaultLevel`)
         )
     }
+
+    set929 = () =>{
+        this.setState({
+            textUrlName : this.state.nine.textUrlName,
+            startChapter : this.state.nine.startChapter,
+            gameState: GameState.play
+        }
+        //, () => this.props.history.push(`${this.props.match.url}/gameDefaultLevel`)
+        )
+    }
+
 
     setGameDefault = () => {
         this.setState({
@@ -164,6 +191,8 @@ export default class BHGame extends Component {
                              parsha={this.state.parsha}
                              setHaftorah={this.setHaftorah}
                              haftorah={this.state.haftorah}
+                             set929={this.set929}
+                             nine={this.state.nine}
                              textUrlName={this.state.textUrlName}
                              startChapter={this.state.startChapter}/>)
         }

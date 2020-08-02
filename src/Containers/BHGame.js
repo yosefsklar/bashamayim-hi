@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BHRound from "./BHRound";
+import GameCustomText from "../Components/GameCustomText";
 
 import {Switch, Route} from "react-router-dom";
 
@@ -9,6 +10,7 @@ const GameState = {
     "default" : 1,
     "play" : 2,
     "start" : 3,
+    "custom": 4
 }
 
 export default class BHGame extends Component {
@@ -157,6 +159,25 @@ export default class BHGame extends Component {
         )
     }
 
+    setCustom = () =>{
+        this.setState({
+            gameState: GameState.custom
+        })
+        //this.props.history.push(`${this.props.match.url}/gameCustomText`);
+    }
+    //TODO rename
+    setText = (text) => {
+        this.setState({
+            textName : text,
+            textUrlName: text.replace(/_/g)
+        })
+    }
+
+    setStartChapter = (chapter) => {
+        this.setState({
+            startChapter : chapter
+        })
+    }
 
     setGameDefault = () => {
         this.setState({
@@ -193,6 +214,7 @@ export default class BHGame extends Component {
                              haftorah={this.state.haftorah}
                              set929={this.set929}
                              nine={this.state.nine}
+                             setCustom={this.setCustom}
                              textUrlName={this.state.textUrlName}
                              startChapter={this.state.startChapter}/>)
         }
@@ -207,6 +229,15 @@ export default class BHGame extends Component {
                 startVerse={this.state.startVerse}
                 endVerse={this.state.endVerse}
             />)
+        }
+        else if (this.state.gameState = GameState.custom){
+            toRender = (<GameCustomText setText={this.setText}
+                                textName={this.state.textName}
+                                textUrlName={this.state.textUrlName}
+                                startChapter={this.state.startChapter}
+                                setStartChapter={this.setStartChapter}
+                                setLevel={this.setLevel}/>
+            )
         }
         return (
             <div>

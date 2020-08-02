@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
     </list>
@@ -14,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="tsconfig.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -25,7 +46,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../personal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/styles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,16 +59,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Components" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\styles" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\gameplay" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Classes" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Resources" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Containers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SklarJoseph\bashamayim-hi\src\styles" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Components" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\styles" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\gameplay" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -74,6 +96,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="1406" y="-856" key="FileChooserDialogImpl" timestamp="1596339143620">

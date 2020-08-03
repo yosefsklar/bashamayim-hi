@@ -27,6 +27,9 @@ export default class BHMain {
     playing;
     reported = false;
     id = '';
+    // date = new Date();
+    // time = this.date.getTime();
+    // delta = 1;
 
 
     constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, config) {
@@ -130,15 +133,26 @@ export default class BHMain {
         this.playing = false;
     }
 
-
+    //todo i think this is all wrong, we want paint -> request -> update
+    // make fps configurable
     loop =()=> {
             if(this.playing) {
-                requestAnimationFrame(this.loop);
+                setTimeout(function() {
+                    requestAnimationFrame(this.loop);
+                    //TODO change the movement relative to 1/60 of a second
+                    // let now = this.date.getTime();
+                    // this.delta = (now - this.time) / (1000/60);
+                    //
+                    // this.time = now;
+
+                    // Drawing code goes here
+                }.bind(this), (1000/60));
             }
 
             //This sets the FPS to 60
             this.now = Date.now();
             this.delta = this.now - this.then;
+            // let updateDelta = this.delta / this.interval
             //if an interval has elapsed, rerender
             if (this.delta > this.interval) {
                 let backgroundImage = new Image();
@@ -148,12 +162,13 @@ export default class BHMain {
                 this.ctx.fill();
                 for (let i = 0; i < this.blocks.length; i++) {
                     if (!this.blocks[i].broken) {
+                        //todo the blocks should take in the delta
                         this.blocks[i].update();
                         this.blocks[i].draw(this.ctx);
                     }
                 }
 
-
+                //todo the blocks should take in the delta
                 this.player.update(this.lowestBlock, this.difficulty, this.blocks, this.blockOffset, this.ctx, this.holdingLeftKey, this.holdingRightKey);
                 if (!this.player.dead) {
                     this.player.draw(this.ctx);
@@ -177,3 +192,4 @@ export default class BHMain {
     }
 
 }
+//https://stackoverflow.com/questions/21333890/how-can-i-reduce-lag-in-the-following-html-5-canvas-game

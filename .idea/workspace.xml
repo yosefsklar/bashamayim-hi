@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +124,10 @@
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>
     <state x="1565" y="-1235" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596396489721" />
+    <state x="212" y="-389" key="run.anything.popup" timestamp="1596405299423">
+      <screen x="0" y="-1440" width="2560" height="1400" />
+    </state>
+    <state x="212" y="-389" key="run.anything.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596405299423" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -105,7 +105,14 @@ export default class BHRound extends Component {
                     return U.removeHTML(data.he);
                 })
         })).then(decoyWordLists => {
-            return U.stripCantillation(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
+            let strippedWords = U.stripCantillation(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
+            // if there are fewer decoy words than text words, double the decoy words
+            while(textWords.length > strippedWords.length){
+                strippedWords = strippedWords.concat(strippedWords);
+            }
+            console.log(textWords);
+            console.log(strippedWords);
+            return strippedWords;
         })
     };
 

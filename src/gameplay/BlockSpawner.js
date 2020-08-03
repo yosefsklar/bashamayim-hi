@@ -129,16 +129,16 @@ export default class BlockSpawner {
     spawnPowerup = (level) => {
         const powerupChances = {
             "easy": {
-                "spring": this.config.easy.spring,
-                "springBoots": this.config.easy.springBoots,
-                "orbBack": this.config.easy.orbBack,
-                "orbForward": this.config.easy.orbForward
+                "spring": this.config.easy.powerUps.spring,
+                "springBoots": this.config.easy.powerUps.springBoots,
+                "orbBack": this.config.easy.powerUps.orbBack,
+                "orbForward": this.config.easy.powerUps.orbForward
             },
             "hard": {
-                "spring": this.config.hard.spring,
-                "springBoots": this.config.hard.springBoots,
-                "orbBack": this.config.hard.orbBack,
-                "orbForward": this.config.hard.orbForward
+                "spring": this.config.hard.powerUps.spring,
+                "springBoots": this.config.hard.powerUps.springBoots,
+                "orbBack": this.config.hard.powerUps.orbBack,
+                "orbForward": this.config.hard.powerUps.orbForward
             }
         };
 

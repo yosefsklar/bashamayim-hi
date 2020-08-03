@@ -148,6 +148,8 @@ export default class BHMain {
                     // Drawing code goes here
                 }.bind(this), (1000/60));
             }
+            //TODO actively change the size of the cnavas
+
 
             //This sets the FPS to 60
             this.now = Date.now();

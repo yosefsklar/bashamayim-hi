@@ -22,7 +22,12 @@
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BHUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BlockSpawner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

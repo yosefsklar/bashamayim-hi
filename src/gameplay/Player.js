@@ -206,7 +206,7 @@ export default class Player {
         if (wordType === "textWord") {
             if (powerup === "spring") {
                // this.ySpeed = U.adjustY(-20);
-                this.ySpeed = U.adjustY(-14);
+                this.ySpeed = U.adjustY(-16.5);
             }
         }
 

@@ -78,14 +78,14 @@ export default class Block {
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
         } else if(this.powerup == "orbBackward"){
             ctx.beginPath();
-            ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), 10, 0, 2 * Math.PI);
+            ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
             ctx.fillStyle = "white";
             ctx.fill();
             ctx.stroke();
         }
         else if(this.powerup == "orbForward"){
             ctx.beginPath();
-            ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), 10, 0, 2 * Math.PI);
+            ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
             ctx.fillStyle = "#5EFF16";
             ctx.fill();
             ctx.stroke();

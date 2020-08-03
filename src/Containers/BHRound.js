@@ -152,10 +152,6 @@ export default class BHRound extends Component {
     };
 
     render() {
-        let screenHeight = 800;
-        let screenWidth = 500;
-        screenHeight = window.screen.height;
-        screenWidth = window.screen.height * (5 / 8);
         return (
             <canvas ref="canvas" width={0} height={0}/>
         );

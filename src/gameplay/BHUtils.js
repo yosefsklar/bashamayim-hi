@@ -1,5 +1,5 @@
 export default class BHUtils {
-
+    //TODO more advanced logic
     screenHeight = window.screen.height  - 125;
     screenWidth = this.screenHeight * (5/8);
 

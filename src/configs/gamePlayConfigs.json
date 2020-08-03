@@ -13,10 +13,10 @@
     "blockFreq": {
     },
     "powerUps": {
-      "spring": 40,
-      "springBoots": 120,
-      "orbBack": 30,
-      "orbForward": 35
+      "spring": 20,
+      "springBoots": 100,
+      "orbBack": 20,
+      "orbForward": 20
     },
     "blockTypeFreq": {
       "sideways": 5,
@@ -32,17 +32,17 @@
       "rising": 5
     },
     "powerUps": {
-      "spring": 40,
-      "springBoots": 120,
-      "orbBack": 30,
-      "orbForward": 35
+      "spring": 20,
+      "springBoots": 100,
+      "orbBack": 20,
+      "orbForward": 20
     },
     "blockTypeFreq": {
       "sideways": 5,
       "rising": 5
     },
     "wordTypeFreq": {
-      "spike": 5
+      "spike": 15
     }
   }
 }

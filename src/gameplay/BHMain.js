@@ -155,30 +155,40 @@ export default class BHMain {
             // let updateDelta = this.delta / this.interval
             //if an interval has elapsed, rerender
             if (this.delta > this.interval) {
+                //PAINT
                 let backgroundImage = new Image();
                 backgroundImage.src = backgroundImagePng;
                 this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth -1, U.screenHeight);
                 this.ctx.strokeRect(0,0,U.screenWidth -1, U.screenHeight);
                 this.ctx.fill();
+
+                for (let i = 0; i < this.blocks.length; i++) {
+                    if (!this.blocks[i].broken) {
+                        //todo the blocks should take in the delta
+                        this.blocks[i].draw(this.ctx);
+                    }
+                }
+                if (!this.player.dead) {
+                    this.player.draw(this.ctx);
+                }
+
+                this.showScore(this.player.yDistanceTravelled, this.score, this.ctx);
+
+                this.ctx.fill();
+                //UPDATE
                 for (let i = 0; i < this.blocks.length; i++) {
                     if (!this.blocks[i].broken) {
                         //todo the blocks should take in the delta
                         this.blocks[i].update();
-                        this.blocks[i].draw(this.ctx);
                     }
                 }
 
                 //todo the blocks should take in the delta
                 this.player.update(this.lowestBlock, this.difficulty, this.blocks, this.blockOffset, this.ctx, this.holdingLeftKey, this.holdingRightKey);
-                if (!this.player.dead) {
-                    this.player.draw(this.ctx);
-                }
+
 
                 this.setIndex(this.player.highestWordIndex);
 
-                this.showScore(this.player.yDistanceTravelled, this.score, this.ctx);
-
-                this.ctx.fill();
                 this.then = this.now - (this.delta % this.interval);
             }
             if(this.player.dead){

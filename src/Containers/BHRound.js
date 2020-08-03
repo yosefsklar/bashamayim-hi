@@ -107,7 +107,7 @@ export default class BHRound extends Component {
         })).then(decoyWordLists => {
             let strippedWords = U.stripCantillation(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
             // if there are fewer decoy words than text words, double the decoy words
-            while(textWords.length > strippedWords.length){
+            while((textWords.length * (5/4)) > strippedWords.length){
                 strippedWords = strippedWords.concat(strippedWords);
             }
             console.log(textWords);

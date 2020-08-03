@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8642ba1a902694d4461687b72d0dba4",
+    "revision": "d6290829985207e846d299207e5ae452",
     "url": "/bashamayim-hi/index.html"
   },
   {
-    "revision": "5ed0f03ff9a78345dab5",
+    "revision": "841f491df22c402727d6",
     "url": "/bashamayim-hi/static/css/main.27e0ffee.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bashamayim-hi/static/js/2.7485d1fd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ed0f03ff9a78345dab5",
-    "url": "/bashamayim-hi/static/js/main.e181e781.chunk.js"
+    "revision": "841f491df22c402727d6",
+    "url": "/bashamayim-hi/static/js/main.25571737.chunk.js"
   },
   {
     "revision": "b2aacfab54104160f515",
@@ -28,11 +28,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bashamayim-hi/static/media/SRHirsch.0135d99e.png"
   },
   {
-    "revision": "f597f27654f21837524e2d1d16c87653",
-    "url": "/bashamayim-hi/static/media/cloudbackgroundRed2.f597f276.png"
-  },
-  {
     "revision": "ee7cd8ed2dcec943251eb2763684fc6f",
     "url": "/bashamayim-hi/static/media/logo.ee7cd8ed.svg"
+  },
+  {
+    "revision": "fa8636106a591563012332a2e91d5a45",
+    "url": "/bashamayim-hi/static/media/sky5.fa863610.jpg"
   }
 ]);

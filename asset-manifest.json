@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bashamayim-hi/static/css/main.27e0ffee.chunk.css",
-    "main.js": "/bashamayim-hi/static/js/main.1fa0793d.chunk.js",
-    "main.js.map": "/bashamayim-hi/static/js/main.1fa0793d.chunk.js.map",
+    "main.js": "/bashamayim-hi/static/js/main.934ecdc4.chunk.js",
+    "main.js.map": "/bashamayim-hi/static/js/main.934ecdc4.chunk.js.map",
     "runtime-main.js": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js",
     "runtime-main.js.map": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js.map",
     "static/js/2.7485d1fd.chunk.js": "/bashamayim-hi/static/js/2.7485d1fd.chunk.js",
     "static/js/2.7485d1fd.chunk.js.map": "/bashamayim-hi/static/js/2.7485d1fd.chunk.js.map",
     "index.html": "/bashamayim-hi/index.html",
-    "precache-manifest.78ecb9504548b8195a931c87217fcb7d.js": "/bashamayim-hi/precache-manifest.78ecb9504548b8195a931c87217fcb7d.js",
+    "precache-manifest.cb8a8784ac35ea7d5d8398b49a1b02fd.js": "/bashamayim-hi/precache-manifest.cb8a8784ac35ea7d5d8398b49a1b02fd.js",
     "service-worker.js": "/bashamayim-hi/service-worker.js",
     "static/css/main.27e0ffee.chunk.css.map": "/bashamayim-hi/static/css/main.27e0ffee.chunk.css.map",
     "static/js/2.7485d1fd.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.7485d1fd.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.bbac2c5d.js",
     "static/js/2.7485d1fd.chunk.js",
     "static/css/main.27e0ffee.chunk.css",
-    "static/js/main.1fa0793d.chunk.js"
+    "static/js/main.934ecdc4.chunk.js"
   ]
 }

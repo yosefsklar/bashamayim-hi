@@ -170,6 +170,7 @@ export default class BHGame extends Component {
         })
         //this.props.history.push(`${this.props.match.url}/gameCustomText`);
     }
+
     //TODO rename
     setText = (text) => {
         this.setState({
@@ -239,7 +240,8 @@ export default class BHGame extends Component {
                                 textUrlName={this.state.textUrlName}
                                 startChapter={this.state.startChapter}
                                 setStartChapter={this.setStartChapter}
-                                setGamePlay={this.setGamePlay}/>
+                                setGamePlay={this.setGamePlay}
+                                setGameDefault={this.setGameDefault}/>
             )
         }
         return (

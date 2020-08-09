@@ -11,6 +11,7 @@ const U = new BHUtils();
 export default class BHMain {
     holdingLeftKey = false;
     holdingRightKey = false;
+    canvas;
     dead = false;
     difficulty = 0;
     score = 0;
@@ -37,7 +38,7 @@ export default class BHMain {
         this.ctx = canvas.getContext("2d");
         canvas.width = U.screenWidth;
         canvas.height = U.screenHeight;
-
+        this.canvas = canvas;
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);
         this.config = config;
@@ -90,6 +91,7 @@ export default class BHMain {
         if (e.keyCode === 78 && (this.player.dead || this.player.win)) {
             //continue - Points need to reset
           this.newGame();
+          this.playing = false;
         }
 
     }
@@ -149,7 +151,9 @@ export default class BHMain {
                 }.bind(this), (1000/60));
             }
             //TODO actively change the size of the cnavas
-
+            //U.setDimensions()
+            // this.canvas.width = U.screenWidth
+            // this.canvas.height = U.screenHeight
 
             //This sets the FPS to 60
             this.now = Date.now();
@@ -158,41 +162,39 @@ export default class BHMain {
             //if an interval has elapsed, rerender
             if (this.delta > this.interval) {
                 //PAINT
-                let backgroundImage = new Image();
-                backgroundImage.src = backgroundImagePng;
-                this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth -1, U.screenHeight);
-                this.ctx.strokeRect(0,0,U.screenWidth -1, U.screenHeight);
-                this.ctx.fill();
 
-                for (let i = 0; i < this.blocks.length; i++) {
-                    if (!this.blocks[i].broken) {
-                        //todo the blocks should take in the delta
-                        this.blocks[i].draw(this.ctx);
+                    let backgroundImage = new Image();
+                    backgroundImage.src = backgroundImagePng;
+                    this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth -1, U.screenHeight);
+                    this.ctx.strokeRect(0,0,U.screenWidth -1, U.screenHeight);
+                    this.ctx.fill();
+                    for (let i = 0; i < this.blocks.length; i++) {
+                        if (!this.blocks[i].broken) {
+                            //todo the blocks should take in the delta
+                            this.blocks[i].draw(this.ctx);
+                        }
                     }
-                }
-                if (!this.player.dead) {
+
+                if (!this.player.dead && !this.player.win) {
                     this.player.draw(this.ctx);
                 }
 
-                this.showScore(this.player.yDistanceTravelled, this.score, this.ctx);
 
-                this.ctx.fill();
-                //UPDATE
-                for (let i = 0; i < this.blocks.length; i++) {
-                    if (!this.blocks[i].broken) {
-                        //todo the blocks should take in the delta
-                        this.blocks[i].update();
+                    this.ctx.fill();
+                    //UPDATE
+                    for (let i = 0; i < this.blocks.length; i++) {
+                        if (!this.blocks[i].broken) {
+                            //todo the blocks should take in the delta
+                            this.blocks[i].update();
+                        }
                     }
+
+                    //todo the blocks should take in the delta
+                    this.player.update(this.lowestBlock, this.difficulty, this.blocks, this.blockOffset, this.ctx, this.holdingLeftKey, this.holdingRightKey);
+                    this.setIndex(this.player.highestWordIndex);
                 }
-
-                //todo the blocks should take in the delta
-                this.player.update(this.lowestBlock, this.difficulty, this.blocks, this.blockOffset, this.ctx, this.holdingLeftKey, this.holdingRightKey);
-
-
-                this.setIndex(this.player.highestWordIndex);
-
+                this.showScore(this.player.yDistanceTravelled, this.score, this.ctx);
                 this.then = this.now - (this.delta % this.interval);
-            }
             if(this.player.dead){
                 if(!this.reported){
   //                  updateDoodleGame(this.id,"died",this.score);

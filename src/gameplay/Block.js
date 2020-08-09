@@ -6,10 +6,10 @@ export default class Block {
     height = U.adjustY(25);
     directionH = "right";
     directionV = "down";
-    riseCount = 0;
+    riseCount = 0;c
     passedText = false;
     highlight = false;
-    moveTime = 10;
+    moveTime = 10;n
     broken = false;
     color = "#00bfff";
     killed = false;
@@ -138,7 +138,7 @@ export default class Block {
 
                 if (this.moveTime === 0) {
                     this.directionH = "left";
-                    this.moveTime = 10;
+                    this.moveTime = 100;
                 }
             } else {
                 this.x -= U.adjustX(1);
@@ -146,7 +146,7 @@ export default class Block {
 
                 if (this.moveTime === 0) {
                     this.directionH = "right";
-                    this.moveTime = 10;
+                    this.moveTime = 100;
                 }
             }
         }

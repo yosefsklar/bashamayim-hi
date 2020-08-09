@@ -32,7 +32,7 @@ const GameCustomText = (props) => {
                     {dropdownArray}
                 </div>
             </div>
-            <GameCustomChapter setStartChapter={props.setStartChapter} textUrlName={props.textUrlName}  startChapter={props.startChapter}/>
+            <GameCustomChapter setStartChapter={props.setStartChapter} textUrlName={props.textUrlName}  startChapter={props.startChapter} setGameDefault={props.setGameDefault}/>
 
         </Modal>
     )

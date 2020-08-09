@@ -1,8 +1,26 @@
 export default class BHUtils {
     //TODO more advanced logic
-    screenHeight = window.screen.height  - 125;
-    screenWidth = this.screenHeight * (5/8);
 
+    screenHeight;
+    screenWidth;
+
+    constructor() {
+        this.setDimensions()
+    }
+    setDimensions = () =>{
+        if (window.innerHeight >= 1000){
+            this.screenHeight = 1000;
+            this.screenWidth = this.screenHeight * (5/8)
+        }
+        else if (window.innerHeight >= 800){
+            this.screenHeight = 800;
+            this.screenWidth = this.screenHeight * (5/8)
+        }
+        else{
+            this.screenHeight = 650;
+            this.screenWidth = this.screenHeight * (5/8)
+        }
+    }
     roundedRect = (ctx, x, y, width, height, radius) =>{
         ctx.beginPath();
         ctx.moveTo(x, y + radius);

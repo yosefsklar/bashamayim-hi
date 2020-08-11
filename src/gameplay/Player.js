@@ -54,8 +54,9 @@ export default class Player {
             ctx.textAlign = "center";
             ctx.strokeStyle = 'black';
             ctx.lineWidth = 1;
-            ctx.fillText("Congradulations!", U.screenWidth / 2, U.screenHeight / 2);
-            ctx.strokeText("Congradulations!", U.screenWidth / 2, U.screenHeight / 2);
+            ctx.fillText("Congratulations!", U.screenWidth / 2, U.screenHeight / 2);
+            ctx.strokeText("Congratulations!", U.screenWidth / 2, U.screenHeight / 2);
+
             ctx.font = "bold " + U.adjustX(36)+ "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
             ctx.fillStyle = "#5EFF16";
             ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, (U.screenHeight / 2) + 100);

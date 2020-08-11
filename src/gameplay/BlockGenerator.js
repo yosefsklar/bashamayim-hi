@@ -125,7 +125,9 @@ export default class BlockGenerator {
         for (let i = 0; i < lowestBlock - 2; i++) {
             blocks.shift();
         }
-        this.section++;
+        if(this.section < 3){
+            this.section++
+        }
     }
 
     generatePowerup = (level) => {
@@ -167,7 +169,6 @@ export default class BlockGenerator {
         if (Math.round(Math.random() * blockChances["sideways"]) === blockChances["sideways"]) {
             return "sideways" ;
         } else if (Math.round(Math.random() * blockChances["rising"]) === blockChances["rising"]) {
-            let sectionFactor = blockChances["sideways"] - (blockChances["sideways"] * (this.section * .25))
             return "rising";
         }
         return "regular";

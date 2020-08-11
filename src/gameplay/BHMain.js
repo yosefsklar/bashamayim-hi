@@ -79,6 +79,7 @@ export default class BHMain {
             this.blocks[0].powerup = 0;
             this.blocks[0].word = "";
             this.reported = false;
+            this.BGenerate.section = 0
             this.BGenerate.setIndex(this.player.highestWordIndex);
             this.BGenerate.blockGenerator(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty, this.mainText);
             this.player.yDistanceTravelled = 0;

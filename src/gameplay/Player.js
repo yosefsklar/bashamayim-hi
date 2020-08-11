@@ -1,5 +1,5 @@
 import BHUtils from './BHUtils';
-import BlockSpawner from './BlockSpawner';
+import BlockGenerator from './BlockGenerator';
 import playerImage from '../Images/SRHirsch.png';
 
 const U = new BHUtils();
@@ -18,13 +18,13 @@ export default class Player {
     dead = false;
     win = false;
     highestWordIndex = 0;
-    constructor(gravity,setLowestBlock,blockSpawner, mainText){
+    constructor(gravity,setLowestBlock,blockGenerator, mainText){
         this.img = new Image();
         //img.src = "Images/rightPlayer.png";
         this.img.src = playerImage;
         this.gravity = gravity;
         this.setLowestBlock = setLowestBlock;
-        this.BSpawn = blockSpawner;
+        this.BGenerate = blockGenerator;
         this.mainText = mainText;
 
     }
@@ -141,7 +141,7 @@ export default class Player {
             if (difficulty < 0) {
                 difficulty += 1;
             }
-            this.BSpawn.blockSpawner(lowestBlock,blocks,blockOffset,difficulty,this.mainText);
+            this.BGenerate.blockGenerator(lowestBlock,blocks,blockOffset,difficulty,this.mainText);
         }
 
         // for (let i = 0; i < blocks.length; i++) {

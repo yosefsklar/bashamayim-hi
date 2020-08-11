@@ -3,10 +3,11 @@ import Block from "./Block";
 let U = new BHUtils();
 let B = new Block();
 
-export default class BlockSpawner {
+export default class BlockGenerator {
 
     decoyIndex = 0;
     textIndex = 0;
+    section = 0
     constructor(level,mainText,decoyText,config){
         this.level = level;
         this.mainText = mainText;
@@ -17,7 +18,7 @@ export default class BlockSpawner {
     setIndex = (num) => {
         this.textIndex = num;
     }
-    blockSpawner = (lowestBlock,blocks,blockOffset,difficulty,mainText) => {
+    blockGenerator = (lowestBlock,blocks,blockOffset,difficulty,mainText) => {
         let i;
         if (lowestBlock === 0) {
             i = 1;
@@ -42,7 +43,7 @@ export default class BlockSpawner {
                         wordType = "textWord";
                     }
                     else {
-                        wordType = this.spawnWordType(i);
+                        wordType = this.generateWordType(i);
                     }
                 }
 
@@ -53,18 +54,18 @@ export default class BlockSpawner {
                             wordType = "decoyWord";
                         }
                         else {
-                            wordType = this.spawnWordType();
+                            wordType = this.generateWordType();
                         }
                     }
                     else {
-                        wordType = this.spawnWordType();
+                        wordType = this.generateWordType();
                     }
                 }
                 else {
-                    wordType = this.spawnWordType();
+                    wordType = this.generateWordType();
                 }
 
-                type = this.spawnBlockType();
+                type = this.generateBlockType();
 
 
 
@@ -72,7 +73,7 @@ export default class BlockSpawner {
                 if (powerup !== 0) {
                 }
                 else if (wordType === "textWord") {
-                    powerup = this.spawnPowerup(this.level);
+                    powerup = this.generatePowerup(this.level);
                 }
 
                 [word,wordType,wordIndex] = this.attributeWordToBlock(wordType);
@@ -124,9 +125,10 @@ export default class BlockSpawner {
         for (let i = 0; i < lowestBlock - 2; i++) {
             blocks.shift();
         }
+        this.section++;
     }
 
-    spawnPowerup = (level) => {
+    generatePowerup = (level) => {
         const powerupChances = {
             "easy": {
                 "spring": this.config.easy.powerUps.spring,
@@ -154,23 +156,24 @@ export default class BlockSpawner {
         return 0;
     }
 
-    spawnBlockType = () => {
+    generateBlockType = () => {
         const blockChances = {
             //1 out of every 15 block TODO this is where we will come up with the decoys, probably 1/4,
-            "sideways": this.config.hard.blockTypeFreq.sideways,
-            "rising": this.config.hard.blockTypeFreq.rising
+            "sideways": this.config.hard.blockTypeFreq.sideways * ((5 - this.section )/5),
+            "rising": this.config.hard.blockTypeFreq.rising * ((5 - this.section )/5)
         };
 
 
         if (Math.round(Math.random() * blockChances["sideways"]) === blockChances["sideways"]) {
-            return "sideways";
+            return "sideways" ;
         } else if (Math.round(Math.random() * blockChances["rising"]) === blockChances["rising"]) {
+            let sectionFactor = blockChances["sideways"] - (blockChances["sideways"] * (this.section * .25))
             return "rising";
         }
         return "regular";
     }
 
-    spawnWordType = (index) => {
+    generateWordType = (index) => {
         const wordChances = {
             "spike": this.config.hard.wordTypeFreq.spike,
             "textWord": 1

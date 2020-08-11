@@ -1,5 +1,5 @@
 import Block from './Block';
-import BlockSpawner from './BlockSpawner';
+import BlockGenerator from './BlockGenerator';
 import Player from './Player';
 import BHUtils from './BHUtils';
 import backgroundImagePng from '../Images/sky5.jpg';
@@ -42,11 +42,11 @@ export default class BHMain {
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);
         this.config = config;
-        this.BSpawn = new BlockSpawner(level, mainText,decoyText, this.config)
+        this.BGenerate = new BlockGenerator(level, mainText,decoyText, this.config)
         this.level = level;
         this.setFirstBlock(this.blocks);
-        this.player = new Player(this.gravity,this.setLowestBlock,this.BSpawn,this.mainText);
-        this.BSpawn.blockSpawner(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty,this.mainText);
+        this.player = new Player(this.gravity,this.setLowestBlock,this.BGenerate,this.mainText);
+        this.BGenerate.blockGenerator(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty,this.mainText);
         this.id = id;
         this.newGame = newGame;
         this.continueGame =  continueGame;
@@ -79,8 +79,8 @@ export default class BHMain {
             this.blocks[0].powerup = 0;
             this.blocks[0].word = "";
             this.reported = false;
-            this.BSpawn.setIndex(this.player.highestWordIndex);
-            this.BSpawn.blockSpawner(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty, this.mainText);
+            this.BGenerate.setIndex(this.player.highestWordIndex);
+            this.BGenerate.blockGenerator(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty, this.mainText);
             this.player.yDistanceTravelled = 0;
             this.player.x = U.adjustX(300);
             this.player.y = U.adjustY(550);

@@ -21,13 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/configs/gamePlayConfigs.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/BHUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Block.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BlockGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BlockGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +97,8 @@
       <workItem from="1595983583625" duration="2497000" />
       <workItem from="1596499795558" duration="1181000" />
       <workItem from="1596582787246" duration="2552000" />
-      <workItem from="1596937311341" duration="2896000" />
+      <workItem from="1596937311341" duration="4471000" />
+      <workItem from="1597103159195" duration="2962000" />
     </task>
     <servers />
   </component>
@@ -134,10 +131,10 @@
     </state>
     <state x="1373" y="-1340" width="1094" height="1207" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596396560541" />
     <state x="191" y="0" width="1094" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.0.1280.680" timestamp="1596402407040" />
-    <state x="589" y="-1131" width="710" height="996" key="find.popup" timestamp="1596499892645">
+    <state x="1283" y="-1036" width="710" height="996" key="find.popup" timestamp="1597112682296">
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>
-    <state x="589" y="-1131" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596499892645" />
+    <state x="1283" y="-1036" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1597112682296" />
     <state x="393" y="-1267" width="1541" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.0.1280.680" timestamp="1596416485016" />
     <state x="212" y="-389" key="run.anything.popup" timestamp="1596405299423">
       <screen x="0" y="-1440" width="2560" height="1400" />

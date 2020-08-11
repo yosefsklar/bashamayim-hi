@@ -69,13 +69,6 @@ export default class Block {
         if (this.powerup === "spring") {
             ctx.fillStyle = "grey";
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(10), U.adjustX(30), U.adjustY(10));
-        } else if (this.powerup === "springBoots") {
-            ctx.fillStyle = "blue";
-            ctx.fillRect(this.x + U.adjustX(55), this.y - U.adjustY(25), U.adjustX(15), U.adjustY(10));
-            ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(25), U.adjustX(15), U.adjustY(10));
-            ctx.fillStyle = "grey";
-            ctx.fillRect(this.x + U.adjustX(55), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
-            ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(15), U.adjustX(15), U.adjustY(15));
         } else if(this.powerup == "orbBackward"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);

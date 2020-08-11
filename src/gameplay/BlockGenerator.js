@@ -134,13 +134,11 @@ export default class BlockGenerator {
         const powerupChances = {
             "easy": {
                 "spring": this.config.easy.powerUps.spring,
-                "springBoots": this.config.easy.powerUps.springBoots,
                 "orbBack": this.config.easy.powerUps.orbBack,
                 "orbForward": this.config.easy.powerUps.orbForward
             },
             "hard": {
                 "spring": this.config.hard.powerUps.spring,
-                "springBoots": this.config.hard.powerUps.springBoots,
                 "orbBack": this.config.hard.powerUps.orbBack,
                 "orbForward": this.config.hard.powerUps.orbForward
             }
@@ -148,8 +146,6 @@ export default class BlockGenerator {
 
         if (Math.round(Math.random() * powerupChances[level]["spring"]) === 0) {
             return "spring";
-        } else if (Math.round(Math.random() * powerupChances[level]["springBoots"]) === 0) {
-            return "springBoots";
         } else if(Math.round(Math.random() * powerupChances[level]["orbBackward"]) === 0) {
             return "orbBackward";
         } else if(Math.round(Math.random() * powerupChances[level]["orbForward"]) === 0) {

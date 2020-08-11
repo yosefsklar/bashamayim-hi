@@ -11,7 +11,6 @@ export default class Player {
     height = U.adjustY(80);
     xSpeed = U.adjustX(6.7);
     ySpeed = 0;
-    springBootsDurability = 0;
     orbDurability  = 0;
     yDistanceTravelled = 0;
     direction = "left";
@@ -168,10 +167,6 @@ export default class Player {
         //this.ySpeed = U.adjustY( -13.2);
         this.ySpeed = U.adjustY( -11.5);
 
-        if (powerup === "springBoots") {
-            this.springBootsDurability = 6;
-        }
-
         if (powerup === "orbBackward") {
             this.orbDurability = 10;
         }
@@ -211,10 +206,6 @@ export default class Player {
             }
         }
 
-        if (this.springBootsDurability !== 0) {
-            this.ySpeed = U.adjustY(-13);
-            this.springBootsDurability -= 1;
-        }
         // for (let i = lowestBlock; i < blocks.length; i++) {
         //     if (blocks[i].y <= this.y + this.height - blocks[i].height) {
         //         break;
@@ -241,23 +232,5 @@ export default class Player {
 
     draw = (ctx) => {
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
-
-        if (this.springBootsDurability !== 0) {
-            if (this.direction === "right") {
-                ctx.fillStyle = "blue";
-                ctx.fillRect(this.x + U.adjustX(10), this.y + U.adjustY(66), U.adjustX(15), U.adjustY(10));
-                ctx.fillRect(this.x + U.adjustX(33), this.y + U.adjustY(66), U.adjustX(15), U.adjustY(10));
-                ctx.fillStyle = "grey";
-                ctx.fillRect(this.x + U.adjustX(10), this.y + U.adjustY(76), U.adjustX(15), U.adjustY(15));
-                ctx.fillRect(this.x + U.adjustX(33), this.y + U.adjustY(76), U.adjustX(15), U.adjustY(15));
-            } else {
-                ctx.fillStyle = "blue";
-                ctx.fillRect(this.x + U.adjustX(30), this.y + U.adjustY(66), U.adjustX(15), U.adjustY(10));
-                ctx.fillRect(this.x + U.adjustX(53), this.y + U.adjustY(66), U.adjustX(15), U.adjustY(10));
-                ctx.fillStyle = "grey";
-                ctx.fillRect(this.x + U.adjustX(30), this.y + U.adjustY(76), U.adjustX(15), U.adjustY(15));
-                ctx.fillRect(this.x + U.adjustX(53), this.y + U.adjustY(76), U.adjustX(15), U.adjustY(15));
-            }
-        }
     }
 }

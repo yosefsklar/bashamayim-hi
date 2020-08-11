@@ -71,7 +71,6 @@ export default class BHMain {
             this.lowestBlock = 0;
             this.difficulty = 0;
             this.score = 0;
-            this.player.springBootsDurability = 0;
             this.blocks.push(new Block());
             this.blocks[0].x = U.adjustX(300);
             this.blocks[0].y = U.adjustY(650);

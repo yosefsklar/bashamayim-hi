@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from '../styles/GameCustomText.module.css';
 import Modal from './assets/Modal';
-import {BtnConfigSmall, BtnConfigWide} from "./assets/buttons";
+import {BtnConfigSmall, BtnConfigWide, BtnSmall} from "./assets/buttons";
 
 const GameDefault = (props) => {
 
@@ -33,10 +33,14 @@ export const GameDefaultLevel = (props) => {
     return (
         <Modal>
             <h1>Game: בשמים היא</h1>
+            <h2>{props.textName}</h2>
             <p>Select a level</p>
             <div className={'row'}>
                 <BtnConfigWide setConfig={() => props.setLevel('easy')}>Easy</BtnConfigWide>
                 <BtnConfigWide setConfig={() => props.setLevel('hard')}>Hard</BtnConfigWide>
+            </div>
+            <div style={{textAlign: 'left'}}>
+                <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>
             </div>
         </Modal>
     );

@@ -4,13 +4,14 @@ import GameCustomText from "../Components/GameCustomText";
 
 import {Switch, Route} from "react-router-dom";
 
-import GameDefault from "../Components/GameDefault";
+import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
 
 const GameState = {
     "default" : 1,
     "play" : 2,
     "start" : 3,
-    "custom": 4
+    "custom": 4,
+    "level" : 5
 }
 
 export default class BHGame extends Component {
@@ -24,6 +25,7 @@ export default class BHGame extends Component {
                 endChapter: 0,
                 endVerse: 0,
                 textName: 'Sefarim',
+                level:'',
                 parsha: new TextItem('',0,"",0),
                 haftorah: new TextItem("",0,"",0),
                 nine: new TextItem("",0,"",0),
@@ -123,11 +125,12 @@ export default class BHGame extends Component {
     setParsha = () =>{
         this.setState({
             textUrlName : this.state.parsha.textUrlName,
+            textName : this.state.parsha.textName,
             startChapter : this.state.parsha.startChapter,
             startVerse: this.state.parsha.startVerse,
             endChapter: this.state.parsha.endChapter,
             endVerse: this.state.parsha.endVerse,
-            gameState: GameState.play
+            gameState: GameState.level
         }
         //,() => this.props.history.push(`${this.props.match.url}/gamePlay`)
         )
@@ -136,11 +139,12 @@ export default class BHGame extends Component {
     setHaftorah = () =>{
         this.setState({
             textUrlName : this.state.haftorah.textUrlName,
+            textName : this.state.haftorah.textName,
             startChapter : this.state.haftorah.startChapter,
             startVerse: this.state.haftorah.startVerse,
             endChapter: this.state.haftorah.endChapter,
             endVerse: this.state.haftorah.endVerse,
-            gameState: GameState.play
+            gameState: GameState.level
         }
         //,
          //   () => this.props.history.push(`${this.props.match.url}/gameDefaultLevel`)
@@ -150,8 +154,9 @@ export default class BHGame extends Component {
     set929 = () =>{
         this.setState({
             textUrlName : this.state.nine.textUrlName,
+            textName : this.state.nine.textName,
             startChapter : this.state.nine.startChapter,
-            gameState: GameState.play
+            gameState: GameState.level
         }
         //, () => this.props.history.push(`${this.props.match.url}/gameDefaultLevel`)
         )
@@ -169,6 +174,15 @@ export default class BHGame extends Component {
             gameState: GameState.play
         })
         //this.props.history.push(`${this.props.match.url}/gameCustomText`);
+    }
+
+    setLevel = (level) => {
+        this.setState({
+            level : level,
+            gameState: GameState.play
+        },
+          //  () => this.props.history.push(`${this.props.match.url}/gamePlay`)
+        )
     }
 
     //TODO rename
@@ -195,6 +209,7 @@ export default class BHGame extends Component {
             startVerse: 0,
             endChapter: 0,
             endVerse: 0,
+            level: '',
             gameNumber: this.state.gameNumber + 1,
             gameState: GameState.default
         }
@@ -224,7 +239,7 @@ export default class BHGame extends Component {
         }
         else if (this.state.gameState == GameState.play){
             toRender = (<BHRound
-                level = {"hard"}
+                level={this.state.level}
                 newGame = {this.setGameDefault}
                 continueGame = {this.continueGame}
                 text={this.state.textUrlName}
@@ -234,15 +249,22 @@ export default class BHGame extends Component {
                 endVerse={this.state.endVerse}
             />)
         }
-        else if (this.state.gameState = GameState.custom){
+        else if (this.state.gameState == GameState.custom){
             toRender = (<GameCustomText setText={this.setText}
                                 textName={this.state.textName}
                                 textUrlName={this.state.textUrlName}
                                 startChapter={this.state.startChapter}
                                 setStartChapter={this.setStartChapter}
                                 setGamePlay={this.setGamePlay}
-                                setGameDefault={this.setGameDefault}/>
+                                setGameDefault={this.setGameDefault}
+                                setLevel={this.setLevel}/>
             )
+        }
+        else if (this.state.gameState == GameState.level){
+            toRender = (<GameDefaultLevel setLevel={this.setLevel}
+                                          setGameDefault={this.setGameDefault}
+                                          textName={this.state.textName}
+                                            />)
         }
         return (
             <div>

@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import classes from '../styles/GameCustomChapter.module.css';
 import {TextChapters} from "../Resources/texts";
-import {BtnSmall} from "./assets/buttons";
 
 const GameCustomChapter  =(props) => {
 
@@ -25,9 +24,6 @@ const GameCustomChapter  =(props) => {
                 <div className={"dropdown-menu dropdown-menu-right " + classes.scrollable_menu}>
                     {dropdownArray}
                 </div>
-            </div>
-            <div style={{textAlign: 'left'}}>
-                <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>
             </div>
         </div>
     )

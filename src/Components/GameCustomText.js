@@ -3,7 +3,7 @@ import classes from '../styles/GameCustomText.module.css';
 import Modal from './assets/Modal';
 import {TextChapters} from '../Resources/texts';
 import GameCustomChapter from "./GameCustomChapter";
-import {BtnConfigSmall} from "./assets/buttons";
+import {BtnConfigSmall, BtnSmall} from "./assets/buttons";
 
 const GameCustomText = (props) => {
 
@@ -15,10 +15,7 @@ const GameCustomText = (props) => {
         <BtnConfigSmall setConfig={() => props.setLevel('easy')}>Easy</BtnConfigSmall>
         <BtnConfigSmall setConfig={() => props.setLevel('hard')}>Hard</BtnConfigSmall>
     </div>)
-    //If text and chapter already chosen
-    if(props.textName != "Sefarim" && props.startChapter != "Chapters"){
-        props.setGamePlay();
-    }
+
     return (
         <Modal>
             <h1>Game: בשמים היא</h1>
@@ -33,7 +30,12 @@ const GameCustomText = (props) => {
                 </div>
             </div>
             <GameCustomChapter setStartChapter={props.setStartChapter} textUrlName={props.textUrlName}  startChapter={props.startChapter} setGameDefault={props.setGameDefault}/>
-
+            <div className={'container'}>
+                {(props.textName != "Sefarim" && props.startChapter != "Chapters") && chooseLevel}
+            </div>
+            <div style={{textAlign: 'left'}}>
+                <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>
+            </div>
         </Modal>
     )
 }

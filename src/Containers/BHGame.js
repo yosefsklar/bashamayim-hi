@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import BHRound from "./BHRound";
 import GameCustomText from "../Components/GameCustomText";
-
+import GameInstructions from "../Components/GameInstructions";
 import {Switch, Route} from "react-router-dom";
 
 import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
+
 
 const GameState = {
     "default" : 1,
     "play" : 2,
     "start" : 3,
     "custom": 4,
-    "level" : 5
+    "level" : 5,
+    "instruction": 6
 }
 
 export default class BHGame extends Component {
@@ -176,6 +178,14 @@ export default class BHGame extends Component {
         //this.props.history.push(`${this.props.match.url}/gameCustomText`);
     }
 
+
+    setInstruction = (chapter) => {
+        this.setState({
+            gameState: GameState.instruction
+        })
+    }
+
+
     setLevel = (level) => {
         this.setState({
             level : level,
@@ -198,6 +208,7 @@ export default class BHGame extends Component {
             startChapter : chapter
         })
     }
+
 
     setGameDefault = () => {
         this.setState({
@@ -235,7 +246,8 @@ export default class BHGame extends Component {
                              nine={this.state.nine}
                              setCustom={this.setCustom}
                              textUrlName={this.state.textUrlName}
-                             startChapter={this.state.startChapter}/>)
+                             startChapter={this.state.startChapter}
+                             setInstruction={this.setInstruction}/>)
         }
         else if (this.state.gameState == GameState.play){
             toRender = (<BHRound
@@ -258,6 +270,12 @@ export default class BHGame extends Component {
                                 setGamePlay={this.setGamePlay}
                                 setGameDefault={this.setGameDefault}
                                 setLevel={this.setLevel}/>
+            )
+        }
+        else if (this.state.gameState == GameState.instruction){
+            toRender = (<GameInstructions
+                    setGameDefault={this.setGameDefault}
+                />
             )
         }
         else if (this.state.gameState == GameState.level){

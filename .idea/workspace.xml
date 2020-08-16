@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/GameInstructions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/GameInstructions.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomChapter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
     </list>
@@ -36,6 +36,7 @@
       <list>
         <option value="tsconfig.json" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -52,6 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/styles" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -100,7 +102,9 @@
       <workItem from="1596582787246" duration="2552000" />
       <workItem from="1596937311341" duration="4471000" />
       <workItem from="1597103159195" duration="4293000" />
-      <workItem from="1597187003388" duration="4484000" />
+      <workItem from="1597187003388" duration="7035000" />
+      <workItem from="1597278395169" duration="612000" />
+      <workItem from="1597541909161" duration="2469000" />
     </task>
     <servers />
   </component>

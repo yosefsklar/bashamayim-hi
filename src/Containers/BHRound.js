@@ -2,8 +2,9 @@ import React, {Component} from 'react';
 // import {textWords, ecc, exodus} from "../Resources/text_samples";
 import Utils from '../Classes/Utils';
 import BHMain from "../gameplay/BHMain";
+import classes from "styles/BHRound.module.css";
 import {TextChapters} from "../Resources/texts";
-import generate from "@babel/generator";
+import {BtnSmall} from "../Components/assets/buttons";
 
 const gamePlayConfigs = require('../configs/gamePlayConfigs')
 
@@ -12,7 +13,12 @@ const U = new Utils();
 export default class BHRound extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            game: '',
+            index: 0,
+            gameProcessed: false,
+            textHelper: false
+        }
     }
 
     componentDidMount() {
@@ -28,6 +34,11 @@ export default class BHRound extends Component {
                     return this.generateDecoyWords(this.props.text, textWords)
                         .then((decoyWords) => {
                             let game = new BHMain(this.refs.canvas, this.props.level, textWords, decoyWords, 1, this.props.newGame, this.props.continueGame, this.setIndex, gamePlayConfigs);
+                            this.setState({
+                                game: game,
+                                gameProcessed: true,
+                                textWords: textWords
+                            })
                         })
                 })
     }
@@ -148,12 +159,39 @@ export default class BHRound extends Component {
         }
     };
 
-    setIndex = () => {
-    };
+    setIndex =(i)=> {
+        this.setState({
+            index : i
+        })
+        console.log("setting index " + i)
+    }
+
+    setTextHelper = () => {
+        console.log("textHelper")
+        this.setState({
+            textHelper: !this.state.textHelper
+        });
+    }
 
     render() {
         return (
-            <canvas ref="canvas" width={0} height={0}/>
-        );
+            <div className={'row ' + classes.RoundContainer}>
+                <div className={'col-sm '}>
+                    <p></p>
+                </div>
+                <div className={'col-sm '}>
+                    <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
+                </div>
+
+                {this.state.textHelper ?
+                    (<div className={'col-sm '}>
+                        <BtnSmall onClick={this.setTextHelper}>Hide Text</BtnSmall>
+                        <p  className={classes.textBox}>{this.state.textWords.filter((v,i) => i <= this.state.index).join(" ")}</p>
+                    </div>)
+                    : this.state.gameProcessed &&
+                    (<BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>)
+                }
+            </div>
+        )
     }
 };

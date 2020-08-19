@@ -1,0 +1,26 @@
+.RoundContainer {
+  position: relative;
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.Canvas {
+    display: inline-block;
+    flex-grow: 0;
+}
+
+.textBox {
+    font-size: 1.2rem;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 0 2px 1px darkgray;
+    text-align: right;
+    width: 300px;
+    height: 250px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}

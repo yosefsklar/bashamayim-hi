@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/BHRound.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameInstructions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameInstructions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,17 +64,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Classes" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Resources" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Containers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SklarJoseph\bashamayim-hi\src\styles" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Components" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\styles" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\gameplay" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Classes" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Resources" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Containers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -101,7 +102,8 @@
       <workItem from="1597103159195" duration="4293000" />
       <workItem from="1597187003388" duration="7035000" />
       <workItem from="1597278395169" duration="612000" />
-      <workItem from="1597541909161" duration="4801000" />
+      <workItem from="1597541909161" duration="5091000" />
+      <workItem from="1597795032057" duration="818000" />
     </task>
     <servers />
   </component>

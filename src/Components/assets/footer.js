@@ -6,7 +6,7 @@ export class Footer extends Component {
     }
     render() {
         return(
-            <footer className={" row page-footer justify-content-center"}>
+            <footer className={"page-footer justify-content-center"}>
                 Footer
             </footer>
         )

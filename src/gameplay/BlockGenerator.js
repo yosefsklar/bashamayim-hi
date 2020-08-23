@@ -146,8 +146,8 @@ export default class BlockGenerator {
 
         if (Math.round(Math.random() * powerupChances[level]["spring"]) === 0) {
             return "spring";
-        } else if(Math.round(Math.random() * powerupChances[level]["orbBackward"]) === 0) {
-            return "orbBackward";
+        } else if(Math.round(Math.random() * powerupChances[level]["orbBack"]) === 0) {
+            return "orbBack";
         } else if(Math.round(Math.random() * powerupChances[level]["orbForward"]) === 0) {
             return "orbForward";
         }

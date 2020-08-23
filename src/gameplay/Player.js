@@ -167,7 +167,7 @@ export default class Player {
         //this.ySpeed = U.adjustY( -13.2);
         this.ySpeed = U.adjustY( -11.5);
 
-        if (powerup === "orbBackward") {
+        if (powerup === "orbBack") {
             this.orbDurability = 10;
         }
 

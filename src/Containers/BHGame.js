@@ -5,6 +5,7 @@ import GameInstructions from "../Components/GameInstructions";
 import {Switch, Route} from "react-router-dom";
 
 import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
+import {Footer} from "../Components/assets/footer";
 
 
 const GameState = {
@@ -287,8 +288,8 @@ export default class BHGame extends Component {
         return (
             <div>
                 {toRender}
+                <Footer/>
             </div>
-
         );
     }
 }

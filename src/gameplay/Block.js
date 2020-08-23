@@ -69,7 +69,7 @@ export default class Block {
         if (this.powerup === "spring") {
             ctx.fillStyle = "grey";
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(10), U.adjustX(30), U.adjustY(10));
-        } else if(this.powerup == "orbBackward"){
+        } else if(this.powerup == "orbBack"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
             ctx.fillStyle = "white";

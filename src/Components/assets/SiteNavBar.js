@@ -16,12 +16,12 @@ export default class TimeBox extends Component {
     render() {
         return (
             <Navbar className={classes.NavbarOuter} expand="lg">
-                <Navbar.Brand href="#">Sefarcade</Navbar.Brand>
+                <Navbar.Brand href="#">Bashamayim Hi</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        <Nav.Link as={Link} to="/matchingGame" >Play</Nav.Link>
+                        <Nav.Link as={Link} to="/suggestions">Suggestions</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

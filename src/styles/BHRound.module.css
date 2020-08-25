@@ -1,8 +1,8 @@
 .RoundContainer {
   position: relative;
     text-align: center;
-    margin-right: 0;
     margin-left: 0;
+    margin-right: 0;
 }
 
 .Canvas {
@@ -10,6 +10,8 @@
     flex-grow: 0;
 }
 
+.canvasWrap{
+}
 .textBox {
     font-size: 1.2rem;
     border-radius: 25px;
@@ -24,3 +26,4 @@
     display: flex;
     flex-direction: column-reverse;
 }
+

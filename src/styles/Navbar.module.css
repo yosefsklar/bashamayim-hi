@@ -1,6 +1,12 @@
 .NavbarOuter{
-    box-shadow: 0 1px 3px rgba(0,0,0,.2);
-    background: white;
+    box-shadow: 0 1px 3px black;
+    background: #71dffd;
+    height: 2.5rem;
+}
+
+.NavbarInner{
+    color: #61dafb;
+    text-shadow: #046cff ;
 }
 
 

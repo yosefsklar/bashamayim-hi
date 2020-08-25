@@ -20,13 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/styles/BHGame.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Footer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/GameInstructions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameInstructions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/assets/SiteNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/assets/SiteNavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/assets/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/assets/footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/Block.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Block.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/BlockGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BlockGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/BHRound.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BHRound.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Modal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Navbar.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="tsconfig.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -108,7 +118,8 @@
       <workItem from="1597278395169" duration="612000" />
       <workItem from="1597541909161" duration="5091000" />
       <workItem from="1597795032057" duration="2343000" />
-      <workItem from="1598148019911" duration="758000" />
+      <workItem from="1598148019911" duration="6650000" />
+      <workItem from="1598318631803" duration="2045000" />
     </task>
     <servers />
   </component>
@@ -142,12 +153,12 @@
     </state>
     <state x="1373" y="-1340" width="1094" height="1207" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1596396560541" />
     <state x="191" y="0" width="1094" height="685" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/0.-1440.2560.1400@0.0.1280.680" timestamp="1596402407040" />
-    <state x="642" y="146" width="549" height="534" key="find.popup" timestamp="1598148211174">
+    <state x="642" y="146" width="549" height="534" key="find.popup" timestamp="1598149430232">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="1283" y="-1036" width="710" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.-1440.2560.1400" timestamp="1597188027123" />
     <state x="393" y="-1267" width="1541" height="996" key="find.popup/0.0.1280.680/0.-1440.2560.1400@0.0.1280.680" timestamp="1596416485016" />
-    <state x="642" y="146" width="549" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1598148211174" />
+    <state x="642" y="146" width="549" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1598149430232" />
     <state x="212" y="-389" key="run.anything.popup" timestamp="1596405299423">
       <screen x="0" y="-1440" width="2560" height="1400" />
     </state>

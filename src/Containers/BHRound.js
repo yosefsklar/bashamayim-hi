@@ -179,7 +179,7 @@ export default class BHRound extends Component {
                 <div className={'col-sm '}>
                     <p></p>
                 </div>
-                <div className={'col-sm '}>
+                <div className={'col-sm ' + classes.canvasWrap}>
                     <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
                 </div>
 

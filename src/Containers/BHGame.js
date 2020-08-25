@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import BHRound from "./BHRound";
 import GameCustomText from "../Components/GameCustomText";
 import GameInstructions from "../Components/GameInstructions";
+import classes from "styles/BHGame.module.css";
+import SiteNavBar from "Components/assets/SiteNavBar";
 import {Switch, Route} from "react-router-dom";
 
 import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
@@ -286,8 +288,11 @@ export default class BHGame extends Component {
                                             />)
         }
         return (
-            <div>
-                {toRender}
+            <div className={classes.pageContainer}>
+                <div className={classes.contentWrap}>
+                    <SiteNavBar/>
+                    {toRender}
+                </div>
                 <Footer/>
             </div>
         );

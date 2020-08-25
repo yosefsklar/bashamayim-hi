@@ -11,7 +11,8 @@
     top: 20%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
-    margin-top: 100px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     position: relative;
     border-radius: 10px;
 }

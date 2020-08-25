@@ -7,7 +7,6 @@ import backgroundImagePng from '../Images/sky5.jpg';
 
 const U = new BHUtils();
 
-// <a href="https://pngtree.com/free-backgrounds">free background photos from pngtree.com</a>
 export default class BHMain {
     holdingLeftKey = false;
     holdingRightKey = false;

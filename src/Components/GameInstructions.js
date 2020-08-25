@@ -12,7 +12,7 @@ import instructions6 from 'Images/powerup.PNG';
 const GameInstructions = (props) => {
     return (
         <Modal>
-            <h1>Game: בשמים היא</h1>
+            <h1>בשמים היא</h1>
             <h2>Instructions</h2>
             <div className={classes.instructions}>
                 <ul>

@@ -19,7 +19,7 @@ const GameDefault = (props) => {
 
     return (
         <Modal>
-            <h1>Game: בשמים היא</h1>
+            <h1>בשמים היא</h1>
             <p>Select a text</p>
             {options}
         </Modal>

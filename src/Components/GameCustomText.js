@@ -18,7 +18,7 @@ const GameCustomText = (props) => {
 
     return (
         <Modal>
-            <h1>Game: בשמים היא</h1>
+            <h1>בשמים היא</h1>
             <p>Please choose a Sefer</p>
             <div className="btn-group">
                 <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown"

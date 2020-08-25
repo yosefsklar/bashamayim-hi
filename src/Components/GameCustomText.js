@@ -8,7 +8,7 @@ import {BtnConfigSmall, BtnSmall} from "./assets/buttons";
 const GameCustomText = (props) => {
 
     let dropdownArray = Object.keys(TextChapters["tanakh"]).map(function(key, index) {
-        return( <button className="dropdown-item" type="button" onClick={() => props.setText(key)}>{key.replace(/_/g," ")}</button>);
+        return( <button className="dropdown-item" type="button" onClick={() => props.setText(key)}>{key.split("_").join(" ")}</button>);
     });
 
     let chooseLevel =   (<div className={'row'}>

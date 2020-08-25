@@ -201,8 +201,8 @@ export default class BHGame extends Component {
     //TODO rename
     setText = (text) => {
         this.setState({
-            textName : text,
-            textUrlName: text.replace(/_/g)
+            textName : text.split("_").join(" "),
+            textUrlName: text
         })
     }
 

@@ -20,23 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/BHGame.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Footer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/GameCustomText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameCustomText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameInstructions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameInstructions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/assets/SiteNavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/assets/SiteNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/assets/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/assets/footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Containers/BHGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/BHRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/BHRound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameplay/BHMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameplay/BHMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/BHRound.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BHRound.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Navbar.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +107,8 @@
       <workItem from="1597541909161" duration="5091000" />
       <workItem from="1597795032057" duration="2343000" />
       <workItem from="1598148019911" duration="6650000" />
-      <workItem from="1598318631803" duration="2045000" />
+      <workItem from="1598318631803" duration="3066000" />
+      <workItem from="1598396044657" duration="639000" />
     </task>
     <servers />
   </component>

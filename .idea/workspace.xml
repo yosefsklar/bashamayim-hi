@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/GameDefault.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/GameDefault.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bashamayim_hi_block_small.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/texts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/texts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1597795032057" duration="2343000" />
       <workItem from="1598148019911" duration="6650000" />
       <workItem from="1598318631803" duration="3066000" />
-      <workItem from="1598396044657" duration="997000" />
+      <workItem from="1598396044657" duration="4393000" />
     </task>
     <servers />
   </component>
@@ -157,6 +158,12 @@
           <url>file://$PROJECT_DIR$/src/App.js</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Resources/texts.js</url>
+          <line>117</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

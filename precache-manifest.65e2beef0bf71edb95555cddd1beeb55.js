@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3cc722b2936b76569e0460aea2eab61",
+    "revision": "0585098184f80084d6f7ad144f1f40ae",
     "url": "/bashamayim-hi/index.html"
   },
   {
-    "revision": "f2e8bd585fa6719ed89e",
+    "revision": "04e0c52f9abc9555f1b4",
     "url": "/bashamayim-hi/static/css/main.30f60def.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bashamayim-hi/static/js/2.9f312b9c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f2e8bd585fa6719ed89e",
-    "url": "/bashamayim-hi/static/js/main.e527a973.chunk.js"
+    "revision": "04e0c52f9abc9555f1b4",
+    "url": "/bashamayim-hi/static/js/main.16c938f7.chunk.js"
   },
   {
     "revision": "b2aacfab54104160f515",

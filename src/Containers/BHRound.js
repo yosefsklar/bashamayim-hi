@@ -163,7 +163,7 @@ export default class BHRound extends Component {
         this.setState({
             index : i
         })
-        console.log("setting index " + i)
+        // console.log("setting index " + i)
     }
 
     setTextHelper = () => {

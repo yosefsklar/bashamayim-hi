@@ -40,6 +40,12 @@ export default class BHMain {
         this.canvas = canvas;
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);
+        window.addEventListener('touchstart', this.touchStart, false);
+        window.addEventListener('touchend', this.touchEnd, false); 
+        this.touchstartX = 0;
+        this.touchstartY = 0;
+        this.touchendX = 0;
+        this.touchendY = 0;
         this.config = config;
         this.BGenerate = new BlockGenerator(level, mainText,decoyText, this.config)
         this.level = level;
@@ -56,14 +62,14 @@ export default class BHMain {
     
     keydown = (e) => {
         //TODO: change to avoid deprication
-        if (e.keyCode === 37) {
-            this.holdingLeftKey = true;
-        }   else if (e.keyCode === 39) {
-            this.holdingRightKey = true;
-        }
+        // if (e.keyCode === 37) {
+        //     this.holdingLeftKey = true;
+        // }   else if (e.keyCode === 39) {
+        //     this.holdingRightKey = true;
+        // }
 
         //when game ends, and the press play again, things reset (TODO this should be a self contained function)
-        else if (e.keyCode === 67 && this.player.dead) {
+        if (e.keyCode === 67 && this.player.dead) {
             //continue - Points need to reset
             //continue - Points need to reset
             this.blocks = [];
@@ -95,14 +101,80 @@ export default class BHMain {
 
     }
 
+    touchStart = (event) => {
+        this.touchstartX = event.changedTouches[0].screenX;
+        this.touchstartY = event.changedTouches[0].screenY;
+    }
 
-    keyup = (e) => {
-        if (e.keyCode === 37) {
+    touchEnd = (event) => {
+        this.touchendX = event.changedTouches[0].screenX;
+        this.touchendY = event.changedTouches[0].screenY;
+        this.handleGesture()
+    }
+
+    handleGesture  =() =>{
+        var swiped = 'swiped: ';
+        if (this.touchendX < this.touchstartX) {
+            console.log(swiped + 'left!');
+            this.holdingLeftKey = true;
+            this.holdingRightKey = false;
+        }
+        
+        if (this.touchendX > this.touchstartX) {
+            console.log(swiped + 'right!');
             this.holdingLeftKey = false;
-        } else if (e.keyCode === 39) {
+            this.holdingRightKey = true;
+        }
+        
+        if (this.touchendY < this.touchstartY) {
+            console.log('Swiped up');
+        }
+        
+        if (this.touchendY > this.touchstartY) {
+            console.log('Swiped down');
+        }
+        
+        if (this.touchendY === this.touchstartY) {
+            console.log('Tap');
+            this.holdingLeftKey = false;
             this.holdingRightKey = false;
         }
     }
+
+
+    keyup = (e) => {
+        // if (e.keyCode === 37) {
+        //     this.holdingLeftKey = false;
+        // } else if (e.keyCode === 39) {
+        //     this.holdingRightKey = false;
+        // }
+        // if (e.keyCode === 37) {
+        //     this.holdingLeftKey = false;
+        // } else if (e.keyCode === 39) {
+        //     this.holdingRightKey = false;
+        // }
+    }
+
+    
+    deviceMoves = (e) => {
+        // if (e.keyCode === 37) {
+        //     this.holdingLeftKey = false;
+        // } else if (e.keyCode === 39) {
+        //     this.holdingRightKey = false;
+        // }
+        if (e.acceleration.x < 0) {
+            console.log(e.acceleration.x)
+            this.ctx.fillText("Left", U.screenWidth / 2, (U.screenHeight / 2) + 50);
+            this.holdingLeftKey = true;
+            this.holdingRightKey = false;
+        } else if (e.acceleration.x > 0) {
+            this.ctx.fillText("Right", U.screenWidth / 2, (U.screenHeight / 2) + 50);
+            console.log(e.acceleration.x)
+            this.holdingLeftKey = false;
+            this.holdingRightKey = true;
+        }
+    }
+
 
 
 
@@ -137,6 +209,8 @@ export default class BHMain {
     //todo i think this is all wrong, we want paint -> request -> update
     // make fps configurable
     loop =()=> {
+
+            //REMOVE
             if(this.playing) {
                 setTimeout(function() {
                     requestAnimationFrame(this.loop);

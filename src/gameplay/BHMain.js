@@ -98,13 +98,49 @@ export default class BHMain {
     }
 
     touchStart = (event) => {
-        this.holdingRightKey = true;
+        if(event.changedTouches[0].screenX > U.screenWidth / 2) {
+            this.holdingRightKey = true;
+            console.log("Right");
+        }
+        else if (event.changedTouches[0].screenX < U.screenWidth / 2) {
+            this.holdingLeftKey = true;
+            console.log("Left");
+        }
     }
 
     touchEnd = (event) => {
-        this.holdingRightKey = true;
+            this.holdingLeftKey = false;
+            this.holdingRightKey = false;
     }
 
+    handleGesture  =() =>{
+        var swiped = 'swiped: ';
+        if (this.touchendX < this.touchstartX) {
+            console.log(swiped + 'left!');
+            this.holdingLeftKey = true;
+            this.holdingRightKey = false;
+        }
+        
+        if (this.touchendX > this.touchstartX) {
+            console.log(swiped + 'right!');
+            this.holdingLeftKey = false;
+            this.holdingRightKey = true;
+        }
+        
+        if (this.touchendY < this.touchstartY) {
+            console.log('Swiped up');
+        }
+        
+        if (this.touchendY > this.touchstartY) {
+            console.log('Swiped down');
+        }
+        
+        if (this.touchendY === this.touchstartY) {
+            console.log('Tap');
+            this.holdingLeftKey = false;
+            this.holdingRightKey = false;
+        }
+    }
 
 
     keyup = (e) => {

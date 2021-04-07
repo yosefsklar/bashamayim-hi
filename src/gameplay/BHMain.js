@@ -42,10 +42,6 @@ export default class BHMain {
         window.addEventListener('keyup',this.keyup,false);
         window.addEventListener('touchstart', this.touchStart, false);
         window.addEventListener('touchend', this.touchEnd, false); 
-        this.touchstartX = 0;
-        this.touchstartY = 0;
-        this.touchendX = 0;
-        this.touchendY = 0;
         this.config = config;
         this.BGenerate = new BlockGenerator(level, mainText,decoyText, this.config)
         this.level = level;
@@ -102,44 +98,13 @@ export default class BHMain {
     }
 
     touchStart = (event) => {
-        this.touchstartX = event.changedTouches[0].screenX;
-        this.touchstartY = event.changedTouches[0].screenY;
+        this.holdingRightKey = true;
     }
 
     touchEnd = (event) => {
-        this.touchendX = event.changedTouches[0].screenX;
-        this.touchendY = event.changedTouches[0].screenY;
-        this.handleGesture()
+        this.holdingRightKey = true;
     }
 
-    handleGesture  =() =>{
-        var swiped = 'swiped: ';
-        if (this.touchendX < this.touchstartX) {
-            console.log(swiped + 'left!');
-            this.holdingLeftKey = true;
-            this.holdingRightKey = false;
-        }
-        
-        if (this.touchendX > this.touchstartX) {
-            console.log(swiped + 'right!');
-            this.holdingLeftKey = false;
-            this.holdingRightKey = true;
-        }
-        
-        if (this.touchendY < this.touchstartY) {
-            console.log('Swiped up');
-        }
-        
-        if (this.touchendY > this.touchstartY) {
-            console.log('Swiped down');
-        }
-        
-        if (this.touchendY === this.touchstartY) {
-            console.log('Tap');
-            this.holdingLeftKey = false;
-            this.holdingRightKey = false;
-        }
-    }
 
 
     keyup = (e) => {

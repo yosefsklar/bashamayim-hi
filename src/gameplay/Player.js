@@ -39,10 +39,10 @@ export default class Player {
             ctx.strokeText("Game Over:", U.screenWidth / 2, U.screenHeight / 2);
             ctx.font = "bold " + U.adjustX(36)+ "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
             ctx.fillStyle = "#5EFF16";
-            ctx.fillText("Press 'c' to Continue", U.screenWidth / 2, (U.screenHeight / 2) + 50);
-            ctx.strokeText("Press 'c' to Continue", U.screenWidth / 2, (U.screenHeight / 2) + 50);
-            ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, (U.screenHeight / 2) + 100);
-            ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, (U.screenHeight / 2) + 100);
+            ctx.fillText("New Game", U.screenWidth / 2, (U.screenHeight *(1/4)));
+            ctx.strokeText("New Game", U.screenWidth / 2, (U.screenHeight *(1/4)));
+            ctx.fillText("Continue", U.screenWidth / 2, (U.screenHeight *(3/4)));
+            ctx.strokeText("Continue", U.screenWidth / 2, (U.screenHeight *(3/4)));
 
         }
         else if(this.win){

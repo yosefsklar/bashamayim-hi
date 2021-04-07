@@ -98,6 +98,42 @@ export default class BHMain {
     }
 
     touchStart = (event) => {
+        if ((this.player.dead || this.player.win) && 
+            event.changedTouches[0].screenY < U.screenHeight / 3) {
+            //Hit the 'Continue' Button
+          console.log('new game')
+          this.newGame();
+          this.playing = false;
+        }
+
+        if (this.player.dead &&
+            event.changedTouches[0].screenY > U.screenHeight * (2/3)){
+            //Hit the 'Continue' Button
+            //continue - Points need to reset
+            this.blocks = [];
+            this.lowestBlock = 0;
+            this.difficulty = 0;
+            this.score = 0;
+            this.blocks.push(new Block());
+            this.blocks[0].x = U.adjustX(300);
+            this.blocks[0].y = U.adjustY(650);
+            this.blocks[0].type = 0;
+            this.blocks[0].powerup = 0;
+            this.blocks[0].word = "";
+            this.reported = false;
+            this.BGenerate.section = 0
+            this.BGenerate.setIndex(this.player.highestWordIndex);
+            this.BGenerate.blockGenerator(this.lowestBlock,this.blocks,this.blockOffset,this.difficulty, this.mainText);
+            this.player.yDistanceTravelled = 0;
+            this.player.x = U.adjustX(300);
+            this.player.y = U.adjustY(550);
+            this.player.dead = false;
+            this.continueGame();
+        }
+
+
+
+
         if(event.changedTouches[0].screenX > U.screenWidth / 2) {
             this.holdingRightKey = true;
             console.log("Right");

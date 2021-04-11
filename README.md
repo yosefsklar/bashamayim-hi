@@ -22,7 +22,7 @@ Date:   Mon Sep 7 09:23:39 2020 -0400
 
     Updates
 
-master-1 branch is now the primary mobile
+
 
 https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 

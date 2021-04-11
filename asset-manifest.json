@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bashamayim-hi/static/css/main.c017fb8e.chunk.css",
+    "main.css": "/bashamayim-hi/static/css/main.ecaa23cb.chunk.css",
     "main.js": "/bashamayim-hi/static/js/main.c40b5e4a.chunk.js",
     "main.js.map": "/bashamayim-hi/static/js/main.c40b5e4a.chunk.js.map",
     "runtime-main.js": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js",
@@ -8,9 +8,9 @@
     "static/js/2.b51cc642.chunk.js": "/bashamayim-hi/static/js/2.b51cc642.chunk.js",
     "static/js/2.b51cc642.chunk.js.map": "/bashamayim-hi/static/js/2.b51cc642.chunk.js.map",
     "index.html": "/bashamayim-hi/index.html",
-    "precache-manifest.25a2ebc5cd64aa62cec046c1cadd723e.js": "/bashamayim-hi/precache-manifest.25a2ebc5cd64aa62cec046c1cadd723e.js",
+    "precache-manifest.de3d5e64461adfe4c7803f5d9bc3c237.js": "/bashamayim-hi/precache-manifest.de3d5e64461adfe4c7803f5d9bc3c237.js",
     "service-worker.js": "/bashamayim-hi/service-worker.js",
-    "static/css/main.c017fb8e.chunk.css.map": "/bashamayim-hi/static/css/main.c017fb8e.chunk.css.map",
+    "static/css/main.ecaa23cb.chunk.css.map": "/bashamayim-hi/static/css/main.ecaa23cb.chunk.css.map",
     "static/js/2.b51cc642.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.b51cc642.chunk.js.LICENSE.txt",
     "static/media/SRHirsch.png": "/bashamayim-hi/static/media/SRHirsch.0135d99e.png",
     "static/media/bashamayim_hi_block.PNG": "/bashamayim-hi/static/media/bashamayim_hi_block.29c640e3.PNG",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.bbac2c5d.js",
     "static/js/2.b51cc642.chunk.js",
-    "static/css/main.c017fb8e.chunk.css",
+    "static/css/main.ecaa23cb.chunk.css",
     "static/js/main.c40b5e4a.chunk.js"
   ]
 }

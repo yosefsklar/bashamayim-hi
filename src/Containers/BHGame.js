@@ -290,10 +290,8 @@ export default class BHGame extends Component {
         return (
             <div className={classes.pageContainer}>
                 <div className={classes.contentWrap}>
-                    <SiteNavBar/>
                     {toRender}
                 </div>
-                <Footer/>
             </div>
         );
     }

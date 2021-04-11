@@ -175,22 +175,8 @@ export default class BHRound extends Component {
 
     render() {
         return (
-            <div className={'row ' + classes.RoundContainer}>
-                <div className={'col-sm '}>
-                    <p></p>
-                </div>
-                <div className={'col-sm ' + classes.canvasWrap}>
-                    <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
-                </div>
-
-                {this.state.textHelper ?
-                    (<div className={'col-sm '}>
-                        <BtnSmall onClick={this.setTextHelper}>Hide Text</BtnSmall>
-                        <p  className={classes.textBox}>{this.state.textWords.filter((v,i) => i <= this.state.index).join(" ")}</p>
-                    </div>)
-                    : this.state.gameProcessed &&
-                    (<BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>)
-                }
+            <div>
+                <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
             </div>
         )
     }

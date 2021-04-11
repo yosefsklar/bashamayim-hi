@@ -288,10 +288,8 @@ export default class BHGame extends Component {
                                             />)
         }
         return (
-            <div className={classes.pageContainer}>
-                <div className={classes.contentWrap}>
+            <div className={classes.noSelect}>
                     {toRender}
-                </div>
             </div>
         );
     }

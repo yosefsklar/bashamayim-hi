@@ -175,8 +175,8 @@ export default class BHRound extends Component {
 
     render() {
         return (
-            <div>
-                <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
+            <div className={classes.Canvas, classes.noSelect}>
+                <canvas className={classes.Canvas, classes.noSelect} ref="canvas" width={0} height={0}/>
             </div>
         )
     }

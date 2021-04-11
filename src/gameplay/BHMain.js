@@ -130,10 +130,6 @@ export default class BHMain {
             this.player.dead = false;
             this.continueGame();
         }
-
-
-
-
         if(event.changedTouches[0].screenX > U.screenWidth / 2) {
             this.holdingRightKey = true;
             console.log("Right");
@@ -142,41 +138,43 @@ export default class BHMain {
             this.holdingLeftKey = true;
             console.log("Left");
         }
+        // event.preventDefault();
     }
 
     touchEnd = (event) => {
-            this.holdingLeftKey = false;
-            this.holdingRightKey = false;
+        this.holdingLeftKey = false;
+        this.holdingRightKey = false;
+        // event.preventDefault();
     }
 
-    handleGesture  =() =>{
-        var swiped = 'swiped: ';
-        if (this.touchendX < this.touchstartX) {
-            console.log(swiped + 'left!');
-            this.holdingLeftKey = true;
-            this.holdingRightKey = false;
-        }
+    // handleGesture  =() =>{
+    //     var swiped = 'swiped: ';
+    //     if (this.touchendX < this.touchstartX) {
+    //         console.log(swiped + 'left!');
+    //         this.holdingLeftKey = true;
+    //         this.holdingRightKey = false;
+    //     }
         
-        if (this.touchendX > this.touchstartX) {
-            console.log(swiped + 'right!');
-            this.holdingLeftKey = false;
-            this.holdingRightKey = true;
-        }
+    //     if (this.touchendX > this.touchstartX) {
+    //         console.log(swiped + 'right!');
+    //         this.holdingLeftKey = false;
+    //         this.holdingRightKey = true;
+    //     }
         
-        if (this.touchendY < this.touchstartY) {
-            console.log('Swiped up');
-        }
+    //     if (this.touchendY < this.touchstartY) {
+    //         console.log('Swiped up');
+    //     }
         
-        if (this.touchendY > this.touchstartY) {
-            console.log('Swiped down');
-        }
+    //     if (this.touchendY > this.touchstartY) {
+    //         console.log('Swiped down');
+    //     }
         
-        if (this.touchendY === this.touchstartY) {
-            console.log('Tap');
-            this.holdingLeftKey = false;
-            this.holdingRightKey = false;
-        }
-    }
+    //     if (this.touchendY === this.touchstartY) {
+    //         console.log('Tap');
+    //         this.holdingLeftKey = false;
+    //         this.holdingRightKey = false;
+    //     }
+    // }
 
 
     keyup = (e) => {
@@ -193,24 +191,24 @@ export default class BHMain {
     }
 
     
-    deviceMoves = (e) => {
-        // if (e.keyCode === 37) {
-        //     this.holdingLeftKey = false;
-        // } else if (e.keyCode === 39) {
-        //     this.holdingRightKey = false;
-        // }
-        if (e.acceleration.x < 0) {
-            console.log(e.acceleration.x)
-            this.ctx.fillText("Left", U.screenWidth / 2, (U.screenHeight / 2) + 50);
-            this.holdingLeftKey = true;
-            this.holdingRightKey = false;
-        } else if (e.acceleration.x > 0) {
-            this.ctx.fillText("Right", U.screenWidth / 2, (U.screenHeight / 2) + 50);
-            console.log(e.acceleration.x)
-            this.holdingLeftKey = false;
-            this.holdingRightKey = true;
-        }
-    }
+    // deviceMoves = (e) => {
+    //     // if (e.keyCode === 37) {
+    //     //     this.holdingLeftKey = false;
+    //     // } else if (e.keyCode === 39) {
+    //     //     this.holdingRightKey = false;
+    //     // }
+    //     if (e.acceleration.x < 0) {
+    //         console.log(e.acceleration.x)
+    //         this.ctx.fillText("Left", U.screenWidth / 2, (U.screenHeight / 2) + 50);
+    //         this.holdingLeftKey = true;
+    //         this.holdingRightKey = false;
+    //     } else if (e.acceleration.x > 0) {
+    //         this.ctx.fillText("Right", U.screenWidth / 2, (U.screenHeight / 2) + 50);
+    //         console.log(e.acceleration.x)
+    //         this.holdingLeftKey = false;
+    //         this.holdingRightKey = true;
+    //     }
+    // }
 
 
 

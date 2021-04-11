@@ -8,6 +8,8 @@
 .Canvas {
     display: inline-block;
     flex-grow: 0;
+}
+.noSelect{
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -16,7 +18,6 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
-
 /* .canvasWrap{
 } */
 .textBox {

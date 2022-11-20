@@ -357,7 +357,7 @@ export const TextChapters = {
             endChapter: 7,
             endVerse: 11
         },
-        Eikev :: {
+        Eikev: {
             text: "Deuteronomy",
             startChapter: 3,
             startVerse: 23,
@@ -420,7 +420,7 @@ export const TextChapters = {
             endChapter: 34,
             endVerse: 12
         },
-    }
+    },
     mishnah: {
         Mishnah_Berakhot: 9,
         Mishnah_Peah: 8,

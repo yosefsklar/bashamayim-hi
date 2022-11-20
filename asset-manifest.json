@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bashamayim-hi/static/css/main.cc085cb8.chunk.css",
-    "main.js": "/bashamayim-hi/static/js/main.99c91e21.chunk.js",
-    "main.js.map": "/bashamayim-hi/static/js/main.99c91e21.chunk.js.map",
+    "main.css": "/bashamayim-hi/static/css/main.30f60def.chunk.css",
+    "main.js": "/bashamayim-hi/static/js/main.cc152dd8.chunk.js",
+    "main.js.map": "/bashamayim-hi/static/js/main.cc152dd8.chunk.js.map",
     "runtime-main.js": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js",
     "runtime-main.js.map": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js.map",
-    "static/js/2.c28128bc.chunk.js": "/bashamayim-hi/static/js/2.c28128bc.chunk.js",
-    "static/js/2.c28128bc.chunk.js.map": "/bashamayim-hi/static/js/2.c28128bc.chunk.js.map",
+    "static/js/2.b1996215.chunk.js": "/bashamayim-hi/static/js/2.b1996215.chunk.js",
+    "static/js/2.b1996215.chunk.js.map": "/bashamayim-hi/static/js/2.b1996215.chunk.js.map",
     "index.html": "/bashamayim-hi/index.html",
-    "precache-manifest.5760a10db78f7857407423f19277d547.js": "/bashamayim-hi/precache-manifest.5760a10db78f7857407423f19277d547.js",
+    "precache-manifest.c60a0aaa4969d15ad3c4cfc1e8f23b24.js": "/bashamayim-hi/precache-manifest.c60a0aaa4969d15ad3c4cfc1e8f23b24.js",
     "service-worker.js": "/bashamayim-hi/service-worker.js",
-    "static/css/main.cc085cb8.chunk.css.map": "/bashamayim-hi/static/css/main.cc085cb8.chunk.css.map",
-    "static/js/2.c28128bc.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.c28128bc.chunk.js.LICENSE.txt",
+    "static/css/main.30f60def.chunk.css.map": "/bashamayim-hi/static/css/main.30f60def.chunk.css.map",
+    "static/js/2.b1996215.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.b1996215.chunk.js.LICENSE.txt",
     "static/media/SRHirsch.png": "/bashamayim-hi/static/media/SRHirsch.0135d99e.png",
     "static/media/bashamayim_hi_block.PNG": "/bashamayim-hi/static/media/bashamayim_hi_block.29c640e3.PNG",
     "static/media/blank_block.PNG": "/bashamayim-hi/static/media/blank_block.e24c31e6.PNG",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bbac2c5d.js",
-    "static/js/2.c28128bc.chunk.js",
-    "static/css/main.cc085cb8.chunk.css",
-    "static/js/main.99c91e21.chunk.js"
+    "static/js/2.b1996215.chunk.js",
+    "static/css/main.30f60def.chunk.css",
+    "static/js/main.cc152dd8.chunk.js"
   ]
 }

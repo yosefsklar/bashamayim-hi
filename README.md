@@ -8,18 +8,18 @@ Climb your up the heavens while showing relying on your knowledge of Tanakh. It'
 * [Node.js](https://nodejs.org/en/download/)
 
 ### Start-Up 
-* Clone directory:
+* Clone directory
 ```
-git clone https://github.com/yosefsklar/bashamayim-hi.git
+$ git clone https://github.com/yosefsklar/bashamayim-hi.git
 ```
-* Intall dependencies:
+* Intall dependencies
 ```
-cd bashamayim-hi
-npm install
+$ cd bashamayim-hi
+$ npm install
 ```
-* Start up the application in the browser:
+* Start up the application in the browser
 ```
-npm start
+$ npm start
 ```
 
 ### Suggestions?

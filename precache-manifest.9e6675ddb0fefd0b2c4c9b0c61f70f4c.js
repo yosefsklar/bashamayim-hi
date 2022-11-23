@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8295cabe4e9374145105ac4ce7eae27d",
+    "revision": "81b2df75bd032a206149bffcb360f579",
     "url": "/bashamayim-hi/index.html"
   },
   {

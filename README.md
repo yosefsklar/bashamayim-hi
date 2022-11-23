@@ -1,30 +1,18 @@
 # Bashamayim-Hi  בשמים היא
-An addicting game for learning Jewish texts
+Climb your up the heavens while showing relying on your knowledge of Tanakh. It's Doodle Jump with a catch - you can only jump on clouds containing words that continue the text! Use it to study the weekly Parasha or Haftorah, the daily 929 Perek or any other Perek in Tanakh. 
 
+## For Developers:
+#### Requirements
+* npm 
+* nodejs
 
+### Start-Up 
+* clone directory and 
+* npm install
+* run `npm start` in the directory root.
 
-For Developers:
+### Suggestions?
+Add an issue of the issues page above for bugs, comments and suggested improvements.
 
-To run, clone directory and run npm start in the directory.
-
-npm install (in a package directory, no arguments):
-
-Install the dependencies in the local node_modules folder.
-
-Search for the keywords to learn more about each warning.
-To ignore, add // eslint-disable-next-line to the line before.
-
-https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
-
-commit 498665016267ed83920aaa59480db076dc2eb531 (HEAD -> gh-pages, origin/gh-pages, workspace)
-Author: yosefsklar <yosef.sklar@gmail.com>
-Date:   Mon Sep 7 09:23:39 2020 -0400
-
-    Updates
-
-
-
-https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
-
-
-to publish: npm run deploy
+### Contributions
+Bashamayim-Hi is a great and easy project to contribute to! To contribute, fork this repository and create a pull-request. Any issue in the "issues" above is a good place to starte. 

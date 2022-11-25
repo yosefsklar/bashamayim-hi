@@ -64,7 +64,7 @@ export default class BHRound extends Component {
                 }
                 return data['he'];
             }).then((data) => {
-                return U.stripCantillation(data.join(" "))
+                return U.stripCantillationAndDivineNames(data)
             })
         return fetchPromise;
     };
@@ -87,7 +87,7 @@ export default class BHRound extends Component {
             let finalText = chapterTexts.flat();
             return finalText;
         }).then((data) => {
-           return U.stripCantillation(data.join(" "))
+           return U.stripCantillationAndDivineNames(data)
        })
     }
 
@@ -116,7 +116,7 @@ export default class BHRound extends Component {
                     return U.removeHTML(data.he);
                 })
         })).then(decoyWordLists => {
-            let strippedWords = U.stripCantillation(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
+            let strippedWords = U.stripCantillationAndDivineNames(this.verseListsToCleanedWords(decoyWordLists,textWords));
             // if there are fewer decoy words than text words, double the decoy words
             while((textWords.length * (5/4)) > strippedWords.length){
                 strippedWords = strippedWords.concat(strippedWords);
@@ -163,7 +163,7 @@ export default class BHRound extends Component {
         this.setState({
             index : i
         })
-        console.log("setting index " + i)
+        // console.log("setting index " + i)
     }
 
     setTextHelper = () => {
@@ -175,22 +175,8 @@ export default class BHRound extends Component {
 
     render() {
         return (
-            <div className={'row ' + classes.RoundContainer}>
-                <div className={'col-sm '}>
-                    <p></p>
-                </div>
-                <div className={'col-sm ' + classes.canvasWrap}>
-                    <canvas className={classes.Canvas} ref="canvas" width={0} height={0}/>
-                </div>
-
-                {this.state.textHelper ?
-                    (<div className={'col-sm '}>
-                        <BtnSmall onClick={this.setTextHelper}>Hide Text</BtnSmall>
-                        <p  className={classes.textBox}>{this.state.textWords.filter((v,i) => i <= this.state.index).join(" ")}</p>
-                    </div>)
-                    : this.state.gameProcessed &&
-                    (<BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>)
-                }
+            <div className={classes.noSelect}>
+                <canvas className={classes.Canvas, classes.noSelect} ref="canvas" width={0} height={0}/>
             </div>
         )
     }

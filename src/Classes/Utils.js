@@ -21,13 +21,17 @@ export default class Utils {
     }
 
     /*
-    * Takes in string returns array of words
+    * words:: Array of strings
+    * returns:: Array of Strings
     * */
 
-    stripCantillation = (words) => {
-        return words.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "").split(/[\s\u05BE]+/);
+    stripCantillationAndDivineNames = (words) => {
+        let replacement_name = "יקוק"
+        let word_string = words.join(" ")
+        return word_string.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "")
+            .replace(/יְהֹוָה|יהֹוָה/g, replacement_name)
+            .split(/[\s\u05BE]+/);
 
     };
-
 
 };

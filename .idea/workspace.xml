@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2c311790-09e3-45f9-a335-f15ab9fff5a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bashamayim_hi_block_small.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/texts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/texts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/assets/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/assets/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/BHGame.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/BHGame.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Footer.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +66,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Classes" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Resources" />
-      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Containers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\SklarJoseph\bashamayim-hi\src\styles" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Components" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\styles" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src" />
       <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\gameplay" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Classes" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Resources" />
+      <recent name="C:\Users\yosef\Dev\bashamayim-hi\src\Containers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -106,7 +108,8 @@
       <workItem from="1597795032057" duration="2343000" />
       <workItem from="1598148019911" duration="6650000" />
       <workItem from="1598318631803" duration="3066000" />
-      <workItem from="1598396044657" duration="4393000" />
+      <workItem from="1598396044657" duration="5223000" />
+      <workItem from="1598620359739" duration="71000" />
     </task>
     <servers />
   </component>
@@ -158,12 +161,6 @@
           <url>file://$PROJECT_DIR$/src/App.js</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Resources/texts.js</url>
-          <line>117</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

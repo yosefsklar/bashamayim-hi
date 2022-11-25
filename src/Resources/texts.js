@@ -357,7 +357,7 @@ export const TextChapters = {
             endChapter: 7,
             endVerse: 11
         },
-        Eikev : {
+        Eikev: {
             text: "Deuteronomy",
             startChapter: 3,
             startVerse: 23,

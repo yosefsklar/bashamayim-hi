@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/bashamayim-hi/static/css/main.30f60def.chunk.css",
-    "main.js": "/bashamayim-hi/static/js/main.1c5ea885.chunk.js",
-    "main.js.map": "/bashamayim-hi/static/js/main.1c5ea885.chunk.js.map",
+    "main.css": "/bashamayim-hi/static/css/main.dbfaa4a3.chunk.css",
+    "main.js": "/bashamayim-hi/static/js/main.00f36537.chunk.js",
+    "main.js.map": "/bashamayim-hi/static/js/main.00f36537.chunk.js.map",
     "runtime-main.js": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js",
     "runtime-main.js.map": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js.map",
-    "static/js/2.9f312b9c.chunk.js": "/bashamayim-hi/static/js/2.9f312b9c.chunk.js",
-    "static/js/2.9f312b9c.chunk.js.map": "/bashamayim-hi/static/js/2.9f312b9c.chunk.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/bashamayim-hi/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.1ebe1f6f.chunk.js": "/bashamayim-hi/static/js/2.1ebe1f6f.chunk.js",
+    "static/js/2.1ebe1f6f.chunk.js.map": "/bashamayim-hi/static/js/2.1ebe1f6f.chunk.js.map",
     "index.html": "/bashamayim-hi/index.html",
-    "precache-manifest.94bf6997fda882ac99b234bdbd440c17.js": "/bashamayim-hi/precache-manifest.94bf6997fda882ac99b234bdbd440c17.js",
+    "precache-manifest.fe25de170336c958d1580403f744ca45.js": "/bashamayim-hi/precache-manifest.fe25de170336c958d1580403f744ca45.js",
     "service-worker.js": "/bashamayim-hi/service-worker.js",
-    "static/css/main.30f60def.chunk.css.map": "/bashamayim-hi/static/css/main.30f60def.chunk.css.map",
-    "static/js/2.9f312b9c.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.9f312b9c.chunk.js.LICENSE.txt",
+    "static/css/2.f3cffc9e.chunk.css.map": "/bashamayim-hi/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.dbfaa4a3.chunk.css.map": "/bashamayim-hi/static/css/main.dbfaa4a3.chunk.css.map",
+    "static/js/2.1ebe1f6f.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.1ebe1f6f.chunk.js.LICENSE.txt",
     "static/media/SRHirsch.png": "/bashamayim-hi/static/media/SRHirsch.0135d99e.png",
     "static/media/bashamayim_hi_block.PNG": "/bashamayim-hi/static/media/bashamayim_hi_block.29c640e3.PNG",
     "static/media/blank_block.PNG": "/bashamayim-hi/static/media/blank_block.e24c31e6.PNG",
@@ -24,8 +26,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bbac2c5d.js",
-    "static/js/2.9f312b9c.chunk.js",
-    "static/css/main.30f60def.chunk.css",
-    "static/js/main.1c5ea885.chunk.js"
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.1ebe1f6f.chunk.js",
+    "static/css/main.dbfaa4a3.chunk.css",
+    "static/js/main.00f36537.chunk.js"
   ]
 }

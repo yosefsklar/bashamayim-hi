@@ -167,13 +167,8 @@ export default class Player {
         //this.ySpeed = U.adjustY( -13.2);
         this.ySpeed = U.adjustY( -11.5);
 
-        if (powerup === "orbBack") {
-            this.orbDurability = 10;
-        }
-
-
-        if (this.orbDurability !== 0) {
-            for (let i = lowestBlock; i < blocks.length; i++) {
+        // mark all block between jumper and the floor as passed
+        for (let i = lowestBlock; i < blocks.length; i++) {
                 if (blocks[i].y <= this.y + this.height - blocks[i].height) {
                     block.powerup = 0;
                     break;
@@ -181,10 +176,27 @@ export default class Player {
                 if(blocks[i].wordType !== "decoyWord") {
                     blocks[i].passedText = true;
                 }
-            }
-            this.orbDurability -= 1;
-
         }
+
+
+        if (powerup === "orbBack") {
+            this.orbDurability = 10;
+        }
+
+
+        // if (this.orbDurability !== 0) {
+        //     for (let i = lowestBlock; i < blocks.length; i++) {
+        //         if (blocks[i].y <= this.y + this.height - blocks[i].height) {
+        //             block.powerup = 0;
+        //             break;
+        //         }
+        //         if(blocks[i].wordType !== "decoyWord") {
+        //             blocks[i].passedText = true;
+        //         }
+        //     }
+        //     this.orbDurability -= 1;
+
+        // }
         if (powerup === "orbForward") {
             let i = blockIndex + 1;
             let count = 0;

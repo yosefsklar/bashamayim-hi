@@ -203,13 +203,14 @@ export default class BlockGenerator {
                 word = this.decoyText[this.decoyIndex];
             }
             else{
+                word = "בַשָּׁמַיִם-הִוא";
                 //word = "בַשָּׁמַיִם-הִוא";
-                if(this.decoyIndex % 2 === 0){
-                    word = "בשמים היא";
-                }
-                else{
-                    word = "";
-                }
+                // if(this.decoyIndex % 2 === 0){
+                //     word = "בַשָּׁמַיִם-הִוא";
+                // }
+                // else{
+                //     word = "";
+                // }
             }
             wordIndex = this.decoyIndex;
             this.decoyIndex++;

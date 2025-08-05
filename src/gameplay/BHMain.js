@@ -35,6 +35,10 @@ export default class BHMain {
     constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, config) {
         this.mainText = mainText;
         this.ctx = canvas.getContext("2d");
+        // smoothen out images (background and player)
+        // this.ctx.imageSmoothingEnabled = true;
+        // this.ctx.webkitImageSmoothingEnabled = true;
+        // this.ctx.mozImageSmoothingEnabled = true;
         canvas.width = U.screenWidth;
         canvas.height = U.screenHeight;
         this.canvas = canvas;

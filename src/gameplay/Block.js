@@ -46,25 +46,15 @@ export default class Block {
         // }
         U.roundedRect(ctx,this.x,this.y,this.width,this.height,U.adjustX(5),"black");
         //ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.font = "bold " + U.adjustX(22)+ "px" + "'Noto Sans Hebrew','Arial Hebrew','BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
+        ctx.font = "bold " + U.adjustX(23)+ "px" + "'Noto Sans Hebrew','Arial Hebrew','BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
         ctx.fillStyle = "white";
         if(this.color === "#5EFF16"){
             ctx.fillStyle = "#090524";
         }
         ctx.textAlign = "center";
-        // if(this.type === "break"){
-        //     if(this.textNumber >= 0) {
-        //         text = window.decoyWords[this.textNumber];
-        //     }
-        // }
-        // else{
-        //     if(this.textNumber >= 0) {
-        //         text = window.textWords[this.textNumber];
-        //     }
-        //     //text = this.textNumber;
-        // }
 
-        ctx.fillText(this.word,this.x + this.width/2,this.y + ((this.height/4)*3));
+        // Align to whole pixels (round) to avoid blur
+        ctx.fillText(this.word,Math.round(this.x + this.width/2),Math.round(this.y + ((this.height/4)*3)));
 
         if (this.powerup === "spring") {
             ctx.fillStyle = "grey";

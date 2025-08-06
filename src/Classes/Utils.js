@@ -34,10 +34,10 @@ export default class Utils {
     }
 
     /**
-     * Removes Hebrew cantillation marks, punctuation, and bracketed text from the input string,
-     * then splits the cleaned string into an array of words.
-     * @param {string} words - String containing Hebrew text with cantillation marks and punctuation.
-     * @returns {string[]} Array of words with cantillation marks and punctuation removed.
+     * Removes Hebrew cantillation marks, punctuation, and bracketed text (e.g., [text]) 
+     * as well as parsha/sedra markers from the input string,then splits the cleaned string into an array of words.
+     * @param {string} words - String containing Hebrew text with cantillation marks, punctuation, and bracketed text.
+     * @returns {string[]} Array of words with cantillation marks, punctuation, and bracketed text removed.
      */
     stripCantillation(words) {
         return words.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "").split(/[\s\u05BE]+/);

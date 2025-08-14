@@ -64,7 +64,7 @@ export default class BHRound extends Component {
                 }
                 return data['he'];
             }).then((data) => {
-                return U.stripCantillation(data.join(" "))
+                return U.cleanText(data.join(" "))
             })
         return fetchPromise;
     };
@@ -87,7 +87,7 @@ export default class BHRound extends Component {
             let finalText = chapterTexts.flat();
             return finalText;
         }).then((data) => {
-           return U.stripCantillation(data.join(" "))
+           return U.cleanText(data.join(" "))
        })
     }
 
@@ -116,7 +116,7 @@ export default class BHRound extends Component {
                     return U.removeHTML(data.he);
                 })
         })).then(decoyWordLists => {
-            let strippedWords = U.stripCantillation(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
+            let strippedWords = U.cleanText(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
             // if there are fewer decoy words than text words, double the decoy words
             while((textWords.length * (5/4)) > strippedWords.length){
                 strippedWords = strippedWords.concat(strippedWords);

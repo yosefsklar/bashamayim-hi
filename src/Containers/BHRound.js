@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
 // import {textWords, ecc, exodus} from "../Resources/text_samples";
-import Utils from '../Classes/Utils';
+import { removeHTML, cleanText, shuffleArray } from '../utils/textProcessingUtils';
 import BHMain from "../gameplay/BHMain";
 import classes from "styles/BHRound.module.css";
 import {TextChapters} from "../Resources/texts";
 import {BtnSmall} from "../Components/assets/buttons";
 
 const gamePlayConfigs = require('../configs/gamePlayConfigs')
-
-const U = new Utils();
 
 export default class BHRound extends Component {
     constructor() {
@@ -58,13 +56,13 @@ export default class BHRound extends Component {
             .then((response) => {
                 return response.json();
             }).then((data) => {
-                data['he'] = U.removeHTML(data.he);
+                data['he'] = removeHTML(data.he);
                 if (this.props.startVerse && this.props.endVerse) {
                     data['he'] = data['he'].filter((verse, index) => index >= this.props.startVerse - 1 && index < this.props.endVerse);
                 }
                 return data['he'];
             }).then((data) => {
-                return U.cleanText(data.join(" "))
+                return cleanText(data.join(" "))
             })
         return fetchPromise;
     };
@@ -79,7 +77,7 @@ export default class BHRound extends Component {
                     return response.json();
                 }).then((data) => {
                     //now were return an array of promises that resolve to provide the hebrew text of its chapter
-                    return U.removeHTML(data.he);
+                    return removeHTML(data.he);
                 })
         })).then((chapterTexts) => {
             chapterTexts[0].splice(0,this.props.startVerse - 1);
@@ -87,7 +85,7 @@ export default class BHRound extends Component {
             let finalText = chapterTexts.flat();
             return finalText;
         }).then((data) => {
-           return U.cleanText(data.join(" "))
+           return cleanText(data.join(" "))
        })
     }
 
@@ -113,10 +111,10 @@ export default class BHRound extends Component {
                     return response.json();
                 }).then((data) => {
                     //now were return an array of promises that resolve to provide the hebrew text of its chapter
-                    return U.removeHTML(data.he);
+                    return removeHTML(data.he);
                 })
         })).then(decoyWordLists => {
-            let strippedWords = U.cleanText(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
+            let strippedWords = cleanText(this.verseListsToCleanedWords(decoyWordLists,textWords).join(" "));
             // if there are fewer decoy words than text words, double the decoy words
             while((textWords.length * (5/4)) > strippedWords.length){
                 strippedWords = strippedWords.concat(strippedWords);
@@ -132,18 +130,10 @@ export default class BHRound extends Component {
     * */
     verseListsToCleanedWords = (decoyVerseLists,textWords) => {
         let decoyWords = decoyVerseLists.flat();
-        decoyWords = this.shuffleArray(decoyWords.join(' ').split(/[\s\u05BE]+/).filter(x => this.checkOverlap(x, textWords)));
+        decoyWords = shuffleArray(decoyWords.join(' ').split(/[\s\u05BE]+/).filter(x => this.checkOverlap(x, textWords)));
         return decoyWords;
     };
 
-
-    shuffleArray = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    };
 
     checkOverlap = (x, textWords) => {
         let noPrefix = textWords.map(x => x.replace(/[\u0591-\u05C7]/g, '').substring(1));

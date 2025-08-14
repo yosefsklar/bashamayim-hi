@@ -39,6 +39,17 @@ export default class BHGame extends Component {
 
     }
 
+    /**
+     * Lifecycle method invoked immediately after the component is mounted.
+     * Fetches calendar data from the Sefaria API and processes specific calendar items:
+     * - Parashat Hashavua
+     * - Haftarah
+     * - 929
+     * Calls corresponding retrieval methods for each item and sets the game defaults.
+     * Logs any errors encountered during the fetch process.
+     *
+     * @returns {Promise<void>} A promise that resolves when the data is fetched and processed.
+     */
     componentDidMount() {
         let fetchString = 'https://www.sefaria.org/api/calendars';
         return fetch(fetchString)
@@ -57,16 +68,24 @@ export default class BHGame extends Component {
 
 
     //TODO add rules for when it is multi parsha vs single
-    //"Genesis.6.9-11.32"
-    //"Genesis.12.1-17.27"
+    /**
+     * Retrieves and parses Parsha information from the Sefaria calendar data,
+     * proving label name for Parsha button and game text url if selected.
+     * Parsha url format: "Genesis.12.1-17.27"
+     *
+     * @param {Object} data - The data object containing calendar items.
+     * @param {number} index - The index of the calendar item to retrieve and parse.
+     */
     retrieveParsha = (data,index) =>{
         let text = data.calendar_items[index].url.split("-")[0].split(".");
         let parshaTextUrlName = text[0];
         let parshaStartChapter = parseInt(text[1]);
         let parshaName = data.calendar_items[index].displayValue.en.split("-")[0];
         let parshaStartVerse = parseInt(data.calendar_items[index].url.split("-")[0].split(".")[2])
-        let parshaEnd = data.calendar_items[index].url.split("-")[0].split(".")[0] +
-            data.calendar_items[index].url.split("-")[1];
+        // let parshaEnd = data.calendar_items[index].url.split("-")[0].split(".")[0] +
+        //    data.calendar_items[index].url.split("-")[1];
+        //TODO remember why we need this type of ending if parshiot always span multiple chapters. 
+        // may have just copied the logic from haftorah
         let parshaEnding = data.calendar_items[index].url.split("-")[1];
         let parshaEndVerse;
         let parshaEndChapter;
@@ -86,6 +105,14 @@ export default class BHGame extends Component {
     }
     //"Isaiah.54.1-55.5"
     //Isaiah 40:27-41:16"
+        /**
+     * Retrieves and parses Haftorah information from the Sefaria calendar data,
+     * proving label name for Haftorah button and game text url if selected.
+     * Haftorah url format: "Isaiah.40.27-41.16", "Isaiah.54.1-34"
+     *
+     * @param {Object} data - The data object containing calendar items.
+     * @param {number} index - The index of the calendar item to retrieve and parse.
+     */
     retrieveHaftorah = (data,index) =>{
         let text = data.calendar_items[index].url.split("-")[0].split(".");
         let haftorahText = text[0];
@@ -95,6 +122,7 @@ export default class BHGame extends Component {
         let haftorahEnding = data.calendar_items[index].url.split("-")[1];
         let haftorahEndVerse;
         let haftorahEndChapter;
+        // Haftorahs sometimes span multiple chapters, sometimes don't
         if(haftorahEnding.includes('.')){
 
             haftorahEndChapter = parseInt(haftorahEnding.split('.')[0]);
@@ -113,6 +141,15 @@ export default class BHGame extends Component {
 
     }
 
+    /**
+     * Retrieves and parses the 929 (Tanakh cycle) information from the Sefaria calendar data,
+     * proving label name for 929 button and game text url if selected.
+     * It will by definition only have be a single chapter.
+     * 929 url format: "Genesis.1.1-31"
+     *
+     * @param {Object} data - The data object containing calendar items.
+     * @param {number} index - The index of the calendar item to retrieve and parse.
+     */
     retrieve929 =(data,index)=>{
         let text = data.calendar_items[index].url.split("-")[0].split(".");
         let nineText = text[0];

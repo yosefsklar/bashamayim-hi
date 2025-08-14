@@ -2,8 +2,5 @@
     position: relative;
     min-height: 100vh;
     box-sizing: content-box;
-}
-
-.contentWrap {
-    padding-bottom: 4.5rem;    /* Footer height */
+    height: 3.5rem;
 }

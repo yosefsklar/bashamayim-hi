@@ -26,9 +26,6 @@ export default class BHMain {
     playing;
     reported = false;
     id = '';
-    // date = new Date();
-    // time = this.date.getTime();
-    // delta = 1;
 
 
     constructor(canvas, level,mainText,decoyText,id,newGame, continueGame, setIndex, config) {

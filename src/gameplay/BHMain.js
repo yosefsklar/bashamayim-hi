@@ -3,7 +3,6 @@ import BlockGenerator from './BlockGenerator';
 import Player from './Player';
 import BHUtils from './BHUtils';
 import backgroundImagePng from '../Images/sky5.jpg';
-// import {updateDoodleGame} from "../doodleRest";
 
 const U = new BHUtils();
 
@@ -36,11 +35,17 @@ export default class BHMain {
         this.mainText = mainText;
         this.ctx = canvas.getContext("2d");
         // smoothen out images (background and player)
-        // this.ctx.imageSmoothingEnabled = true;
-        // this.ctx.webkitImageSmoothingEnabled = true;
-        // this.ctx.mozImageSmoothingEnabled = true;
+        this.ctx.imageSmoothingEnabled = true;
+        this.ctx.webkitImageSmoothingEnabled = true;
+        this.ctx.mozImageSmoothingEnabled = true;
         canvas.width = U.screenWidth;
         canvas.height = U.screenHeight;
+        const scale = window.devicePixelRatio || 1;
+
+        // Set actual pixel resolution of the canvas
+        canvas.width = canvas.clientWidth * scale;
+        canvas.height = canvas.clientHeight * scale;
+        ctx.scale(scale, scale);
         this.canvas = canvas;
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);

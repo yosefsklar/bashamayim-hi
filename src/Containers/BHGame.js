@@ -30,11 +30,11 @@ export default class BHGame extends Component {
                 nine: new TextItem("",0,"",0),
                 // User selected game configurations
                 textUrlName: '',
-                startChapter: 'Chapters',
+                textName: 'Sefarim', // default value for dropdown
+                startChapter: 'Chapters', // default value for dropdown
                 startVerse: 0,
                 endChapter: 0,
                 endVerse: 0,
-                textName: 'Sefarim',
                 level:'',
                 // Game Lifecycle State
                 gameState: GameState.default

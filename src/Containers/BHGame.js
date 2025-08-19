@@ -24,6 +24,11 @@ export default class BHGame extends Component {
     constructor(props) {
             super(props);
             this.state = {
+                // Sefaria supplied game text options
+                parsha: new TextItem('',0,"",0),
+                haftorah: new TextItem("",0,"",0),
+                nine: new TextItem("",0,"",0),
+                // User selected game configurations
                 textUrlName: '',
                 startChapter: 'Chapters',
                 startVerse: 0,
@@ -31,9 +36,7 @@ export default class BHGame extends Component {
                 endVerse: 0,
                 textName: 'Sefarim',
                 level:'',
-                parsha: new TextItem('',0,"",0),
-                haftorah: new TextItem("",0,"",0),
-                nine: new TextItem("",0,"",0),
+                // Game Lifecycle State
                 gameState: GameState.default
             };
 

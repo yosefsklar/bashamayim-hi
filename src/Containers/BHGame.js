@@ -85,8 +85,6 @@ export default class BHGame extends Component {
         let parshaStartChapter = parseInt(text[1]);
         let parshaName = data.calendar_items[index].displayValue.en.split("-")[0];
         let parshaStartVerse = parseInt(data.calendar_items[index].url.split("-")[0].split(".")[2])
-        // let parshaEnd = data.calendar_items[index].url.split("-")[0].split(".")[0] +
-        //    data.calendar_items[index].url.split("-")[1];
         //TODO remember why we need this type of ending if parshiot always span multiple chapters. 
         // may have just copied the logic from haftorah
         let parshaEnding = data.calendar_items[index].url.split("-")[1];

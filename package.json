@@ -20,10 +20,10 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/"
   },
   "browserslist": {
     "production": [
@@ -38,6 +38,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "gh-pages": "^3.1.0",
+    "prettier": "^3.6.2"
   }
 }

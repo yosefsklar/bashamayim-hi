@@ -40,7 +40,7 @@ export default class Block {
             this.color = "#5EFF16";
             ctx.fillStyle =  this.color;
         }
-        // else if(this.wordType == "spike"){
+        // else if(this.wordType === "spike"){
         //     this.color = "#ff5046";
         //     ctx.fillStyle =  this.color;
         // }
@@ -59,21 +59,21 @@ export default class Block {
         if (this.powerup === "spring") {
             ctx.fillStyle = "grey";
             ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(10), U.adjustX(30), U.adjustY(10));
-        } else if(this.powerup == "orbBack"){
+        } else if(this.powerup === "orbBack"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
             ctx.fillStyle = "white";
             ctx.fill();
             ctx.stroke();
         }
-        else if(this.powerup == "orbForward"){
+        else if(this.powerup === "orbForward"){
             ctx.beginPath();
             ctx.arc(this.x + (this.width/2), this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
             ctx.fillStyle = "#5EFF16";
             ctx.fill();
             ctx.stroke();
         }
-        else if(this.wordType == "spike"){
+        else if(this.wordType === "spike"){
             ctx.fillStyle = "grey";
             U.downwardTriangle(ctx,this.x + (this.width * (0/6)),this.y + this.height,this.width/6,this.width/6);
             U.downwardTriangle(ctx,this.x + (this.width * (2/6)),this.y + this.height,this.width/6,this.width/6);

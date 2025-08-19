@@ -42,7 +42,7 @@ export default class BHMain {
         // Set actual pixel resolution of the canvas
         canvas.width = canvas.clientWidth * scale;
         canvas.height = canvas.clientHeight * scale;
-        ctx.scale(scale, scale);
+        this.ctx.scale(scale, scale);
         this.canvas = canvas;
         window.addEventListener('keydown',this.keydown,false);
         window.addEventListener('keyup',this.keyup,false);

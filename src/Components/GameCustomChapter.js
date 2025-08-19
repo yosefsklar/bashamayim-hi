@@ -5,7 +5,7 @@ import {TextChapters} from "../Resources/texts";
 const GameCustomChapter  =(props) => {
 
     let dropdownArray = <div></div>;
-    if(props.textUrlName != "Sefarim")
+    if(props.textUrlName !== "Sefarim")
     {
         dropdownArray = Array.from(Array(TextChapters["tanakh"][props.textUrlName]).keys()).map(function (element, index) {
             return (<button className="dropdown-item" type="button"

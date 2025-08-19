@@ -4,7 +4,7 @@ import GameCustomText from "../Components/GameCustomText";
 import GameInstructions from "../Components/GameInstructions";
 import classes from "styles/BHGame.module.css";
 import SiteNavBar from "Components/assets/SiteNavBar";
-import {Switch, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom"; 
 
 import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
 import {Footer} from "../Components/assets/footer";
@@ -276,7 +276,7 @@ export default class BHGame extends Component {
 
     render() {
         let toRender;
-        if (this.state.gameState == GameState.default){
+        if (this.state.gameState === GameState.default){
             toRender = (
                 <GameDefault setParsha={this.setParsha}
                              parsha={this.state.parsha}
@@ -289,7 +289,7 @@ export default class BHGame extends Component {
                              startChapter={this.state.startChapter}
                              setInstruction={this.setInstruction}/>)
         }
-        else if (this.state.gameState == GameState.play){
+        else if (this.state.gameState === GameState.play){
             toRender = (<BHRound
                 level={this.state.level}
                 newGame = {this.setGameDefault}
@@ -301,7 +301,7 @@ export default class BHGame extends Component {
                 endVerse={this.state.endVerse}
             />)
         }
-        else if (this.state.gameState == GameState.custom){
+        else if (this.state.gameState === GameState.custom){
             toRender = (<GameCustomText setText={this.setText}
                                 textName={this.state.textName}
                                 textUrlName={this.state.textUrlName}
@@ -312,13 +312,13 @@ export default class BHGame extends Component {
                                 setLevel={this.setLevel}/>
             )
         }
-        else if (this.state.gameState == GameState.instruction){
+        else if (this.state.gameState === GameState.instruction){
             toRender = (<GameInstructions
                     setGameDefault={this.setGameDefault}
                 />
             )
         }
-        else if (this.state.gameState == GameState.level){
+        else if (this.state.gameState === GameState.level){
             toRender = (<GameDefaultLevel setLevel={this.setLevel}
                                           setGameDefault={this.setGameDefault}
                                           textName={this.state.textName}

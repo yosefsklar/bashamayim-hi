@@ -11,7 +11,6 @@ export const BtnConfig = (props) => {
 
 
 export const BtnConfigSmall = (props) => {
-    let title = <h3>{props.title}</h3>;
     return (
             <button className={"col-sm " +  classes.Btn + ' ' + classes.Config + classes.Small} onClick={() => props.setConfig(props.response)}>{props.children}</button>
             )

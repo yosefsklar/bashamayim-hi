@@ -17,8 +17,8 @@ export default class TimeBox extends Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevProps != this.props) {
-            if (this.props.round != prevProps.round) {
+        if (prevProps !== this.props) {
+            if (this.props.round !== prevProps.round) {
                 this.setState({
                     count: this.props.time
                 })
@@ -38,13 +38,13 @@ export default class TimeBox extends Component {
                             clearInterval(this.state.timeInterval);
                             this.startCountDown();
                         }
-                        else if(this.state.count == 30){
-                            if(this.props.clue != 2){
+                        else if(this.state.count === 30){
+                            if(this.props.clue !== 2){
                                 this.props.resetClue();
                             }
                         }
-                        else if(this.state.count == 15){
-                            if(this.props.clue != 3){
+                        else if(this.state.count === 15){
+                            if(this.props.clue !== 3){
                                 this.props.resetClue();
                             }
                         }

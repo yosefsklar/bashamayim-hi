@@ -49,8 +49,8 @@ export default class BlockGenerator {
 
 
                 else if (blocks[i-1].wordType === "textWord"){
-                    if(blocks[i-2] != null && blocks[i-2].wordType === "textWord") {
-                        if(blocks[i-3] != null && blocks[i-3].wordType === "textWord"){
+                    if(blocks[i-2] !== null && blocks[i-2].wordType === "textWord") {
+                        if(blocks[i-3] !== null && blocks[i-3].wordType === "textWord"){
                             wordType = "decoyWord";
                         }
                         else {
@@ -106,7 +106,7 @@ export default class BlockGenerator {
 
                 let last = false;
                 if(this.textIndex === mainText.length){
-                    if(wordType != 'decoyWord'){
+                    if(wordType !== 'decoyWord'){
                         last = true;
                     }
                     else{

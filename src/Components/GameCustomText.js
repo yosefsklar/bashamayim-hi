@@ -31,7 +31,7 @@ const GameCustomText = (props) => {
             </div>
             <GameCustomChapter setStartChapter={props.setStartChapter} textUrlName={props.textUrlName}  startChapter={props.startChapter} setGameDefault={props.setGameDefault}/>
             <div className={'container'}>
-                {(props.textName != "Sefarim" && props.startChapter != "Chapters") && chooseLevel}
+                {(props.textName !== "Sefarim" && props.startChapter !== "Chapters") && chooseLevel}
             </div>
             <div style={{textAlign: 'left'}}>
                 <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>

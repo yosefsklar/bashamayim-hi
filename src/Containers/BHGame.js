@@ -104,9 +104,8 @@ export default class BHGame extends Component {
             parsha : new TextItem(parshaTextUrlName,parshaStartChapter,parshaName,parshaEndChapter,parshaStartVerse, parshaEndVerse)
         })
     }
-    //"Isaiah.54.1-55.5"
-    //Isaiah 40:27-41:16"
-        /**
+
+    /**
      * Retrieves and parses Haftorah information from the Sefaria calendar data,
      * proving label name for Haftorah button and game text url if selected.
      * Haftorah url format: "Isaiah.40.27-41.16", "Isaiah.54.1-34"

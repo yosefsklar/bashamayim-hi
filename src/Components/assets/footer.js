@@ -6,10 +6,7 @@ export class Footer extends Component {
       <footer className={classes.footer + " _root page-footer justify-content-center"}>
         <p>
           Powered by
-          <a href="https://github.com/Sefaria/Sefaria-Project/wiki/API-Documentation">
-            {" "}
-            Sefaria APIs
-          </a>
+          <a href="https://github.com/Sefaria/Sefaria-Project/wiki/API-Documentation"> Sefaria APIs</a>
         </p>
         <p>
           Free background photos from

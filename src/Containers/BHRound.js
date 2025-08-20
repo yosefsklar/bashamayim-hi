@@ -60,11 +60,7 @@ export default class BHRound extends Component {
   fetchSingleChapterText = () => {
     let fetchPromise;
     let fetchString =
-      "https://www.sefaria.org/api/texts/" +
-      this.props.text +
-      "." +
-      this.props.startChapter +
-      "?custom=ashkenazi";
+      "https://www.sefaria.org/api/texts/" + this.props.text + "." + this.props.startChapter + "?custom=ashkenazi";
     fetchPromise = fetch(fetchString)
       .then((response) => {
         return response.json();
@@ -90,11 +86,7 @@ export default class BHRound extends Component {
     return Promise.all(
       chapters.map((chapterNumber, index) => {
         let fetchString =
-          "https://www.sefaria.org/api/texts/" +
-          this.props.text +
-          "." +
-          chapterNumber +
-          "?custom=ashkenazi";
+          "https://www.sefaria.org/api/texts/" + this.props.text + "." + chapterNumber + "?custom=ashkenazi";
         return fetch(fetchString)
           .then((response) => {
             return response.json();
@@ -134,11 +126,7 @@ export default class BHRound extends Component {
     return Promise.all(
       decoyTexts.map((chapterNumber, index) => {
         let fetchString =
-          "https://www.sefaria.org/api/texts/" +
-          decoyTexts[index] +
-          "." +
-          decoyChapters[index] +
-          "?custom=ashkenazi";
+          "https://www.sefaria.org/api/texts/" + decoyTexts[index] + "." + decoyChapters[index] + "?custom=ashkenazi";
         return fetch(fetchString)
           .then((response) => {
             return response.json();
@@ -149,9 +137,7 @@ export default class BHRound extends Component {
           });
       }),
     ).then((decoyWordLists) => {
-      let strippedWords = cleanText(
-        this.verseListsToCleanedWords(decoyWordLists, textWords).join(" "),
-      );
+      let strippedWords = cleanText(this.verseListsToCleanedWords(decoyWordLists, textWords).join(" "));
       // if there are fewer decoy words than text words, double the decoy words
       while (textWords.length * (5 / 4) > strippedWords.length) {
         strippedWords = strippedWords.concat(strippedWords);
@@ -217,9 +203,7 @@ export default class BHRound extends Component {
         {this.state.textHelper ? (
           <div className={"col-sm "}>
             <BtnSmall onClick={this.setTextHelper}>Hide Text</BtnSmall>
-            <p className={classes.textBox}>
-              {this.state.textWords.filter((v, i) => i <= this.state.index).join(" ")}
-            </p>
+            <p className={classes.textBox}>{this.state.textWords.filter((v, i) => i <= this.state.index).join(" ")}</p>
           </div>
         ) : (
           this.state.gameProcessed && <BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>

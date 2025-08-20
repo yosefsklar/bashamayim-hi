@@ -35,9 +35,7 @@ const GameCustomText = (props) => {
         >
           {props.textName}
         </button>
-        <div className={"dropdown-menu dropdown-menu-right " + classes.scrollable_menu}>
-          {dropdownArray}
-        </div>
+        <div className={"dropdown-menu dropdown-menu-right " + classes.scrollable_menu}>{dropdownArray}</div>
       </div>
       <GameCustomChapter
         setStartChapter={props.setStartChapter}

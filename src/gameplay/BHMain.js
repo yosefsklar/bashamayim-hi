@@ -50,13 +50,7 @@ export default class BHMain {
     this.level = level;
     this.setFirstBlock(this.blocks);
     this.player = new Player(this.gravity, this.setLowestBlock, this.BGenerate, this.mainText);
-    this.BGenerate.blockGenerator(
-      this.lowestBlock,
-      this.blocks,
-      this.blockOffset,
-      this.difficulty,
-      this.mainText,
-    );
+    this.BGenerate.blockGenerator(this.lowestBlock, this.blocks, this.blockOffset, this.difficulty, this.mainText);
     this.id = id;
     this.newGame = newGame;
     this.continueGame = continueGame;
@@ -90,13 +84,7 @@ export default class BHMain {
       this.reported = false;
       this.BGenerate.section = 0;
       this.BGenerate.setIndex(this.player.highestWordIndex);
-      this.BGenerate.blockGenerator(
-        this.lowestBlock,
-        this.blocks,
-        this.blockOffset,
-        this.difficulty,
-        this.mainText,
-      );
+      this.BGenerate.blockGenerator(this.lowestBlock, this.blocks, this.blockOffset, this.difficulty, this.mainText);
       this.player.yDistanceTravelled = 0;
       this.player.x = U.adjustX(300);
       this.player.y = U.adjustY(550);

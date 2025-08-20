@@ -72,42 +72,29 @@ export default class BlockGenerator {
         if (wordType === "decoyWord" || blocks[i - 1].wordType === "decoyWord") {
           y =
             blocks[i - 1].y -
-            (Math.random() * (U.adjustY(50) + difficulty * U.adjustY(10)) +
-              U.adjustY(30) +
-              blockOffset) *
-              (2 / 3);
+            (Math.random() * (U.adjustY(50) + difficulty * U.adjustY(10)) + U.adjustY(30) + blockOffset) * (2 / 3);
         } else if (wordType === "spike") {
           y =
             blocks[i - 1].y -
-            (Math.random() * (U.adjustY(50) + difficulty * U.adjustY(10)) +
-              U.adjustY(50) +
-              blockOffset);
+            (Math.random() * (U.adjustY(50) + difficulty * U.adjustY(10)) + U.adjustY(50) + blockOffset);
         } else if (blocks[i - 1].wordType === "spike") {
           // blocks[i].y = (blocks[i-1].y) - ((Math.random()*(U.adjustY(80) + (difficulty*U.adjustY(25))))+U.adjustY(50) + blockOffset);
           y =
             blocks[i - 1].y -
-            (Math.random() * (U.adjustY(20) + difficulty * U.adjustY(10)) +
-              U.adjustY(10) +
-              blockOffset);
+            (Math.random() * (U.adjustY(20) + difficulty * U.adjustY(10)) + U.adjustY(10) + blockOffset);
         } else {
           if (blocks[i - 1].type === "sideways" || blocks[i - 1].type === "rising") {
             y =
               blocks[i - 1].y -
-              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) +
-                U.adjustY(40) +
-                blockOffset);
+              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) + U.adjustY(40) + blockOffset);
           } else if (blocks[i - 1].wordType === "textWord") {
             y =
               blocks[i - 1].y -
-              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) +
-                U.adjustY(75) +
-                blockOffset);
+              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) + U.adjustY(75) + blockOffset);
           } else {
             y =
               blocks[i - 1].y -
-              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) +
-                U.adjustY(25) +
-                blockOffset);
+              (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) + U.adjustY(25) + blockOffset);
           }
         }
 

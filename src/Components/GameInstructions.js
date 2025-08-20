@@ -19,8 +19,8 @@ const GameInstructions = (props) => {
           <li>Jump from block to block to get as high as you can!</li>
           <li>Use the left and right arrow keys to move</li>
           <li>
-            You may only step on the blocks that contain words that are the continuation of the text
-            that you selected. (You need not land on these blocks in order or consecutively.)
+            You may only step on the blocks that contain words that are the continuation of the text that you selected.
+            (You need not land on these blocks in order or consecutively.)
           </li>
           <div className={classes.picture}>
             <img src={instructions1} alt="player jumping from block to block" height="200" />

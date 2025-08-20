@@ -57,11 +57,7 @@ export default class Block {
     ctx.textAlign = "center";
 
     // Align to whole pixels (round) to avoid blur
-    ctx.fillText(
-      this.word,
-      Math.round(this.x + this.width / 2),
-      Math.round(this.y + (this.height / 4) * 3),
-    );
+    ctx.fillText(this.word, Math.round(this.x + this.width / 2), Math.round(this.y + (this.height / 4) * 3));
 
     if (this.powerup === "spring") {
       ctx.fillStyle = "grey";
@@ -80,27 +76,9 @@ export default class Block {
       ctx.stroke();
     } else if (this.wordType === "spike") {
       ctx.fillStyle = "grey";
-      U.downwardTriangle(
-        ctx,
-        this.x + this.width * (0 / 6),
-        this.y + this.height,
-        this.width / 6,
-        this.width / 6,
-      );
-      U.downwardTriangle(
-        ctx,
-        this.x + this.width * (2 / 6),
-        this.y + this.height,
-        this.width / 6,
-        this.width / 6,
-      );
-      U.downwardTriangle(
-        ctx,
-        this.x + this.width * (4 / 6),
-        this.y + this.height,
-        this.width / 6,
-        this.width / 6,
-      );
+      U.downwardTriangle(ctx, this.x + this.width * (0 / 6), this.y + this.height, this.width / 6, this.width / 6);
+      U.downwardTriangle(ctx, this.x + this.width * (2 / 6), this.y + this.height, this.width / 6, this.width / 6);
+      U.downwardTriangle(ctx, this.x + this.width * (4 / 6), this.y + this.height, this.width / 6, this.width / 6);
     }
   };
 

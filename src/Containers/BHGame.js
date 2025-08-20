@@ -168,8 +168,7 @@ export default class BHGame extends Component {
     let nineStart = parseInt(text[1]);
     let nineName = data.calendar_items[index].displayValue.en;
     let nineEnd =
-      data.calendar_items[index].url.split("-")[0].split(".")[0] +
-      data.calendar_items[index].url.split("-")[1];
+      data.calendar_items[index].url.split("-")[0].split(".")[0] + data.calendar_items[index].url.split("-")[1];
 
     this.setState({
       nine: new TextItem(nineText, nineStart, nineName, nineEnd),

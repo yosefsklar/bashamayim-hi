@@ -9,7 +9,7 @@ module.exports = {
     
     // Optional: Other rules you might want to customize
     'no-unused-vars': 'warn',
-    'no-console': 'warn',
+    'no-console': 'off',
     'react/prop-types': 'off', // Turn off if you're not using PropTypes
     
     // JSX specific rules

@@ -1,5 +1,4 @@
 import BHUtils from './BHUtils';
-import BlockGenerator from './BlockGenerator';
 import playerImage from '../Images/SRHirsch.png';
 
 const U = new BHUtils();

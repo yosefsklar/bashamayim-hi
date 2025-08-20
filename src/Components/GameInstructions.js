@@ -1,5 +1,5 @@
 import Modal from "Components/assets/Modal";
-import {BtnConfigWide, BtnSmall} from "Components/assets/buttons";
+import {BtnSmall} from "Components/assets/buttons";
 import React from "react";
 import classes from 'styles/GameInstructions.module.css';
 import instructions1 from 'Images/instructions1.PNG';
@@ -23,7 +23,7 @@ const GameInstructions = (props) => {
                         (You need not land on these blocks in order or consecutively.)
                     </li>
                     <div className={classes.picture}>
-                        <img src={instructions1} alt="image of player jumping from block to block" height="200"/>
+                        <img src={instructions1} alt="player jumping from block to block" height="200"/>
                     </div>
                     <li>Easy: Decoy blocks will be blank or "bashamayim hi" blocksnp</li>
                     <div className={classes.picture}>
@@ -36,7 +36,7 @@ const GameInstructions = (props) => {
                     </div>
                     <li>Avoid the spiked blocks! Though you can land on top of them if you'd like.</li>
                     <div className={classes.picture}>
-                        <img src={instructions2} alt="image of spike block" height="125"/>
+                        <img src={instructions2} alt="spike block" height="125"/>
                     </div>
                     <li>Powerup</li>
                     <div className={classes.picture}>

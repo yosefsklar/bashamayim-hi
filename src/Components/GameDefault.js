@@ -1,7 +1,6 @@
 import React from 'react';
-import classes from '../styles/GameCustomText.module.css';
 import Modal from './assets/Modal';
-import {BtnConfigSmall, BtnConfigWide, BtnSmall} from "./assets/buttons";
+import { BtnConfigWide, BtnSmall} from "./assets/buttons";
 
 const GameDefault = (props) => {
 

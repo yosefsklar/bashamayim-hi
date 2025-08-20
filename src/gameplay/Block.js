@@ -46,7 +46,7 @@ export default class Block {
         // }
         U.roundedRect(ctx,this.x,this.y,this.width,this.height,U.adjustX(5),"black");
         //ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.font = "bold " + U.adjustX(22)+ "px" + "'Noto Sans Hebrew','Arial Hebrew','BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
+        ctx.font = "bold " + U.adjustX(22)+ "px 'Noto Sans Hebrew','Arial Hebrew','BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
         ctx.fillStyle = "white";
         if(this.color === "#5EFF16"){
             ctx.fillStyle = "#090524";

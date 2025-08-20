@@ -97,7 +97,6 @@ let checkOverlap = (x,textWords) =>{
         }
     }
 }
-let noPrefix = textWords.map(x => x.replace(/[\u0591-\u05C7]/g,'').substring(1));
 
 export let decoyWords = decoyOrigWords.filter(x => checkOverlap(x,textWords));
 

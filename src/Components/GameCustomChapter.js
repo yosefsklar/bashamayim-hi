@@ -1,8 +1,8 @@
-import React,{Component} from 'react';
+import React from 'react';
 import classes from '../styles/GameCustomChapter.module.css';
 import {TextChapters} from "../Resources/texts";
 
-const GameCustomChapter  =(props) => {
+const GameCustomChapter  = (props) => {
 
     let dropdownArray = <div></div>;
     if(props.textUrlName !== "Sefarim")

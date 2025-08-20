@@ -4,7 +4,6 @@ import GameCustomText from "../Components/GameCustomText";
 import GameInstructions from "../Components/GameInstructions";
 import classes from "styles/BHGame.module.css";
 import SiteNavBar from "Components/assets/SiteNavBar";
-import {Switch, Route} from "react-router-dom"; 
 
 import GameDefault, {GameDefaultLevel} from "../Components/GameDefault";
 import {Footer} from "../Components/assets/footer";

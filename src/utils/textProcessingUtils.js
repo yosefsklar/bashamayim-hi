@@ -4,9 +4,7 @@
  * @returns {string[]} Array of strings with HTML tags removed.
  */
 export function removeHTML(textArr) {
-  return textArr.map((x) =>
-    x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g, "").replace(/<[^>]*>/g, ""),
-  );
+  return textArr.map((x) => x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g, "").replace(/<[^>]*>/g, ""));
 }
 
 /**

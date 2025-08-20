@@ -58,9 +58,7 @@ export default class BHGame extends Component {
       .then((data) => {
         this.retrieveParsha(
           data,
-          data.calendar_items.findIndex(
-            (item) => item.title.en === "Parashat Hashavua",
-          ),
+          data.calendar_items.findIndex((item) => item.title.en === "Parashat Hashavua"),
         );
         this.retrieveHaftorah(
           data,
@@ -91,9 +89,7 @@ export default class BHGame extends Component {
     let parshaTextUrlName = text[0];
     let parshaStartChapter = parseInt(text[1]);
     let parshaName = data.calendar_items[index].displayValue.en.split("-")[0];
-    let parshaStartVerse = parseInt(
-      data.calendar_items[index].url.split("-")[0].split(".")[2],
-    );
+    let parshaStartVerse = parseInt(data.calendar_items[index].url.split("-")[0].split(".")[2]);
     //TODO remember why we need this type of ending if parshiot always span multiple chapters.
     // may have just copied the logic from haftorah
     let parshaEnding = data.calendar_items[index].url.split("-")[1];
@@ -132,9 +128,7 @@ export default class BHGame extends Component {
     let haftorahText = text[0];
     let haftorahStartChapter = parseInt(text[1]);
     let haftorahName = data.calendar_items[index].displayValue.en;
-    let haftorahStartVerse = parseInt(
-      data.calendar_items[index].url.split("-")[0].split(".")[2],
-    );
+    let haftorahStartVerse = parseInt(data.calendar_items[index].url.split("-")[0].split(".")[2]);
     let haftorahEnding = data.calendar_items[index].url.split("-")[1];
     let haftorahEndVerse;
     let haftorahEndChapter;
@@ -360,14 +354,7 @@ export default class BHGame extends Component {
  *  For parshiyot "textName" refers to name of parsha, texturlname refers to name of Sefer
  * */
 class TextItem {
-  constructor(
-    textUrlName,
-    startChapter,
-    textName,
-    endChapter,
-    startVerse = 0,
-    endVerse = 0,
-  ) {
+  constructor(textUrlName, startChapter, textName, endChapter, startVerse = 0, endVerse = 0) {
     this.textUrlName = textUrlName;
     this.startChapter = startChapter;
     this.textName = textName;

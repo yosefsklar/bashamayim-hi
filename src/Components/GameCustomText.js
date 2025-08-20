@@ -6,28 +6,18 @@ import GameCustomChapter from "./GameCustomChapter";
 import { BtnConfigSmall, BtnSmall } from "./assets/buttons";
 
 const GameCustomText = (props) => {
-  let dropdownArray = Object.keys(TextChapters["tanakh"]).map(
-    function (key, index) {
-      return (
-        <button
-          className="dropdown-item"
-          type="button"
-          onClick={() => props.setText(key)}
-        >
-          {key.split("_").join(" ")}
-        </button>
-      );
-    },
-  );
+  let dropdownArray = Object.keys(TextChapters["tanakh"]).map(function (key, index) {
+    return (
+      <button className="dropdown-item" type="button" onClick={() => props.setText(key)}>
+        {key.split("_").join(" ")}
+      </button>
+    );
+  });
 
   let chooseLevel = (
     <div className={"row"}>
-      <BtnConfigSmall setConfig={() => props.setLevel("easy")}>
-        Easy
-      </BtnConfigSmall>
-      <BtnConfigSmall setConfig={() => props.setLevel("hard")}>
-        Hard
-      </BtnConfigSmall>
+      <BtnConfigSmall setConfig={() => props.setLevel("easy")}>Easy</BtnConfigSmall>
+      <BtnConfigSmall setConfig={() => props.setLevel("hard")}>Hard</BtnConfigSmall>
     </div>
   );
 
@@ -45,11 +35,7 @@ const GameCustomText = (props) => {
         >
           {props.textName}
         </button>
-        <div
-          className={
-            "dropdown-menu dropdown-menu-right " + classes.scrollable_menu
-          }
-        >
+        <div className={"dropdown-menu dropdown-menu-right " + classes.scrollable_menu}>
           {dropdownArray}
         </div>
       </div>
@@ -60,9 +46,7 @@ const GameCustomText = (props) => {
         setGameDefault={props.setGameDefault}
       />
       <div className={"container"}>
-        {props.textName !== "Sefarim" &&
-          props.startChapter !== "Chapters" &&
-          chooseLevel}
+        {props.textName !== "Sefarim" && props.startChapter !== "Chapters" && chooseLevel}
       </div>
       <div style={{ textAlign: "left" }}>
         <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>

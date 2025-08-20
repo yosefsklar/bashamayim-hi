@@ -91,16 +91,12 @@ export let textWords = genesis
   .split(/[\s\u05BE]+/);
 
 let checkOverlap = (x, textWords) => {
-  let noPrefix = textWords.map((x) =>
-    x.replace(/[\u0591-\u05C7]/g, "").substring(1),
-  );
+  let noPrefix = textWords.map((x) => x.replace(/[\u0591-\u05C7]/g, "").substring(1));
   textWords = textWords.map((x) => x.replace(/[\u0591-\u05C7]/g, ""));
   if (!textWords.includes(x)) {
     if (!noPrefix.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))) {
       if (!noPrefix.includes(x.replace(/[\u0591-\u05C7]/g, ""))) {
-        if (
-          !textWords.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))
-        ) {
+        if (!textWords.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))) {
           return true;
         }
       }
@@ -108,9 +104,7 @@ let checkOverlap = (x, textWords) => {
   }
 };
 
-export let decoyWords = decoyOrigWords.filter((x) =>
-  checkOverlap(x, textWords),
-);
+export let decoyWords = decoyOrigWords.filter((x) => checkOverlap(x, textWords));
 
 console.log(decoyWords);
 // console.log(textWords)

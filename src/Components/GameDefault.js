@@ -43,12 +43,8 @@ export const GameDefaultLevel = (props) => {
       <h2>{props.textName}</h2>
       <p>Select a level</p>
       <div className={"row"}>
-        <BtnConfigWide setConfig={() => props.setLevel("easy")}>
-          Easy
-        </BtnConfigWide>
-        <BtnConfigWide setConfig={() => props.setLevel("hard")}>
-          Hard
-        </BtnConfigWide>
+        <BtnConfigWide setConfig={() => props.setLevel("easy")}>Easy</BtnConfigWide>
+        <BtnConfigWide setConfig={() => props.setLevel("hard")}>Hard</BtnConfigWide>
       </div>
       <div style={{ textAlign: "left" }}>
         <BtnSmall onClick={props.setGameDefault}>Back</BtnSmall>

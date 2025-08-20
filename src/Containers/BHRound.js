@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 // import {textWords, ecc, exodus} from "../Resources/text_samples";
-import {
-  removeHTML,
-  cleanText,
-  shuffleArray,
-} from "../utils/textProcessingUtils";
+import { removeHTML, cleanText, shuffleArray } from "../utils/textProcessingUtils";
 import BHMain from "../gameplay/BHMain";
 import classes from "styles/BHRound.module.css";
 import { TextChapters } from "../Resources/texts";
@@ -32,26 +28,24 @@ export default class BHRound extends Component {
       textPromise = this.fetchSingleChapterText();
     }
     textPromise.then((textWords) => {
-      return this.generateDecoyWords(this.props.text, textWords).then(
-        (decoyWords) => {
-          let game = new BHMain(
-            this.refs.canvas,
-            this.props.level,
-            textWords,
-            decoyWords,
-            1,
-            this.props.newGame,
-            this.props.continueGame,
-            this.setIndex,
-            gamePlayConfigs,
-          );
-          this.setState({
-            game: game,
-            gameProcessed: true,
-            textWords: textWords,
-          });
-        },
-      );
+      return this.generateDecoyWords(this.props.text, textWords).then((decoyWords) => {
+        let game = new BHMain(
+          this.refs.canvas,
+          this.props.level,
+          textWords,
+          decoyWords,
+          1,
+          this.props.newGame,
+          this.props.continueGame,
+          this.setIndex,
+          gamePlayConfigs,
+        );
+        this.setState({
+          game: game,
+          gameProcessed: true,
+          textWords: textWords,
+        });
+      });
     });
   }
 
@@ -79,8 +73,7 @@ export default class BHRound extends Component {
         data["he"] = removeHTML(data.he);
         if (this.props.startVerse && this.props.endVerse) {
           data["he"] = data["he"].filter(
-            (verse, index) =>
-              index >= this.props.startVerse - 1 && index < this.props.endVerse,
+            (verse, index) => index >= this.props.startVerse - 1 && index < this.props.endVerse,
           );
         }
         return data["he"];
@@ -93,10 +86,7 @@ export default class BHRound extends Component {
 
   fetchMultiChapterText = () => {
     let difference = this.props.endChapter - this.props.startChapter + 1;
-    let chapters = Array.from(
-      new Array(difference),
-      (x, i) => i + this.props.startChapter,
-    );
+    let chapters = Array.from(new Array(difference), (x, i) => i + this.props.startChapter);
     return Promise.all(
       chapters.map((chapterNumber, index) => {
         let fetchString =
@@ -136,9 +126,7 @@ export default class BHRound extends Component {
     for (let i = 0; i < 2; i++) {
       let keys = Object.keys(TextChapters["tanakh"]);
       let key = keys[Math.floor(Math.random() * keys.length)];
-      let chapterNumber = Math.ceil(
-        Math.random() * TextChapters["tanakh"][key],
-      );
+      let chapterNumber = Math.ceil(Math.random() * TextChapters["tanakh"][key]);
       decoyTexts.push(key);
       decoyChapters.push(chapterNumber);
     }
@@ -189,16 +177,12 @@ export default class BHRound extends Component {
   };
 
   checkOverlap = (x, textWords) => {
-    let noPrefix = textWords.map((x) =>
-      x.replace(/[\u0591-\u05C7]/g, "").substring(1),
-    );
+    let noPrefix = textWords.map((x) => x.replace(/[\u0591-\u05C7]/g, "").substring(1));
     textWords = textWords.map((x) => x.replace(/[\u0591-\u05C7]/g, ""));
     if (!textWords.includes(x)) {
       if (!noPrefix.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))) {
         if (!noPrefix.includes(x.replace(/[\u0591-\u05C7]/g, ""))) {
-          if (
-            !textWords.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))
-          ) {
+          if (!textWords.includes(x.replace(/[\u0591-\u05C7]/g, "").substring(1))) {
             return true;
           }
         }
@@ -227,27 +211,18 @@ export default class BHRound extends Component {
           <p></p>
         </div>
         <div className={"col-sm " + classes.canvasWrap}>
-          <canvas
-            className={classes.Canvas}
-            ref="canvas"
-            width={0}
-            height={0}
-          />
+          <canvas className={classes.Canvas} ref="canvas" width={0} height={0} />
         </div>
 
         {this.state.textHelper ? (
           <div className={"col-sm "}>
             <BtnSmall onClick={this.setTextHelper}>Hide Text</BtnSmall>
             <p className={classes.textBox}>
-              {this.state.textWords
-                .filter((v, i) => i <= this.state.index)
-                .join(" ")}
+              {this.state.textWords.filter((v, i) => i <= this.state.index).join(" ")}
             </p>
           </div>
         ) : (
-          this.state.gameProcessed && (
-            <BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>
-          )
+          this.state.gameProcessed && <BtnSmall onClick={this.setTextHelper}>Show Text</BtnSmall>
         )}
       </div>
     );

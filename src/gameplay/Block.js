@@ -44,15 +44,7 @@ export default class Block {
     //     this.color = "#ff5046";
     //     ctx.fillStyle =  this.color;
     // }
-    U.roundedRect(
-      ctx,
-      this.x,
-      this.y,
-      this.width,
-      this.height,
-      U.adjustX(5),
-      "black",
-    );
+    U.roundedRect(ctx, this.x, this.y, this.width, this.height, U.adjustX(5), "black");
     //ctx.fillRect(this.x, this.y, this.width, this.height);
     ctx.font =
       "bold " +
@@ -73,33 +65,16 @@ export default class Block {
 
     if (this.powerup === "spring") {
       ctx.fillStyle = "grey";
-      ctx.fillRect(
-        this.x + U.adjustX(35),
-        this.y - U.adjustY(10),
-        U.adjustX(30),
-        U.adjustY(10),
-      );
+      ctx.fillRect(this.x + U.adjustX(35), this.y - U.adjustY(10), U.adjustX(30), U.adjustY(10));
     } else if (this.powerup === "orbBack") {
       ctx.beginPath();
-      ctx.arc(
-        this.x + this.width / 2,
-        this.y - U.adjustY(15),
-        U.adjustY(10),
-        0,
-        2 * Math.PI,
-      );
+      ctx.arc(this.x + this.width / 2, this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
       ctx.fillStyle = "white";
       ctx.fill();
       ctx.stroke();
     } else if (this.powerup === "orbForward") {
       ctx.beginPath();
-      ctx.arc(
-        this.x + this.width / 2,
-        this.y - U.adjustY(15),
-        U.adjustY(10),
-        0,
-        2 * Math.PI,
-      );
+      ctx.arc(this.x + this.width / 2, this.y - U.adjustY(15), U.adjustY(10), 0, 2 * Math.PI);
       ctx.fillStyle = "#5EFF16";
       ctx.fill();
       ctx.stroke();

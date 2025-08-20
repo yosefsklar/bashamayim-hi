@@ -19,32 +19,22 @@ const GameInstructions = (props) => {
           <li>Jump from block to block to get as high as you can!</li>
           <li>Use the left and right arrow keys to move</li>
           <li>
-            You may only step on the blocks that contain words that are the
-            continuation of the text that you selected. (You need not land on
-            these blocks in order or consecutively.)
+            You may only step on the blocks that contain words that are the continuation of the text
+            that you selected. (You need not land on these blocks in order or consecutively.)
           </li>
           <div className={classes.picture}>
-            <img
-              src={instructions1}
-              alt="player jumping from block to block"
-              height="200"
-            />
+            <img src={instructions1} alt="player jumping from block to block" height="200" />
           </div>
           <li>Easy: Decoy blocks will be blank or "bashamayim hi" blocksnp</li>
           <div className={classes.picture}>
             <img src={instructions3} alt="blank block" height="50" />
             <img src={instructions5} alt="bashamayim hi block" height="50" />
           </div>
-          <li>
-            Hard: Decoy blocks will have other words from Tanakh written on them
-          </li>
+          <li>Hard: Decoy blocks will have other words from Tanakh written on them</li>
           <div className={classes.picture}>
             <img src={instructions4} alt="hard gameplay" width="250" />
           </div>
-          <li>
-            Avoid the spiked blocks! Though you can land on top of them if you'd
-            like.
-          </li>
+          <li>Avoid the spiked blocks! Though you can land on top of them if you'd like.</li>
           <div className={classes.picture}>
             <img src={instructions2} alt="spike block" height="125" />
           </div>

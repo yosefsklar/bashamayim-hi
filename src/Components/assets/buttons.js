@@ -68,10 +68,7 @@ export const BtnAnswer = (props) => {
 export const BtnSmall = (props) => {
   return (
     <div className={"col-sm "}>
-      <button
-        className={classes.Btn + " " + classes.Small}
-        onClick={props.onClick}
-      >
+      <button className={classes.Btn + " " + classes.Small} onClick={props.onClick}>
         <p>{props.children}</p>
       </button>
     </div>

@@ -36,24 +36,15 @@ export default class BlockGenerator {
         let x;
         let y;
 
-        if (
-          blocks[i - 1].wordType === "decoyWord" ||
-          blocks[i - 1].wordType === "spike"
-        ) {
-          if (
-            blocks[i - 2].wordType === "decoyWord" ||
-            blocks[i - 1].wordType === "spike"
-          ) {
+        if (blocks[i - 1].wordType === "decoyWord" || blocks[i - 1].wordType === "spike") {
+          if (blocks[i - 2].wordType === "decoyWord" || blocks[i - 1].wordType === "spike") {
             wordType = "textWord";
           } else {
             wordType = this.generateWordType(i);
           }
         } else if (blocks[i - 1].wordType === "textWord") {
           if (blocks[i - 2] !== null && blocks[i - 2].wordType === "textWord") {
-            if (
-              blocks[i - 3] !== null &&
-              blocks[i - 3].wordType === "textWord"
-            ) {
+            if (blocks[i - 3] !== null && blocks[i - 3].wordType === "textWord") {
               wordType = "decoyWord";
             } else {
               wordType = this.generateWordType();
@@ -78,10 +69,7 @@ export default class BlockGenerator {
         x = Math.random() * (U.screenWidth - B.width);
 
         //TODO figure out the levels, max jump =~ 260
-        if (
-          wordType === "decoyWord" ||
-          blocks[i - 1].wordType === "decoyWord"
-        ) {
+        if (wordType === "decoyWord" || blocks[i - 1].wordType === "decoyWord") {
           y =
             blocks[i - 1].y -
             (Math.random() * (U.adjustY(50) + difficulty * U.adjustY(10)) +
@@ -102,10 +90,7 @@ export default class BlockGenerator {
               U.adjustY(10) +
               blockOffset);
         } else {
-          if (
-            blocks[i - 1].type === "sideways" ||
-            blocks[i - 1].type === "rising"
-          ) {
+          if (blocks[i - 1].type === "sideways" || blocks[i - 1].type === "rising") {
             y =
               blocks[i - 1].y -
               (Math.random() * (U.adjustY(45) + difficulty * U.adjustY(10)) +
@@ -137,16 +122,7 @@ export default class BlockGenerator {
         if (this.textIndex > mainText.length) {
           break;
         }
-        let block = new Block(
-          x,
-          y,
-          powerup,
-          type,
-          word,
-          wordType,
-          wordIndex,
-          last,
-        );
+        let block = new Block(x, y, powerup, type, word, wordType, wordIndex, last);
         blocks.push(block);
       }
     }
@@ -176,13 +152,9 @@ export default class BlockGenerator {
 
     if (Math.round(Math.random() * powerupChances[level]["spring"]) === 0) {
       return "spring";
-    } else if (
-      Math.round(Math.random() * powerupChances[level]["orbBack"]) === 0
-    ) {
+    } else if (Math.round(Math.random() * powerupChances[level]["orbBack"]) === 0) {
       return "orbBack";
-    } else if (
-      Math.round(Math.random() * powerupChances[level]["orbForward"]) === 0
-    ) {
+    } else if (Math.round(Math.random() * powerupChances[level]["orbForward"]) === 0) {
       return "orbForward";
     }
     return 0;
@@ -191,20 +163,13 @@ export default class BlockGenerator {
   generateBlockType = () => {
     const blockChances = {
       //1 out of every 15 block TODO this is where we will come up with the decoys, probably 1/4,
-      sideways:
-        this.config.hard.blockTypeFreq.sideways * ((5 - this.section) / 5),
+      sideways: this.config.hard.blockTypeFreq.sideways * ((5 - this.section) / 5),
       rising: this.config.hard.blockTypeFreq.rising * ((5 - this.section) / 5),
     };
 
-    if (
-      Math.round(Math.random() * blockChances["sideways"]) ===
-      blockChances["sideways"]
-    ) {
+    if (Math.round(Math.random() * blockChances["sideways"]) === blockChances["sideways"]) {
       return "sideways";
-    } else if (
-      Math.round(Math.random() * blockChances["rising"]) ===
-      blockChances["rising"]
-    ) {
+    } else if (Math.round(Math.random() * blockChances["rising"]) === blockChances["rising"]) {
       return "rising";
     }
     return "regular";
@@ -215,15 +180,9 @@ export default class BlockGenerator {
       spike: this.config.hard.wordTypeFreq.spike,
       textWord: 1,
     };
-    if (
-      index > 5 &&
-      Math.round(Math.random() * wordChances["spike"]) === wordChances["spike"]
-    ) {
+    if (index > 5 && Math.round(Math.random() * wordChances["spike"]) === wordChances["spike"]) {
       return "spike";
-    } else if (
-      Math.round(Math.random() * wordChances["textWord"]) ===
-      wordChances["textWord"]
-    ) {
+    } else if (Math.round(Math.random() * wordChances["textWord"]) === wordChances["textWord"]) {
       return "textWord";
     } else {
       return "decoyWord";

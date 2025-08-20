@@ -3,9 +3,7 @@ import classes from "styles/Footer.module.css";
 export class Footer extends Component {
   render() {
     return (
-      <footer
-        className={classes.footer + " _root page-footer justify-content-center"}
-      >
+      <footer className={classes.footer + " _root page-footer justify-content-center"}>
         <p>
           Powered by
           <a href="https://github.com/Sefaria/Sefaria-Project/wiki/API-Documentation">

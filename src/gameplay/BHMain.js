@@ -27,17 +27,7 @@ export default class BHMain {
   reported = false;
   id = "";
 
-  constructor(
-    canvas,
-    level,
-    mainText,
-    decoyText,
-    id,
-    newGame,
-    continueGame,
-    setIndex,
-    config,
-  ) {
+  constructor(canvas, level, mainText, decoyText, id, newGame, continueGame, setIndex, config) {
     this.mainText = mainText;
     this.ctx = canvas.getContext("2d");
     // smoothen out images (background and player)
@@ -56,20 +46,10 @@ export default class BHMain {
     window.addEventListener("keydown", this.keydown, false);
     window.addEventListener("keyup", this.keyup, false);
     this.config = config;
-    this.BGenerate = new BlockGenerator(
-      level,
-      mainText,
-      decoyText,
-      this.config,
-    );
+    this.BGenerate = new BlockGenerator(level, mainText, decoyText, this.config);
     this.level = level;
     this.setFirstBlock(this.blocks);
-    this.player = new Player(
-      this.gravity,
-      this.setLowestBlock,
-      this.BGenerate,
-      this.mainText,
-    );
+    this.player = new Player(this.gravity, this.setLowestBlock, this.BGenerate, this.mainText);
     this.BGenerate.blockGenerator(
       this.lowestBlock,
       this.blocks,
@@ -200,13 +180,7 @@ export default class BHMain {
 
       let backgroundImage = new Image();
       backgroundImage.src = backgroundImagePng;
-      this.ctx.drawImage(
-        backgroundImage,
-        0,
-        0,
-        U.screenWidth - 1,
-        U.screenHeight,
-      );
+      this.ctx.drawImage(backgroundImage, 0, 0, U.screenWidth - 1, U.screenHeight);
       this.ctx.strokeRect(0, 0, U.screenWidth - 1, U.screenHeight);
       this.ctx.fill();
       for (let i = 0; i < this.blocks.length; i++) {

@@ -26,15 +26,7 @@ export default class Player {
     this.mainText = mainText;
   }
 
-  update = (
-    lowestBlock,
-    difficulty,
-    blocks,
-    blockOffset,
-    ctx,
-    holdingLeftKey,
-    holdingRightKey,
-  ) => {
+  update = (lowestBlock, difficulty, blocks, blockOffset, ctx, holdingLeftKey, holdingRightKey) => {
     if (this.dead) {
       ctx.font =
         "bold " +
@@ -51,26 +43,10 @@ export default class Player {
         U.adjustX(36) +
         "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
       ctx.fillStyle = "#5EFF16";
-      ctx.fillText(
-        "Press 'c' to Continue",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 50,
-      );
-      ctx.strokeText(
-        "Press 'c' to Continue",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 50,
-      );
-      ctx.fillText(
-        "Press 'n' to Start a New Game",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 100,
-      );
-      ctx.strokeText(
-        "Press 'n' to Start a New Game",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 100,
-      );
+      ctx.fillText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
+      ctx.strokeText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
+      ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
+      ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
     } else if (this.win) {
       this.ySpeed = 0;
       this.xSpeed = 0;
@@ -90,16 +66,8 @@ export default class Player {
         U.adjustX(36) +
         "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
       ctx.fillStyle = "#5EFF16";
-      ctx.fillText(
-        "Press 'n' to Start a New Game",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 100,
-      );
-      ctx.strokeText(
-        "Press 'n' to Start a New Game",
-        U.screenWidth / 2,
-        U.screenHeight / 2 + 100,
-      );
+      ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
+      ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
     } else {
       this.ySpeed += this.gravity;
       if (this.y <= U.screenHeight / 2 - U.adjustY(100) && this.ySpeed <= 0) {
@@ -186,13 +154,7 @@ export default class Player {
       if (difficulty < 0) {
         difficulty += 1;
       }
-      this.BGenerate.blockGenerator(
-        lowestBlock,
-        blocks,
-        blockOffset,
-        difficulty,
-        this.mainText,
-      );
+      this.BGenerate.blockGenerator(lowestBlock, blocks, blockOffset, difficulty, this.mainText);
     }
 
     // for (let i = 0; i < blocks.length; i++) {
@@ -207,14 +169,9 @@ export default class Player {
   jump = (blocks, blockIndex, lowestBlock) => {
     if (blocks[blockIndex].wordType === "textWord") {
       console.log("high " + this.highestWordIndex);
-      this.highestWordIndex = Math.max(
-        this.highestWordIndex,
-        blocks[blockIndex].wordIndex,
-      );
+      this.highestWordIndex = Math.max(this.highestWordIndex, blocks[blockIndex].wordIndex);
       console.log("word " + blocks[blockIndex].wordIndex);
-      console.log(
-        Math.max(this.highestWordIndex, blocks[blockIndex].wordIndex),
-      );
+      console.log(Math.max(this.highestWordIndex, blocks[blockIndex].wordIndex));
     }
     let block = blocks[blockIndex];
     let powerup = block.powerup;

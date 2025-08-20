@@ -1,6 +1,6 @@
 .pageContainer {
-    position: relative;
-    min-height: 100vh;
-    box-sizing: content-box;
-    height: 3.5rem;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: content-box;
+  height: 3.5rem;
 }

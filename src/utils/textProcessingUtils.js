@@ -4,7 +4,9 @@
  * @returns {string[]} Array of strings with HTML tags removed.
  */
 export function removeHTML(textArr) {
-    return textArr.map(x => x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g, "").replace(/<[^>]*>/g, ""));
+  return textArr.map((x) =>
+    x.replace(/<\s*a[^>]*>(.*?)<\s*\/\s*a>/g, "").replace(/<[^>]*>/g, ""),
+  );
 }
 
 /**
@@ -13,7 +15,7 @@ export function removeHTML(textArr) {
  * @returns {string} String with vowel marks removed.
  */
 export function stripVowels(rawString) {
-    return rawString.replace(/[\u0591-\u05C7]/g, "");
+  return rawString.replace(/[\u0591-\u05C7]/g, "");
 }
 
 /**
@@ -22,11 +24,11 @@ export function stripVowels(rawString) {
  * @returns {any[]} The shuffled array.
  */
 export function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
 /**
@@ -36,7 +38,7 @@ export function shuffleArray(array) {
  * @returns {string} String with cantillation marks, maqaf, parsha markers, and bracketed text removed.
  */
 export function stripCantillation(words) {
-    return words.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "");
+  return words.replace(/[\u0591-\u05AF\u05c0]|\(פ\)|\(ס\)|\[(.*?)]/g, "");
 }
 
 /**
@@ -46,16 +48,16 @@ export function stripCantillation(words) {
  * @returns {string} The modified string with divine names replaced.
  */
 export function replaceDivineNames(words) {
-    const replacements = [
-        { regex: /יְהֹוָה|יהֹוָה/g, replacement: "יקוק" },
-        { regex: /אֱלֹהִים/g, replacement: "אלוקים" },
-        { regex: /(?<=\s)אֵל(?=\s)/g, replacement: "אֵ־ל" },
-    ];
+  const replacements = [
+    { regex: /יְהֹוָה|יהֹוָה/g, replacement: "יקוק" },
+    { regex: /אֱלֹהִים/g, replacement: "אלוקים" },
+    { regex: /(?<=\s)אֵל(?=\s)/g, replacement: "אֵ־ל" },
+  ];
 
-    for (const { regex, replacement } of replacements) {
-        words = words.replace(regex, replacement);
-    }
-    return words;
+  for (const { regex, replacement } of replacements) {
+    words = words.replace(regex, replacement);
+  }
+  return words;
 }
 
 /**
@@ -66,5 +68,5 @@ export function replaceDivineNames(words) {
  * @returns {string[]} An array of cleaned words.
  */
 export function cleanText(words) {
-    return replaceDivineNames(stripCantillation(words)).split(/[\s\u05BE]+/);
+  return replaceDivineNames(stripCantillation(words)).split(/[\s\u05BE]+/);
 }

@@ -45,6 +45,13 @@ export default class BHMain {
     this.canvas = canvas;
     window.addEventListener("keydown", this.keydown, false);
     window.addEventListener("keyup", this.keyup, false);
+    
+    // Add touch event listeners for mobile support
+    //MAIN PART
+    canvas.addEventListener("touchstart", this.touchStart, false);
+    canvas.addEventListener("touchend", this.touchEnd, false);
+    canvas.addEventListener("touchcancel", this.touchEnd, false);
+    
     this.config = config;
     this.BGenerate = new BlockGenerator(level, mainText, decoyText, this.config);
     this.level = level;
@@ -107,6 +114,92 @@ export default class BHMain {
     }
   };
 
+  touchStart = (e) => {
+    e.preventDefault(); // Prevent scrolling and other default touch behaviors
+    
+    // Handle touch events during gameplay vs game over states
+    if (this.player.dead) {
+      // Get the touch position relative to the canvas
+      const rect = this.canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      const touchY = touch.clientY - rect.top;
+      
+      // Define areas for continue and new game buttons
+      const upperHalf = U.screenHeight / 2 + 75; // Around where "Press 'c' to Continue" appears
+      const lowerHalf = U.screenHeight / 2 + 125; // Around where "Press 'n' to Start New Game" appears
+      
+      if (touchY >= upperHalf - 25 && touchY <= upperHalf + 25) {
+        // Continue game (equivalent to 'c' key)
+        this.continueGameTouch();
+      } else if (touchY >= lowerHalf - 25 && touchY <= lowerHalf + 25) {
+        // New game (equivalent to 'n' key)
+        this.newGame();
+        this.playing = false;
+      }
+      return;
+    } else if (this.player.win) {
+      // Get the touch position for win state
+      const rect = this.canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      const touchY = touch.clientY - rect.top;
+      
+      const newGameArea = U.screenHeight / 2 + 125; // Around where "Press 'n' to Start New Game" appears
+      
+      if (touchY >= newGameArea - 25 && touchY <= newGameArea + 25) {
+        // New game (equivalent to 'n' key)
+        this.newGame();
+        this.playing = false;
+      }
+      return;
+    }
+    
+    // Get the touch position relative to the canvas
+    const rect = this.canvas.getBoundingClientRect();
+    const touch = e.touches[0];
+    const touchX = touch.clientX - rect.left;
+    
+    // Determine if touch is on left or right half of screen
+    const screenCenter = U.screenWidth / 2;
+    //MAIN PART
+    if (touchX < screenCenter) {
+      this.holdingLeftKey = true;
+      this.holdingRightKey = false;
+    } else {
+      this.holdingRightKey = true;
+      this.holdingLeftKey = false;
+    }
+  };
+
+  continueGameTouch = () => {
+    // Same logic as the 'c' key press in keydown
+    this.blocks = [];
+    this.lowestBlock = 0;
+    this.difficulty = 0;
+    this.score = 0;
+    this.blocks.push(new Block());
+    this.blocks[0].x = U.adjustX(300);
+    this.blocks[0].y = U.adjustY(650);
+    this.blocks[0].type = 0;
+    this.blocks[0].powerup = 0;
+    this.blocks[0].word = "";
+    this.reported = false;
+    this.BGenerate.section = 0;
+    this.BGenerate.setIndex(this.player.highestWordIndex);
+    this.BGenerate.blockGenerator(this.lowestBlock, this.blocks, this.blockOffset, this.difficulty, this.mainText);
+    this.player.yDistanceTravelled = 0;
+    this.player.x = U.adjustX(300);
+    this.player.y = U.adjustY(550);
+    this.player.dead = false;
+    this.continueGame();
+  };
+
+  touchEnd = (e) => {
+    e.preventDefault();
+    // Stop all movement when touch ends
+    this.holdingLeftKey = false;
+    this.holdingRightKey = false;
+  };
+
   showScore = (yDistanceTravelled, score, ctx) => {
     if (yDistanceTravelled > score) {
       this.score = Math.round(yDistanceTravelled);
@@ -132,7 +225,17 @@ export default class BHMain {
 
   exitGame = () => {
     //       updateDoodleGame(this.id,"exit",this.score)
+    this.cleanup();
     this.playing = false;
+  };
+
+  cleanup = () => {
+    // Remove event listeners to prevent memory leaks
+    window.removeEventListener("keydown", this.keydown, false);
+    window.removeEventListener("keyup", this.keyup, false);
+    this.canvas.removeEventListener("touchstart", this.touchStart, false);
+    this.canvas.removeEventListener("touchend", this.touchEnd, false);
+    this.canvas.removeEventListener("touchcancel", this.touchEnd, false);
   };
 
   //todo i think this is all wrong, we want paint -> request -> update

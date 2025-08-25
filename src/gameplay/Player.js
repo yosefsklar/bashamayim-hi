@@ -30,6 +30,7 @@ export default class Player {
 
   update = (lowestBlock, difficulty, blocks, blockOffset, ctx, holdingLeftKey, holdingRightKey) => {
     // Check if user is on mobile device
+    // clean this up later ROUGH
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
                      (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
     

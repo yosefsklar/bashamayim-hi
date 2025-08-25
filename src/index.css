@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Prevent touch scrolling and selection on mobile */
+  /*TODO Not obvious that I want this for main screen as it Prevents default gestures like scrolling, pinch-zooming, or double tap*/
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

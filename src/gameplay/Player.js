@@ -1,7 +1,5 @@
 import BHUtils from "./BHUtils";
 import playerImage from "../Images/SRHirsch.png";
-// import rightPlayer from "../Images/rightPlayer.png";
-// import leftPlayer from "../Images/leftPlayer.png";
 
 const U = new BHUtils();
 
@@ -29,11 +27,6 @@ export default class Player {
   }
 
   update = (lowestBlock, difficulty, blocks, blockOffset, ctx, holdingLeftKey, holdingRightKey) => {
-    // Check if user is on mobile device
-    // clean this up later ROUGH
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
-                     (navigator.maxTouchPoints && navigator.maxTouchPoints > 2);
-    
     if (this.dead) {
       ctx.font =
         "bold " +
@@ -50,17 +43,10 @@ export default class Player {
         U.adjustX(36) +
         "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
       ctx.fillStyle = "#5EFF16";
-      if (isMobile) {
-        ctx.fillText("Tap here to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
-        ctx.strokeText("Tap here to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
-        ctx.fillText("Tap here to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-        ctx.strokeText("Tap here to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-      } else {
-        ctx.fillText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
-        ctx.strokeText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
-        ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-        ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-      }
+      ctx.fillText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
+      ctx.strokeText("Press 'c' to Continue", U.screenWidth / 2, U.screenHeight / 2 + 50);
+      ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
+      ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
     } else if (this.win) {
       this.ySpeed = 0;
       this.xSpeed = 0;
@@ -80,27 +66,9 @@ export default class Player {
         U.adjustX(36) +
         "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
       ctx.fillStyle = "#5EFF16";
-      if (isMobile) {
-        ctx.fillText("Tap here to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-        ctx.strokeText("Tap here to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-      } else {
-        ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-        ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
-      }
+      ctx.fillText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
+      ctx.strokeText("Press 'n' to Start a New Game", U.screenWidth / 2, U.screenHeight / 2 + 100);
     } else {
-      // Add mobile control instructions during gameplay
-      if (isMobile && this.yDistanceTravelled < 500) { // Show instructions for first 500 units of travel
-        ctx.font = "bold " + U.adjustX(24) + "px 'BlinkMacSystemFont','Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue'";
-        ctx.fillStyle = "#FFFFFF";
-        ctx.textAlign = "center";
-        ctx.strokeStyle = "black";
-        ctx.lineWidth = 1;
-        ctx.fillText("Tap left side to move left", U.screenWidth / 2, 30);
-        ctx.strokeText("Tap left side to move left", U.screenWidth / 2, 30);
-        ctx.fillText("Tap right side to move right", U.screenWidth / 2, 55);
-        ctx.strokeText("Tap right side to move right", U.screenWidth / 2, 55);
-      }
-      
       this.ySpeed += this.gravity;
       if (this.y <= U.screenHeight / 2 - U.adjustY(100) && this.ySpeed <= 0) {
         for (let i = 0; i < blocks.length; i++) {
@@ -115,15 +83,14 @@ export default class Player {
     //A key pressed
     if (holdingLeftKey) {
       this.direction = "left";
-      // get left and right rav hirsch images
-      // this.img.src = leftPlayer;
+      //this.img.src = "Images/leftPlayer.png";
       this.img.src = playerImage;
       this.moveLeft();
     }
     //D key pressed
     if (holdingRightKey) {
       this.direction = "right";
-      // this.img.src = rightPlayer;
+      //this.img.src = "Images/rightPlayer.png";
       this.img.src = playerImage;
       this.moveRight();
     }
@@ -208,6 +175,7 @@ export default class Player {
     }
     let block = blocks[blockIndex];
     let powerup = block.powerup;
+    let type = block.type;
     let wordType = block.wordType;
     //this.ySpeed = U.adjustY( -13.2);
     this.ySpeed = U.adjustY(-11.5);
@@ -273,7 +241,6 @@ export default class Player {
 
   moveLeft = () => {
     this.x -= this.xSpeed;
-    // Wrap around screen if we go off the left side
     if (this.x <= -this.width) {
       this.x = U.screenWidth;
     }
@@ -281,7 +248,6 @@ export default class Player {
 
   moveRight = () => {
     this.x += this.xSpeed;
-    // Wrap around screen if we go off the right side
     if (this.x >= U.screenWidth) {
       this.x = -this.width;
     }

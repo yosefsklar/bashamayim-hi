@@ -1,30 +1,34 @@
 {
   "files": {
-    "main.css": "/bashamayim-hi/static/css/main.ae2efeaa.chunk.css",
-    "main.js": "/bashamayim-hi/static/js/main.c30ced61.chunk.js",
-    "main.js.map": "/bashamayim-hi/static/js/main.c30ced61.chunk.js.map",
+    "main.css": "/bashamayim-hi/static/css/main.19ad4a87.chunk.css",
+    "main.js": "/bashamayim-hi/static/js/main.6a98340a.chunk.js",
+    "main.js.map": "/bashamayim-hi/static/js/main.6a98340a.chunk.js.map",
     "runtime-main.js": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js",
     "runtime-main.js.map": "/bashamayim-hi/static/js/runtime-main.bbac2c5d.js.map",
-    "static/js/2.283d121f.chunk.js": "/bashamayim-hi/static/js/2.283d121f.chunk.js",
-    "static/js/2.283d121f.chunk.js.map": "/bashamayim-hi/static/js/2.283d121f.chunk.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/bashamayim-hi/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.a888d667.chunk.js": "/bashamayim-hi/static/js/2.a888d667.chunk.js",
+    "static/js/2.a888d667.chunk.js.map": "/bashamayim-hi/static/js/2.a888d667.chunk.js.map",
     "index.html": "/bashamayim-hi/index.html",
-    "precache-manifest.ef4ab791e2111b178c8a6093adcfe8b3.js": "/bashamayim-hi/precache-manifest.ef4ab791e2111b178c8a6093adcfe8b3.js",
+    "precache-manifest.67c76499500d543bdb9e3810269168ec.js": "/bashamayim-hi/precache-manifest.67c76499500d543bdb9e3810269168ec.js",
     "service-worker.js": "/bashamayim-hi/service-worker.js",
-    "static/css/main.ae2efeaa.chunk.css.map": "/bashamayim-hi/static/css/main.ae2efeaa.chunk.css.map",
-    "static/js/2.283d121f.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.283d121f.chunk.js.LICENSE.txt",
+    "static/css/2.f3cffc9e.chunk.css.map": "/bashamayim-hi/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.19ad4a87.chunk.css.map": "/bashamayim-hi/static/css/main.19ad4a87.chunk.css.map",
+    "static/js/2.a888d667.chunk.js.LICENSE.txt": "/bashamayim-hi/static/js/2.a888d667.chunk.js.LICENSE.txt",
     "static/media/SRHirsch.png": "/bashamayim-hi/static/media/SRHirsch.0135d99e.png",
     "static/media/bashamayim_hi_block.PNG": "/bashamayim-hi/static/media/bashamayim_hi_block.29c640e3.PNG",
     "static/media/blank_block.PNG": "/bashamayim-hi/static/media/blank_block.e24c31e6.PNG",
     "static/media/hard_block.PNG": "/bashamayim-hi/static/media/hard_block.de640c83.PNG",
     "static/media/instructions1.PNG": "/bashamayim-hi/static/media/instructions1.d184b7ef.PNG",
     "static/media/instructions_spike.PNG": "/bashamayim-hi/static/media/instructions_spike.5a45cc6a.PNG",
+    "static/media/logo.svg": "/bashamayim-hi/static/media/logo.ee7cd8ed.svg",
     "static/media/powerup.PNG": "/bashamayim-hi/static/media/powerup.aac40b6c.PNG",
     "static/media/sky5.jpg": "/bashamayim-hi/static/media/sky5.fa863610.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bbac2c5d.js",
-    "static/js/2.283d121f.chunk.js",
-    "static/css/main.ae2efeaa.chunk.css",
-    "static/js/main.c30ced61.chunk.js"
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.a888d667.chunk.js",
+    "static/css/main.19ad4a87.chunk.css",
+    "static/js/main.6a98340a.chunk.js"
   ]
 }
